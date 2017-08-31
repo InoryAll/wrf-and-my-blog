@@ -1,0 +1,47 @@
+/**
+ *主页面组件样式 Main
+ */
+
+/*slider侧边栏*/
+.logo {
+    height: 32px;
+    border-radius: 6px;
+    margin: 16px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 30px;
+}
+.ant-layout-sider{
+    background: #FFFEEC;
+}
+.ant-menu-dark, .ant-menu-dark .ant-menu-sub {
+    background: #FFFEEC !important;
+}
+.ant-layout-sider-trigger{
+    background: #FFFEEC;
+    color: #359768;
+}
+.ant-menu-dark .ant-menu-item, .ant-menu-dark .ant-menu-item-group-title, .ant-menu-dark .ant-menu-item > a {
+    color: #359768;
+}
+.ant-menu-dark .ant-menu-item:hover, .ant-menu-dark .ant-menu-item-active, .ant-menu-dark .ant-menu-submenu-active, .ant-menu-dark:not(.ant-menu-inline) .ant-menu-submenu-open, .ant-menu-dark .ant-menu-submenu-selected, .ant-menu-dark .ant-menu-submenu:hover, .ant-menu-dark .ant-menu-submenu-title:hover {
+    color: #359768;
+}
+.ant-menu.ant-menu-dark .ant-menu-item-selected {
+    background-color: #359768;
+    color: rgba(255, 255, 255, 0.67);
+}
+.ant-menu-dark, .ant-menu-dark .ant-menu-sub {
+    color: #359768;
+}
+
+/*content右侧区域*/
+.ant-layout{
+    background: #F8F8F8;
+}
+.layout-content{
+    min-height: 100vh;
+}
+
+
+
