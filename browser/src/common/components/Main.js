@@ -6,8 +6,10 @@ import { Layout, Menu, Breadcrumb, Icon, Card, Button, Row, Col } from 'antd';
 import '../css/main.css';
 import Banner from './Banner';
 import Comment from "./Comment";
+import Detail from '../../article/Detail';
 import '../../article/css/detail.css';
-
+import github from '../../static/images/github.png';
+import wechat from '../../static/images/wechat.png';
 
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -63,7 +65,7 @@ export default class Main extends React.Component {
                         <Banner/>
                     </Card>
                     <Content className="content">
-                        <div className="detail-container">
+                       <div className="detail-container">
                             <Card className="detail-card" bordered={false}>
                                 <div className="detail">
                                     <h1>这里是文章的标题</h1>
@@ -81,11 +83,18 @@ export default class Main extends React.Component {
                                         <h3>支持我们</h3>
                                         <hr/>
                                         <div className="img-container">
-                                            <img src="" alt=""/>
-                                            <img src="" alt=""/>
+                                            <div className="img-box">
+                                                <img src={github} alt="github"/>
+                                            </div>
+                                            <div className="img-box">
+                                                <img src={wechat} alt="wechat"/>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                            </Card>
+                            <Card className="review" bordered={false}>
+
                             </Card>
                         </div>
                     </Content>
