@@ -1,0 +1,35 @@
+/**
+ *文章列表 comment
+ */
+.comment h1{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.comment hr{
+    height: 2px;
+    background: #D3E0E2;
+    border: none;
+    margin-bottom: 10px;
+}
+.comment p{
+    line-height: 32px;
+    font-size: 16px;
+    color: #333;
+    text-indent: 32px;
+}
+.comment div{
+    padding: 20px 0;
+}
+.comment  .date{
+    color: #919191;
+    font-size: 14px;
+    float: right;
+}
+.comment  .author{
+    color: #919191;
+    font-size: 14px;
+    float: right;
+}
+.comment  .more{
+    float: right;
+}

@@ -10,6 +10,7 @@
     line-height: 32px;
     text-align: center;
     font-size: 30px;
+    color: #FF8C94;
 }
 .ant-layout-sider{
     background: #FFFEEC;
@@ -41,6 +42,12 @@
 }
 .layout-content{
     min-height: 100vh;
+}
+.content{
+    margin: 0 16px;
+}
+.footer{
+    text-align: center;
 }
 
 
