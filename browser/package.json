@@ -7,6 +7,7 @@
     "es6-promise": "^4.1.1",
     "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.5.10",
+    "rc-banner-anim": "^0.5.16",
     "rc-tween-one": "^1.4.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
