@@ -1,6 +1,9 @@
 /**
  *文章列表 comment
  */
+.comment-card{
+    margin-bottom: 20px;
+}
 .comment h1{
     font-size: 30px;
     padding-bottom: 10px;

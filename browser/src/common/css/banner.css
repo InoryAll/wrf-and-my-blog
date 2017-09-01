@@ -21,11 +21,39 @@
 .banner-user-title{
     text-align: center;
     font-size: 32px;
-    top: 30%;
+    top: 10%;
     color: #fff;
 }
 .banner-user-text{
     text-align: center;
-    top: 30%;
+    top: 10%;
     color: #fff;
+    font-size: 16px;
+}
+.banner-card .item{
+    width: 260px;
+    height: 120px;
+    margin: 0 auto;
+    line-height: 120px;
+}
+.banner-card .single-item{
+    width: 100px;
+    height:120px;
+    margin: 0 auto;
+    line-height: 120px;
+}
+.banner-card img{
+    display: block;
+    float: left;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.banner-card .split{
+    display: block;
+    float: left;
+    width: 60px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
 }

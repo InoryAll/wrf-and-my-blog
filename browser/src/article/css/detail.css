@@ -1,0 +1,31 @@
+/**
+ *文章详细信息样式 detail
+ */
+.detail-card{
+    margin-bottom: 20px;
+}
+.detail h1{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.detail .info{
+    margin-bottom: 10px;
+}
+.detail .info span{
+    color: #919191;
+    font-size: 14px;
+    margin-right: 10px;
+
+}
+.detail hr{
+    height: 2px;
+    background: #D3E0E2;
+    border: none;
+    margin-bottom: 10px;
+}
+.detail p{
+    line-height: 32px;
+    font-size: 16px;
+    color: #333;
+    text-indent: 32px;
+}
