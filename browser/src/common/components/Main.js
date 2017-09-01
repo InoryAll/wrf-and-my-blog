@@ -27,7 +27,7 @@ export default class Main extends React.Component {
                     onCollapse={this.onCollapse}
                 >
                     <div className="logo">
-                        <Icon type="heart-o" />
+                        <Icon type="loading" />
                     </div>
                     <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
                         <Menu.Item key="1">
@@ -65,7 +65,9 @@ export default class Main extends React.Component {
                     </Card>
                     <Content className="content">
                         <Card className="comment-card" bordered={false}>
-                            {/*实现动态加载帖子...*/}
+                            <Comment/>
+                        </Card>
+                        <Card className="comment-card" bordered={false}>
                             <Comment/>
                         </Card>
                     </Content>
