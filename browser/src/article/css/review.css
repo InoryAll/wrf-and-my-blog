@@ -1,0 +1,52 @@
+/**
+ *用户评论组件样式 review
+ */
+.review-card h1{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.review-card hr{
+    height: 2px;
+    background: #D3E0E2;
+    border: none;
+    margin-bottom: 10px;
+}
+.review .avatar{
+    float: left;
+    margin-right: 10px;
+}
+.review .review-form{
+    float: left;
+    width: calc(100% - 60px);
+}
+.review .submit{
+    float: right;
+}
+.review .reset{
+    float: right;
+    margin-right: 10px;
+}
+.review-list h2{
+    padding-bottom: 10px;
+}
+.review-list hr{
+    height: 2px;
+    background: #D3E0E2;
+    border: none;
+    margin-bottom: 10px;
+}
+.review-list .item{
+    margin-bottom: 20px;
+}
+.review-list .avatar{
+    float: left;
+}
+.review-list p{
+    float: left;
+    margin-left: 10px;
+}
+.review-list .date{
+    display: block;
+    color: #919191;
+    margin-top: 10px;
+}

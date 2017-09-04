@@ -7,6 +7,7 @@ import {Card} from 'antd';
 import './css/detail.css';
 import github from '../static/images/github.png';
 import wechat from '../static/images/wechat.png';
+import Review from './Review';
 
 export default class Detail extends React.Component{
     constructor(props){
@@ -42,9 +43,7 @@ export default class Detail extends React.Component{
                         </div>
                     </div>
                 </Card>
-                <Card className="review" bordered={false}>
-
-                </Card>
+                <Review/>
             </div>
         );
     }
