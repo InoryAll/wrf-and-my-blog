@@ -5,13 +5,18 @@ import React from 'react';
 import { Layout, Menu, Breadcrumb, Icon, Card, Button, Row, Col, Avatar, Mention, Form } from 'antd';
 import '../css/main.css';
 import Banner from './Banner';
-import Comment from "./Comment";
-import Detail from '../../article/Detail';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import {fetchSiders} from "../../action/action";
 
 const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 
-export default class Main extends React.Component {
+class Main extends React.Component {
+    constructor(props){
+        super(props);
+        this.props.fetchSiders();
+    }
     state = {
         collapsed: false
     };
@@ -21,6 +26,8 @@ export default class Main extends React.Component {
     };
 
     render() {
+        const Siders=this.props.siders;
+
         return (
             <Layout className="layout-content">
                 <Sider
@@ -62,7 +69,7 @@ export default class Main extends React.Component {
                         <Banner/>
                     </Card>
                     <Content className="content">
-                        <Detail/>
+                        {this.props.children}
                     </Content>
                     <Footer className="footer">
                         WRF&TRJ ©2017 Created by Us.
@@ -72,4 +79,16 @@ export default class Main extends React.Component {
         );
     }
 }
+
+function mapStateToProps(state) {
+    return {
+        siders:state.sider.siders
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({fetchSiders},dispatch);
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Main);
 

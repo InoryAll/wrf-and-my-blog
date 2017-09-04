@@ -7,7 +7,7 @@ var Schema=mongoose.Schema;
 var ReviewSchema=new Schema({
     content:String,
     date:String,
-    comment:{type:Schema.type.ObjectId,ref:'Comment'}
+    comment:String
 });
 
 mongoose.model('Review',ReviewSchema);

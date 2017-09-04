@@ -10,7 +10,7 @@ var CommentSchema=new Schema({
     author:String,
     date:String,
     content:String,
-    review:{type:Schema.type.ObjectId,ref:'Review'}
+    review:String
 });
 
 mongoose.model('Comment',CommentSchema);

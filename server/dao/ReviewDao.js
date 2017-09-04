@@ -6,7 +6,9 @@ var  Review=model.Review;
 
 exports.add=function (object,callback) {
     var review=new Review({
-        ...object
+        content:object.content,
+        date:object.date,
+        comment:object.comment
     });
     review.save(callback);
 };

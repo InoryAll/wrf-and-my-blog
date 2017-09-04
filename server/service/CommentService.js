@@ -16,5 +16,18 @@ exports.getAllComments=function (req,res,next) {
     });
 };
 
+//获取侧边栏数据
+exports.getSliders=function (req,res,next) {
+    console.log('getSiders');
+    CommentDao.findGenaral(function (err,comments) {
+        if(!err){
+            res.json(comments);
+        }
+        else{
+            console.log(err.message);
+        }
+    });
+};
+
 
 

@@ -8,12 +8,21 @@ import './css/detail.css';
 import github from '../static/images/github.png';
 import wechat from '../static/images/wechat.png';
 import Review from './Review';
+import {connect} from 'react-redux';
 
-export default class Detail extends React.Component{
+class Detail extends React.Component{
     constructor(props){
         super(props);
     }
     render(){
+        const id=this.props.params.id;
+        let comment;
+        const comments=this.props.comments;
+        comments && comments.forEach(function (item,index) {
+            if (id===item._id){
+
+            }
+        });
         return (
             <div className="detail-container">
                 <Card className="detail-card" bordered={false}>
@@ -48,3 +57,15 @@ export default class Detail extends React.Component{
         );
     }
 }
+
+function mapStateToProps(state) {
+    return {
+        comments:state.comment.comments
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Detail);

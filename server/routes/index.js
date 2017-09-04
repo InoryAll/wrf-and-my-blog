@@ -4,10 +4,11 @@
 var express = require('express');
 var router = express.Router();
 
-import CommentService from '../service/CommentService';
-import ReviewService from '../service/ReviewService';
+var  CommentService=require('../service/CommentService');
+var  ReviewService=require( '../service/ReviewService');
 
-router.get('/comment/getAllComment',CommentService.getAllComments);
-router.get('/review/addReview',ReviewService.addReview);
+router.post('/comment/getSiders',CommentService.getSliders);
+router.post('/comment/getAllComment',CommentService.getAllComments);
+router.post('/review/addReview',ReviewService.addReview);
 
 module.exports = router;
