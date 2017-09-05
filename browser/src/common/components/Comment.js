@@ -24,8 +24,8 @@ class Comment extends React.Component{
         let commentList=[];
         comments && comments.forEach(function (item,index) {
             commentList.push(
-                <Card className="comment-card" bordered={false}>
-                    <div className="comment" key={index}>
+                <Card className="comment-card" bordered={false} key={index}>
+                    <div className="comment">
                         <h1>{item.title}</h1>
                         <hr/>
                         <p>{item.summary}</p>

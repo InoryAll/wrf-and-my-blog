@@ -7,7 +7,8 @@ import { Form, Mention, Card, Row, Avatar, Button } from 'antd';
 import './css/review.css';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {fetchReviewsById} from "../action/action";
+import {fetchReviewsById , fetchAddReview} from "../action/action";
+import moment from 'moment';
 
 const { toString, toContentState, getMentions } = Mention;
 const FormItem = Form.Item;
@@ -22,9 +23,16 @@ class Review extends React.Component{
 
     componentDidMount(){
         const id=this.props.id;
-        console.log(id);
         this.props.fetchReviewsById(id);
     }
+
+    componentWillReceiveProps(nextProps){
+        console.log('update');
+        const id=nextProps.id;
+        this.props.fetchReviewsById(id);
+    }
+
+
 
     handleReset = (e) => {
         e.preventDefault();
@@ -38,13 +46,33 @@ class Review extends React.Component{
                 console.log('Errors in form!!!');
                 return;
             }
+            const review={
+                content:toString(values.mention),
+                date:moment().format('l'),
+                comment:this.props.id
+            };
+            this.props.fetchAddReview(review);
             console.log('Submit!!!');
             console.log(toString(values.mention));
+            this.handleReset(e);
         });
     };
 
     render(){
         const { getFieldDecorator, getFieldValue } = this.props.form;
+        const reviews=this.props.reviews;
+        let reviewItem=[];
+        reviews && reviews.forEach(function (item,index) {
+            reviewItem.push(
+                <Row className="item" key={index}>
+                    <div className="clearfix">
+                        <Avatar shape="square" icon="user" className="avatar"/>
+                        <p>{item.content}</p>
+                    </div>
+                    <span className="date">发表日期:{item.date}</span>
+                </Row>
+            );
+        });
         return (
             <Card className="review-card" bordered={false}>
                 <h1>评论区</h1>
@@ -77,20 +105,7 @@ class Review extends React.Component{
                 <div className="review-list">
                     <h2>评论</h2>
                     <hr/>
-                    <Row className="item">
-                        <div className="clearfix">
-                            <Avatar shape="square" icon="user" className="avatar"/>
-                            <p>这里是我的第一条评论~</p>
-                        </div>
-                        <span className="date">发表日期:2017-9-4</span>
-                    </Row>
-                    <Row className="item">
-                        <div className="clearfix">
-                            <Avatar shape="square" icon="user" className="avatar"/>
-                            <p>这里是我的第一条评论~</p>
-                        </div>
-                        <span className="date">发表日期:2017-9-4</span>
-                    </Row>
+                    {reviewItem}
                 </div>
             </Card>
         );
@@ -99,12 +114,13 @@ class Review extends React.Component{
 
 function mapStateToProps(state) {
     return {
-        reviews:state.review.reviews
+        reviews:state.review.reviews,
+        review:state.review.review
     };
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ fetchReviewsById },dispatch);
+    return bindActionCreators({ fetchReviewsById , fetchAddReview },dispatch);
 }
 
 const ReviewForm = Form.create()(Review);

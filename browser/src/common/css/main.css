@@ -48,8 +48,19 @@
 .ant-menu.ant-menu-dark .ant-menu-item-selected a:hover{
     color: rgba(255, 255, 255, 0.67);
 }
+.to-home{
+    display: inline-block;
+    width: calc(100% - 22px);
+}
+a{
+    color: #359768;
+    text-decoration: none;
+}
+a:focus{
+    text-decoration: none;
+}
 
-    /*content右侧区域*/
+/*content右侧区域*/
 .ant-layout{
     background: #F8F8F8;
 }

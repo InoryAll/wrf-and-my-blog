@@ -55,7 +55,7 @@ class Main extends React.Component {
                     <Menu theme="dark" defaultOpenKeys={['sub1','sub2']} mode="inline">
                         <Menu.Item key="1">
                             <Icon type="home" />
-                            <span>主页</span>
+                            <span><Link to="/index" className="to-home">主页</Link></span>
                         </Menu.Item>
                         <SubMenu
                             key="sub1"

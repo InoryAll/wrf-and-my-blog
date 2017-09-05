@@ -11,6 +11,7 @@ import Review from './Review';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {fetchCommentById} from "../action/action";
+import _ from 'lodash';
 
 class Detail extends React.Component{
     constructor(props){
@@ -19,6 +20,11 @@ class Detail extends React.Component{
 
     componentDidMount(){
         const id=this.props.params.id;
+        this.props.fetchCommentById(id);
+    }
+
+    componentWillReceiveProps(nextProps){
+        const id=nextProps.params.id;
         this.props.fetchCommentById(id);
     }
 

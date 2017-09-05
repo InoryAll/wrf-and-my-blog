@@ -1,6 +1,8 @@
 /**
  * action
  */
+import {Modal} from 'antd';
+
 // main sider
 export const GET_SIDER='GET_SIDER';
 export const getSider=(siders) => {
@@ -79,10 +81,10 @@ export const fetchCommentById=(id)=>{
 };
 
 // reviews
-export const GET_REVIEWS='GET_REVIEWS';
-export const getReviews=(reviews)=>{
+export const GET_REVIEWS_BY_ID='GET_REVIEWS_BY_ID';
+export const getReviewsById=(reviews)=>{
     return {
-        type:GET_REVIEWS,
+        type:GET_REVIEWS_BY_ID,
         reviews
     };
 };
@@ -99,7 +101,50 @@ export const fetchReviewsById=(id)=>{
                 return response.json();
             }
         }).then((data)=>{
-            dispatch(getReviews(data));
+            dispatch(getReviewsById(data));
+        }).catch((e)=>{
+            console.log(e.message);
+        });
+    };
+};
+
+export const ADD_REVIEW='ADD_REVIEW';
+export const addReview=(review)=>{
+    return {
+        type:ADD_REVIEW,
+        review
+    };
+};
+export const fetchAddReview=(review)=>{
+    return (dispatch,getState)=>{
+        fetch('http://localhost:8080/review/addReview',{
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify(review)
+        }).then((response)=>{
+            if (response.ok){
+                return response.json();
+            }
+        }).then((data)=>{
+            if (data.code==='0'){
+                Modal.error({
+                    title:'失败',
+                    content:data.message
+                });
+            }
+            else{
+                const modal=Modal.success({
+                    title:'成功',
+                    content:data.message
+                });
+                setTimeout(()=>{
+                    modal.destroy();
+                },1000);
+                dispatch(addReview(review));
+                fetchReviewsById(review.comment);
+            }
         }).catch((e)=>{
             console.log(e.message);
         });

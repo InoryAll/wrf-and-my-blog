@@ -6,6 +6,8 @@
     "antd": "^2.12.2",
     "es6-promise": "^4.1.1",
     "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
     "prop-types": "^15.5.10",
     "rc-banner-anim": "^0.5.16",
     "rc-tween-one": "^1.4.4",
