@@ -16,18 +16,28 @@ class Main extends React.Component {
     constructor(props){
         super(props);
         this.props.fetchSiders();
+        this.state={
+            collapsed: false
+        };
     }
-    state = {
-        collapsed: false
-    };
+
     onCollapse = (collapsed) => {
         console.log(collapsed);
         this.setState({ collapsed });
     };
 
     render() {
-        const Siders=this.props.siders;
-
+       /* const siders=this.props.siders;
+        const trj=[];
+        const wrf=[];
+        siders && siders.forEach(function (item,index) {
+           if (item.author.toLowerCase()==='trj'){
+               trj.push(<Menu.Item key={item._id}>{item.title}</Menu.Item>);
+           }
+           else if(item.author.toLowerCase()==='wrf'){
+               wrf.push(<Menu.Item key={item._id}>{item.title}</Menu.Item>);
+           }
+        });*/
         return (
             <Layout className="layout-content">
                 <Sider
