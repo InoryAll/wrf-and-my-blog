@@ -29,5 +29,19 @@ exports.getSliders=function (req,res,next) {
     });
 };
 
+// 获取文章详细信息
+exports.getCommentDetail=function (req,res,next) {
+    console.log('getCommentDetail');
+    var id=req.body.id;
+    CommentDao.findById(id,function (err,comment) {
+        if (!err){
+            res.json(comment);
+        }
+        else{
+            console.log(err.message);
+        }
+    });
+};
+
 
 

@@ -13,6 +13,9 @@ import {Link} from 'react-router';
 class Comment extends React.Component{
     constructor(props){
         super(props);
+    }
+
+    componentDidMount(){
         this.props.fetchAllComments();
     }
 
@@ -21,30 +24,32 @@ class Comment extends React.Component{
         let commentList=[];
         comments && comments.forEach(function (item,index) {
             commentList.push(
-                <div className="comment" key={index}>
-                    <h1>{item.title}</h1>
-                    <hr/>
-                    <p>{item.summary}</p>
-                    <div>
-                        <Row>
-                            <Col lg={{span:6,offset:13}} md={{span:10,offset:6}} span={14}>
-                                <span className="date">发布日期:{item.date}</span>
-                            </Col>
-                            <Col lg={{span:2}} md={{span:3}} span={4}>
-                                <span className="author">作者:{item.author}</span>
-                            </Col>
-                            <Col lg={{span:3}} md={{span:5}} span={6}>
-                                <Button type="primary" ghost className="more"><Link to={`detail/${item._id}`}>查看更多</Link></Button>
-                            </Col>
-                        </Row>
+                <Card className="comment-card" bordered={false}>
+                    <div className="comment" key={index}>
+                        <h1>{item.title}</h1>
+                        <hr/>
+                        <p>{item.summary}</p>
+                        <div>
+                            <Row>
+                                <Col lg={{span:6,offset:13}} md={{span:10,offset:6}} span={14}>
+                                    <span className="date">发布日期:{item.date}</span>
+                                </Col>
+                                <Col lg={{span:2}} md={{span:3}} span={4}>
+                                    <span className="author">作者:{item.author}</span>
+                                </Col>
+                                <Col lg={{span:3}} md={{span:5}} span={6}>
+                                    <Button type="primary" ghost className="more"><Link to={`detail/${item._id}`}>查看更多</Link></Button>
+                                </Col>
+                            </Row>
+                        </div>
                     </div>
-                </div>
+                </Card>
             );
         });
         return (
-            <Card className="comment-card" bordered={false}>
+            <div>
                 { commentList }
-            </Card>
+            </div>
         );
     }
 }

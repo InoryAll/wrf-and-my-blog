@@ -13,4 +13,8 @@ exports.add=function (object,callback) {
     review.save(callback);
 };
 
+exports.findById=function (id,callback) {
+    Review.find({comment:id},callback);
+};
+
 

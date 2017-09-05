@@ -5,6 +5,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Form, Mention, Card, Row, Avatar, Button } from 'antd';
 import './css/review.css';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import {fetchReviewsById} from "../action/action";
 
 const { toString, toContentState, getMentions } = Mention;
 const FormItem = Form.Item;
@@ -16,6 +19,13 @@ class Review extends React.Component{
             initValue: toContentState('@wrf')
         };
     }
+
+    componentDidMount(){
+        const id=this.props.id;
+        console.log(id);
+        this.props.fetchReviewsById(id);
+    }
+
     handleReset = (e) => {
         e.preventDefault();
         this.props.form.resetFields();
@@ -87,5 +97,15 @@ class Review extends React.Component{
     }
 }
 
-export default Form.create()(Review);
+function mapStateToProps(state) {
+    return {
+        reviews:state.review.reviews
+    };
+}
 
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ fetchReviewsById },dispatch);
+}
+
+const ReviewForm = Form.create()(Review);
+export default connect(mapStateToProps,mapDispatchToProps)(ReviewForm);

@@ -16,3 +16,18 @@ exports.addReview=function (req,res,next) {
         return res.json(message);
     });
 };
+
+exports.getReviewsById=function (req,res,next) {
+    console.log('getReviewsById');
+    var id=req.body.id;
+    console.log(id);
+    ReviewDao.findById(id,function (err,reviews) {
+        if (!err){
+            console.log(reviews);
+            res.json(reviews);
+        }
+        else{
+            console.log(err.message);
+        }
+    })
+};

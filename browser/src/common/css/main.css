@@ -35,8 +35,21 @@
 .ant-menu-dark, .ant-menu-dark .ant-menu-sub {
     color: #359768;
 }
+.ant-menu-dark .ant-menu-item, .ant-menu-dark .ant-menu-item-group-title, .ant-menu-dark .ant-menu-item > a {
+    color: #359768;
+}
+.ant-menu.ant-menu-dark .ant-menu-item-selected a{
+    background-color: #359768;
+    color: rgba(255, 255, 255, 0.67);
+}
+.ant-menu-dark .ant-menu-item:hover > a, .ant-menu-dark .ant-menu-item-active > a, .ant-menu-dark .ant-menu-submenu-active > a, .ant-menu-dark:not(.ant-menu-inline) .ant-menu-submenu-open > a, .ant-menu-dark .ant-menu-submenu-selected > a, .ant-menu-dark .ant-menu-submenu:hover > a, .ant-menu-dark .ant-menu-submenu-title:hover > a {
+    color: #359768;
+}
+.ant-menu.ant-menu-dark .ant-menu-item-selected a:hover{
+    color: rgba(255, 255, 255, 0.67);
+}
 
-/*content右侧区域*/
+    /*content右侧区域*/
 .ant-layout{
     background: #F8F8F8;
 }

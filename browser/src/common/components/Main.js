@@ -8,6 +8,7 @@ import Banner from './Banner';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {fetchSiders} from "../../action/action";
+import {Link} from 'react-router';
 
 const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -15,10 +16,13 @@ const SubMenu = Menu.SubMenu;
 class Main extends React.Component {
     constructor(props){
         super(props);
-        this.props.fetchSiders();
         this.state={
             collapsed: false
         };
+    }
+
+    componentDidMount(){
+        this.props.fetchSiders();
     }
 
     onCollapse = (collapsed) => {
@@ -27,17 +31,17 @@ class Main extends React.Component {
     };
 
     render() {
-       /* const siders=this.props.siders;
+        const siders=this.props.siders;
         const trj=[];
         const wrf=[];
         siders && siders.forEach(function (item,index) {
            if (item.author.toLowerCase()==='trj'){
-               trj.push(<Menu.Item key={item._id}>{item.title}</Menu.Item>);
+               trj.push(<Menu.Item key={item._id}><Link to={`/detail/${item._id}`}>{item.title}</Link></Menu.Item>);
            }
            else if(item.author.toLowerCase()==='wrf'){
-               wrf.push(<Menu.Item key={item._id}>{item.title}</Menu.Item>);
+               wrf.push(<Menu.Item key={item._id}><Link to={`/detail/${item._id}`}>{item.title}</Link></Menu.Item>);
            }
-        });*/
+        });
         return (
             <Layout className="layout-content">
                 <Sider
@@ -57,16 +61,13 @@ class Main extends React.Component {
                             key="sub1"
                             title={<span><Icon type="heart-o" /><span>TRJ</span></span>}
                         >
-                            <Menu.Item key="3">我的文章1</Menu.Item>
-                            <Menu.Item key="4">我的文章2</Menu.Item>
-                            <Menu.Item key="5">我的文章3</Menu.Item>
+                            {trj}
                         </SubMenu>
                         <SubMenu
                             key="sub2"
                             title={<span><Icon type="star-o" /><span>WRF</span></span>}
                         >
-                            <Menu.Item key="6">我的文章1</Menu.Item>
-                            <Menu.Item key="8">我的文章2</Menu.Item>
+                            {wrf}
                         </SubMenu>
                         <Menu.Item key="2">
                             <Icon type="message" />

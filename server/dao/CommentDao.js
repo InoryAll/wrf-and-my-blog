@@ -12,3 +12,7 @@ exports.findGenaral=function (callback) {
     Comment.find({},{_id:1,title:1,author:1},callback)
 };
 
+exports.findById=function (id,callback) {
+  Comment.find({_id:id},callback);
+};
+
