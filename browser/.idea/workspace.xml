@@ -331,7 +331,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/express/Express" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="C:\Users\tianrenjie\AppData\Roaming\npm\node_modules\eslint" />
@@ -392,12 +392,12 @@
       <workItem from="1504575384393" duration="21570000" />
       <workItem from="1504658515066" duration="621000" />
       <workItem from="1504745590454" duration="3852000" />
-      <workItem from="1505124150119" duration="7000" />
+      <workItem from="1505124150119" duration="40000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78001000" />
+    <option name="totallyTimeSpent" value="78034000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
