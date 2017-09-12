@@ -3,8 +3,8 @@
  */
 import React from 'react';
 import { Layout, Menu, Breadcrumb, Icon, Card, Button, Row, Col, Avatar, Mention, Form } from 'antd';
-import '../css/main.css';
-import Banner from './Banner';
+import './css/main.css';
+import Banner from './components/Banner';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {fetchSiders} from "../../action/action";
@@ -98,7 +98,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({fetchSiders},dispatch);
+    return bindActionCreators({ fetchSiders },dispatch);
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(Main);

@@ -7,8 +7,9 @@ import { Form, Mention, Card, Row, Avatar, Button } from 'antd';
 import './css/review.css';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {fetchReviewsById , fetchAddReview} from "../action/action";
+import {fetchReviewsById , fetchAddReview} from "../../action/action";
 import moment from 'moment';
+import _ from 'lodash';
 
 const { toString, toContentState, getMentions } = Mention;
 const FormItem = Form.Item;
@@ -20,16 +21,20 @@ class Review extends React.Component{
             initValue: toContentState('@wrf')
         };
     }
-
-    componentDidMount(){
-        const id=this.props.id;
-        this.props.fetchReviewsById(id);
+    
+    componentWillMount(){
+      this.props.fetchReviewsById(this.props.id);
     }
-
+    
     componentWillReceiveProps(nextProps){
         console.log('update');
-        const id=nextProps.id;
-        this.props.fetchReviewsById(id);
+        if (this.props.id!==nextProps.id){
+          this.props.fetchReviewsById(nextProps.id);
+        }
+    }
+    
+    shouldComponentUpdate(nextProps,nextState){
+        return !_.isEqual(this.props.reviews,nextProps.reviews);
     }
 
 

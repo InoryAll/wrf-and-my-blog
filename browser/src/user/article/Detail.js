@@ -10,25 +10,53 @@ import wechat from '../static/images/wechat.png';
 import Review from './Review';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {fetchCommentById} from "../action/action";
+import {fetchCommentById} from "../../action/action";
 import _ from 'lodash';
 
 class Detail extends React.Component{
     constructor(props){
         super(props);
+        this.state={
+            id:props.params.id
+        }
     }
-
-    componentDidMount(){
+    
+    componentWillMount(){
+      this.props.fetchCommentById(this.state.id);
+    }
+  
+  componentWillReceiveProps(nextProps){
+    if (nextProps.params.id!==this.state.id){
+      this.state={
+        id: nextProps.params.id
+      };
+      this.props.fetchCommentById(this.state.id);
+    }
+  }
+    
+    shouldComponentUpdate(nextProps,nextState){
+      console.log(_.isEqual(nextProps.comment,this.props.comment));
+      return !_.isEqual(nextProps.comment,this.props.comment);
+    }
+    
+    /*componentDidUpdate(){
+      const id=this.props.params.id;
+      this.props.fetchCommentById(id);
+    }*/
+    
+   /* componentDidUpdate(){
         const id=this.props.params.id;
         this.props.fetchCommentById(id);
-    }
+    }*/
 
-    componentWillReceiveProps(nextProps){
-        const id=nextProps.params.id;
-        this.props.fetchCommentById(id);
-    }
+   /* componentWillReceiveProps(nextProps){
+       this.setState({
+         id:this.props.params.id
+       });
+    }*/
 
     render(){
+        console.log('render');
         const comment=this.props.comment;
         let commentItem;
         comment && comment.forEach(function (item,index) {
@@ -62,7 +90,7 @@ class Detail extends React.Component{
                     </div>
                 </Card>
                 <Review
-                id={this.props.params.id}/>
+                id={this.state.id}/>
             </div>
         );
     }

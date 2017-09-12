@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import ReacDOM from 'react-dom';
-import '../css/comment.css';
+import './css/comment.css';
 import {Row,Col,Button,Card} from 'antd';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
