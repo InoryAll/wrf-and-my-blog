@@ -8,15 +8,13 @@ class Login extends React.Component{
   render(){
     return (
       <Row>
-        <Col>
-        
+        <Col span={10} offset={7}>
+          <Card title="Card title" bordered={false} className="login-card">
+            <p>Card content</p>
+            <p>Card content</p>
+            <p>Card content</p>
+          </Card>
         </Col>
-        
-        <Card title="Card title" bordered={false} style={{ width: 300 }}>
-          <p>Card content</p>
-          <p>Card content</p>
-          <p>Card content</p>
-        </Card>
       </Row>
     );
   };

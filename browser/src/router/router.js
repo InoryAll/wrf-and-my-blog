@@ -8,6 +8,7 @@ import Main from "../user/common/Main";
 import Comment from "../user/common/Comment";
 import Detail from "../user/article/Detail";
 import Login from "../admin/login/Login";
+import Wrapper from "../admin/wrapper/Wrapper";
 
 export const routers=(
     <Router history={browserHistory}>
@@ -18,7 +19,7 @@ export const routers=(
             <IndexRoute components={Comment}/>
             <Route path="/detail/:id" components={Detail}/>
         </Route>
-        <Route path="/admin">
+        <Route path="/admin" components={Wrapper}>
             <IndexRoute components={Login}/>
             <Route path="login" components={Login}/>
         </Route>
