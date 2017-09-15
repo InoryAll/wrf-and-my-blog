@@ -1,3 +1,16 @@
 /**
  * 包裹组件Wrapper样式表 wrapper
  */
+html{
+    background: url("../../static/images/bg.jpg") no-repeat fixed;
+    background-size: cover;
+}
+.admin-wrapper{
+    background: none;
+}
+#root,body{
+    background: none;
+}
+.card-container{
+    padding: 10% 0;
+}
