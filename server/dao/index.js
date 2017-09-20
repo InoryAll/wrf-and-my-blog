@@ -4,4 +4,4 @@
 
 exports.CommentDao=require('./CommentDao');
 exports.ReviewDao=require('./ReviewDao');
-
+exports.UserDao=require('./UserDao');
