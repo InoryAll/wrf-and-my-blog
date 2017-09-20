@@ -9,6 +9,7 @@ import Comment from "../user/common/Comment";
 import Detail from "../user/article/Detail";
 import LoginContainer from "../admin/login/Login";
 import Wrapper from "../admin/wrapper/Wrapper";
+import Console from "../admin/common/Console";
 
 export const routers=(
     <Router history={browserHistory}>
@@ -22,6 +23,8 @@ export const routers=(
         <Route path="/admin" components={Wrapper}>
             <IndexRoute components={LoginContainer}/>
             <Route path="login" components={LoginContainer}/>
+        </Route>
+        <Route path="/admin/index" components={Console}>
         </Route>
     </Router>
 );

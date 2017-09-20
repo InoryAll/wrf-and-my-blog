@@ -1,0 +1,23 @@
+/**
+ * 管理员主界面console样式
+ */
+
+/*console*/
+.console-layout{
+    min-height: 100vh;
+}
+.console-header{
+    background: #fff;
+    padding: 0;
+}
+.console-content{
+    margin: 0 16px;
+}
+.console-container{
+    padding: 24px;
+    background: #fff;
+    min-height: 360px;
+}
+.console-footer{
+    text-align: center;
+}
