@@ -7,7 +7,7 @@ import App from "../App";
 import Main from "../user/common/Main";
 import Comment from "../user/common/Comment";
 import Detail from "../user/article/Detail";
-import Login from "../admin/login/Login";
+import LoginContainer from "../admin/login/Login";
 import Wrapper from "../admin/wrapper/Wrapper";
 
 export const routers=(
@@ -20,8 +20,8 @@ export const routers=(
             <Route path="/detail/:id" components={Detail}/>
         </Route>
         <Route path="/admin" components={Wrapper}>
-            <IndexRoute components={Login}/>
-            <Route path="login" components={Login}/>
+            <IndexRoute components={LoginContainer}/>
+            <Route path="login" components={LoginContainer}/>
         </Route>
     </Router>
 );

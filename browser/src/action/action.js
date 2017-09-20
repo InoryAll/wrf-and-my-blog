@@ -2,6 +2,7 @@
  * action
  */
 import {Modal} from 'antd';
+import {browserHistory} from 'react-router';
 
 // main sider
 export const GET_SIDER='GET_SIDER';
@@ -151,4 +152,44 @@ export const fetchAddReview=(review)=>{
     };
 };
 
-//users
+//user
+export const LOGIN_USER='LOGIN_USER';
+export const loginUser=(user)=>{
+    return {
+        type:LOGIN_USER,
+        user
+    };
+};
+export const doLogin=(user)=>{
+    return (dispatch,getState)=>{
+        fetch('http://localhost:8080/user/login',{
+            method:'POST',
+            headers:{
+              'Content-Type':'application/json'
+            },
+            body:JSON.stringify(user)
+        }).then((response)=>{
+            if (response.ok){
+                return response.json();
+            }
+        }).then((data)=>{
+            if (data.length===0){
+                Modal.error({
+                  title:'错误',
+                  content:'用户不存在，请联系管理员!'
+                });
+            }
+            else{
+                dispatch(loginUser(user));
+                const modal=Modal.success({
+                  title:'成功',
+                  content:`欢迎你${user.username}用户!`
+                });
+                //登陆成功的路由跳转
+               /* browserHistory.push();*/
+            }
+        }).catch((e)=>{
+            console.log(e.message);
+        });
+    };
+};

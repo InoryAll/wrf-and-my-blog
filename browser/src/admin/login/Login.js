@@ -3,6 +3,9 @@
  */
 import React from 'react';
 import { Card, Row, Col, Form, Input, Icon, Button, Alert } from 'antd';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import {doLogin} from "../../action/action";
 import './css/login.css';
 
 const FormItem=Form.Item;
@@ -11,7 +14,11 @@ class Login extends React.Component{
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        let user={
+          username:values.username,
+          password:values.password
+        };
+        this.props.doLogin(user);
       }
     });
   };
@@ -85,4 +92,16 @@ class Login extends React.Component{
   };
 }
 
-export default Form.create()(Login);
+function mapStateToProps(state) {
+  return {
+    user:state.login
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ doLogin },dispatch);
+}
+
+const loginForm=Form.create()(Login);
+const loginContainer=connect(mapStateToProps,mapDispatchToProps)(loginForm);
+export default loginContainer;

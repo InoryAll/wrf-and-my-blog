@@ -23,7 +23,6 @@ exports.getReviewsById=function (req,res,next) {
     console.log(id);
     ReviewDao.findById(id,function (err,reviews) {
         if (!err){
-            console.log(reviews);
             res.json(reviews);
         }
         else{
