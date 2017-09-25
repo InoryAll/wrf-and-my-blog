@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Link } from 'react-router';
 import './css/console.css';
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -26,16 +27,16 @@ class Console extends React.Component {
           <div className="logo" />
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1">
-              <Icon type="pie-chart" />
-              <span>Option 1</span>
+              <Icon type="home" />
+              <span><Link to="/admin/index">主页</Link></span>
             </Menu.Item>
             <Menu.Item key="2">
-              <Icon type="desktop" />
-              <span>Option 2</span>
+              <Icon type="edit" />
+              <span><Link to="/admin/postBlog">发布文章</Link></span>
             </Menu.Item>
             <SubMenu
               key="sub1"
-              title={<span><Icon type="user" /><span>User</span></span>}
+              title={<span><Icon type="user" /><span>测试1</span></span>}
             >
               <Menu.Item key="3">Tom</Menu.Item>
               <Menu.Item key="4">Bill</Menu.Item>
@@ -43,22 +44,18 @@ class Console extends React.Component {
             </SubMenu>
             <SubMenu
               key="sub2"
-              title={<span><Icon type="team" /><span>Team</span></span>}
+              title={<span><Icon type="team" /><span>测试2</span></span>}
             >
               <Menu.Item key="6">Team 1</Menu.Item>
               <Menu.Item key="8">Team 2</Menu.Item>
             </SubMenu>
-            <Menu.Item key="9">
-              <Icon type="file" />
-              <span>File</span>
-            </Menu.Item>
           </Menu>
         </Sider>
         <Layout>
           <Header className="console-header"/>
           <Content className="console-content">
             <div className="console-container">
-              Bill is a cat.
+              {this.props.children}
             </div>
           </Content>
           <Footer className="console-footer">

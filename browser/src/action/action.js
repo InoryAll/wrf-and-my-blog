@@ -185,8 +185,11 @@ export const doLogin=(user)=>{
                   title:'成功',
                   content:`欢迎你${user.username}用户!`
                 });
-                //登陆成功的路由跳转
-               /* browserHistory.push();*/
+               setTimeout(()=>{
+                   modal.destroy();
+                 //登陆成功的路由跳转
+                 /* browserHistory.push();*/
+               },1000);
             }
         }).catch((e)=>{
             console.log(e.message);

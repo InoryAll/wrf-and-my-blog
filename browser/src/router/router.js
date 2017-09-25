@@ -10,6 +10,7 @@ import Detail from "../user/article/Detail";
 import LoginContainer from "../admin/login/Login";
 import Wrapper from "../admin/wrapper/Wrapper";
 import Console from "../admin/common/Console";
+import ConsoleCarousel from "../admin/common/components/ConsoleCarousel";
 
 export const routers=(
     <Router history={browserHistory}>
@@ -25,6 +26,7 @@ export const routers=(
             <Route path="login" components={LoginContainer}/>
         </Route>
         <Route path="/admin/index" components={Console}>
+          <IndexRoute components={ConsoleCarousel}/>
         </Route>
     </Router>
 );
