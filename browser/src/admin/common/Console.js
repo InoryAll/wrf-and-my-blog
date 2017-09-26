@@ -2,8 +2,9 @@
  * 管理员主界面main
  */
 import React from 'react';
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Layout, Menu, Breadcrumb, Icon, Badge, Avatar } from 'antd';
 import { Link } from 'react-router';
+import item from '../static/images/item.jpg';
 import './css/console.css';
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -24,7 +25,11 @@ class Console extends React.Component {
           collapsed={this.state.collapsed}
           onCollapse={this.onCollapse}
         >
-          <div className="logo" />
+          <div className="logo">
+            <Badge dot>
+              <Avatar src={item} size="large"/>
+            </Badge>
+          </div>
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1">
               <Icon type="home" />
@@ -38,21 +43,20 @@ class Console extends React.Component {
               key="sub1"
               title={<span><Icon type="user" /><span>测试1</span></span>}
             >
-              <Menu.Item key="3">Tom</Menu.Item>
-              <Menu.Item key="4">Bill</Menu.Item>
-              <Menu.Item key="5">Alex</Menu.Item>
+              <Menu.Item key="3">1</Menu.Item>
+              <Menu.Item key="4">2</Menu.Item>
+              <Menu.Item key="5">3</Menu.Item>
             </SubMenu>
             <SubMenu
               key="sub2"
               title={<span><Icon type="team" /><span>测试2</span></span>}
             >
-              <Menu.Item key="6">Team 1</Menu.Item>
-              <Menu.Item key="8">Team 2</Menu.Item>
+              <Menu.Item key="6">4</Menu.Item>
+              <Menu.Item key="8">5</Menu.Item>
             </SubMenu>
           </Menu>
         </Sider>
         <Layout>
-          <Header className="console-header"/>
           <Content className="console-content">
             <div className="console-container">
               {this.props.children}
