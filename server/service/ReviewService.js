@@ -20,7 +20,6 @@ exports.addReview=function (req,res,next) {
 exports.getReviewsById=function (req,res,next) {
     console.log('getReviewsById');
     var id=req.body.id;
-    console.log(id);
     ReviewDao.findById(id,function (err,reviews) {
         if (!err){
             res.json(reviews);
