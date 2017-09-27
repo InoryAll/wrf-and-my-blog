@@ -53,7 +53,7 @@ class Review extends React.Component{
             }
             const review={
                 content:toString(values.mention),
-                date:moment().format('l'),
+                date:moment().format('YYYY-MM-DD'),
                 comment:this.props.id
             };
             this.props.fetchAddReview(review);
