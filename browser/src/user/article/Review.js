@@ -89,9 +89,7 @@ class Review extends React.Component{
                             <FormItem
                                 id="control-mention"
                             >
-                                {getFieldDecorator('mention', {
-                                    initialValue: this.state.initValue,
-                                })(
+                                {getFieldDecorator('mention')(
                                     <Mention
                                         suggestions={['wrf', 'trj']}
                                         style={{ height: 60 }}
