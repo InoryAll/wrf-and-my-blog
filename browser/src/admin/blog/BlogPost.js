@@ -2,19 +2,36 @@
  * 博客发表组件 blogpost
  */
 import React from 'react';
-import { Form, Input, Card, Button, Row, Col, Select, DatePicker } from 'antd';
+import { Form, Input, Card, Button, Row, Col, Select, DatePicker, Modal } from 'antd';
 import moment from 'moment';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { browserHistory } from 'react-router';
+import { fetchComment } from "../../action/action";
 import './css/blogpost.css';
 
 const FormItem = Form.Item;
 const Option = Select.Option;
 const { TextArea } = Input;
 class BlogPost extends React.Component{
+  componentWillMount(){
+    if (!this.props.user.username) {
+      Modal.error({
+        title:'失败',
+        content:'请登录！',
+        onOk(){
+          browserHistory.push('/admin/login');
+        }
+      });
+    }
+  }
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
+        this.props.fetchComment({...values,date: moment(values.date).format('YYYY-MM-DD')});
+        this.onReset();
       }
     });
   };
@@ -98,8 +115,9 @@ class BlogPost extends React.Component{
               rules: [{
                 required: true, message: '请选择作者!'
               }],
+              initialValue: this.props.user && this.props.user.username
             })(
-              <Select placeholder="请选择作者">
+              <Select placeholder="请选择作者" disabled>
                 <Option value="trj">trj</Option>
                 <Option value="wrf">wrf</Option>
               </Select>
@@ -124,7 +142,7 @@ class BlogPost extends React.Component{
             label="内容"
             hasFeedback
           >
-            {getFieldDecorator('date', {
+            {getFieldDecorator('content', {
               rules: [{
                required: true, message: '请输入内容!'
               }],
@@ -147,4 +165,16 @@ class BlogPost extends React.Component{
   }
 }
 
-export default Form.create()(BlogPost);
+function mapStateToProps(state) {
+  return {
+    comment:state.comment.comment,
+    user:state.login,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchComment },dispatch);
+}
+
+const BlogPostForm=Form.create()(BlogPost);
+export default connect(mapStateToProps,mapDispatchToProps)(BlogPostForm);

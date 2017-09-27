@@ -43,5 +43,21 @@ exports.getCommentDetail=function (req,res,next) {
     });
 };
 
+// 发布文章
+exports.addComment=function (req,res,next) {
+  console.log('addComment');
+  var comment=req.body;
+  CommentDao.add(comment,function (err,message) {
+    if (!err) {
+      message = {code: '1', message: '发表成功!'};
+    }
+    else{
+      console.log(err.message);
+      message={code:'0',message:'发表失败!'};
+    }
+    return res.json(message);
+  })
+};
+
 
 

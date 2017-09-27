@@ -16,3 +16,15 @@ exports.findById=function (id,callback) {
   Comment.find({_id:id},callback);
 };
 
+exports.add=function (object,callback) {
+  var comment=new Comment({
+    title:object.title,
+    summary:object.summary,
+    author:object.author,
+    date:object.date,
+    content:object.content,
+    review:''
+  });
+  comment.save(callback);
+};
+

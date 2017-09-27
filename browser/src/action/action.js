@@ -53,7 +53,7 @@ export const fetchAllComments=()=>{
     };
 };
 
-//comment detail
+// comment detail
 export const GET_COMMENT_BY_ID='GET_COMMENT_BY_ID';
 export const getCommentById=(comment)=>{
     return {
@@ -152,7 +152,7 @@ export const fetchAddReview=(review)=>{
     };
 };
 
-//user
+// user
 export const LOGIN_USER='LOGIN_USER';
 export const loginUser=(user)=>{
     return {
@@ -187,12 +187,54 @@ export const doLogin=(user)=>{
                 });
                setTimeout(()=>{
                    modal.destroy();
-                 //登陆成功的路由跳转
-                 /* browserHistory.push();*/
+                   browserHistory.push('/admin/index');
                },1000);
             }
         }).catch((e)=>{
             console.log(e.message);
         });
+    };
+};
+
+// comment add
+export const ADD_COMMENT='ADD_COMMENT';
+export const addComment=(comment)=>{
+    return {
+      type:ADD_COMMENT,
+      comment
+    };
+};
+export const fetchComment=(comment)=>{
+    return (dispatch,getState)=>{
+      fetch('http://localhost:8080/comment/postBlog',{
+        method:'POST',
+        headers:{
+          'Content-Type':'application/json'
+        },
+        body:JSON.stringify(comment)
+      }).then((response)=>{
+        if (response.ok){
+          return response.json();
+        }
+      }).then((data)=>{
+        if (data.code==='0'){
+          Modal.error({
+            title:'错误',
+            content:'发表失败，请重试!'
+          });
+        }
+        else{
+          const modal=Modal.success({
+            title:'成功',
+            content:'发表成功!'
+          });
+          setTimeout(()=>{
+            dispatch(addComment(comment));
+            modal.destroy();
+          },1000);
+        }
+      }).catch((e)=>{
+        console.log(e.message);
+      });
     };
 };
