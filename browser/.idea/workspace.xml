@@ -29,8 +29,8 @@
       <file leaf-file-name="Review.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/article/Review.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="75" column="26" lean-forward="true" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
+            <state relative-caret-position="270">
+              <caret line="76" column="66" lean-forward="true" selection-start-line="76" selection-start-column="66" selection-end-line="76" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -212,9 +212,9 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="364" />
-    <option name="y" value="14" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="114" />
+    <option name="y" value="63" />
     <option name="width" value="1692" />
     <option name="height" value="1009" />
   </component>
@@ -452,12 +452,12 @@
       <workItem from="1506326130569" duration="5603000" />
       <workItem from="1506387017239" duration="603000" />
       <workItem from="1506414070710" duration="2288000" />
-      <workItem from="1506481602590" duration="13606000" />
+      <workItem from="1506481602590" duration="14278000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137821000" />
+    <option name="totallyTimeSpent" value="138493000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -469,7 +469,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="364" y="14" width="1692" height="1009" extended-state="0" />
+    <frame x="114" y="63" width="1692" height="1009" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14933495" sideWeight="0.49532712" order="0" side_tool="false" content_ui="combo" />
@@ -853,8 +853,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/article/Review.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="75" column="26" lean-forward="true" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
+        <state relative-caret-position="270">
+          <caret line="76" column="66" lean-forward="true" selection-start-line="76" selection-start-column="66" selection-end-line="76" selection-end-column="66" />
           <folding />
         </state>
       </provider>
