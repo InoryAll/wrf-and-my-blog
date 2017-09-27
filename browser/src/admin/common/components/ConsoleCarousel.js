@@ -13,12 +13,14 @@ class ConsoleCarousel extends React.Component{
       autoplaySpeed:3000
     };
     return (
-      <Carousel vertical {...settings}>
-        <div><h3>你好，这里是管理员主页.</h3></div>
-        <div><h3>管理员只有TRJ&&WRF</h3></div>
-        <div><h3>如果你想申请管理员，请联系TRJ.</h3></div>
-        <div><h3>虽然他不一定理你.</h3></div>
-      </Carousel>
+      <div>
+        <Carousel {...settings}>
+          <div><h3>你好，这里是管理员主页.</h3></div>
+          <div><h3>管理员只有TRJ&&WRF</h3></div>
+          <div><h3>如果你想申请管理员，请联系TRJ.</h3></div>
+          <div><h3>虽然他不一定理你.</h3></div>
+        </Carousel>
+      </div>
     );
   }
 }

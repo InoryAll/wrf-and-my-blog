@@ -12,6 +12,7 @@
 }
 .console-content{
     margin: 0 16px;
+    padding: 40px 0;
 }
 .console-container{
     padding: 24px;
@@ -26,4 +27,8 @@
 }
 .item{
     width: 60%;
+}
+.menu-item{
+    display: inline-block;
+    width: calc( 100% - 22px );
 }

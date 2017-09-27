@@ -1,6 +1,9 @@
 /**
  * 管理员走马灯样式
  */
+.ant-carousel{
+  /*  margin-top: 50px;*/
+}
 .ant-carousel .slick-slide {
     text-align: center;
     height: 800px;

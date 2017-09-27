@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { Layout, Menu, Breadcrumb, Icon, Badge, Avatar } from 'antd';
-import { Link } from 'react-router';
+import { Link,IndexLink } from 'react-router';
 import item from '../static/images/item.jpg';
 import './css/console.css';
 
@@ -33,11 +33,11 @@ class Console extends React.Component {
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1">
               <Icon type="home" />
-              <span><Link to="/admin/index">主页</Link></span>
+              <span><Link to="/admin/index" className="menu-item">主页</Link></span>
             </Menu.Item>
             <Menu.Item key="2">
               <Icon type="edit" />
-              <span><Link to="/admin/postBlog">发布文章</Link></span>
+              <span><Link to="/admin/postBlog" className="menu-item">发布文章</Link></span>
             </Menu.Item>
             <SubMenu
               key="sub1"
@@ -58,9 +58,7 @@ class Console extends React.Component {
         </Sider>
         <Layout>
           <Content className="console-content">
-            <div className="console-container">
               {this.props.children}
-            </div>
           </Content>
           <Footer className="console-footer">
             Trj and Wrf ©2017 Created by Trj
