@@ -14,7 +14,7 @@ export const getSider=(siders) => {
 };
 export const fetchSiders=() => {
     return (dispatch,getState) => {
-        fetch('http://localhost:8080/comment/getSiders',{
+        fetch('http://118.89.236.17:8080/comment/getSiders',{
             method:'POST'
         }).then((response)=>{
             if (response.ok){
@@ -39,7 +39,7 @@ export const getAllComments=(comments) => {
 };
 export const fetchAllComments=()=>{
     return (dispatch,getState)=>{
-        fetch('http://localhost:8080/comment/getAllComment',{
+        fetch('http://118.89.236.17:8080/comment/getAllComment',{
             method:'POST'
         }).then((response)=>{
             if (response.ok){
@@ -63,7 +63,7 @@ export const getCommentById=(comment)=>{
 };
 export const fetchCommentById=(id)=>{
     return (dispatch,getState)=>{
-        fetch('http://localhost:8080/comment/getCommentDetail',{
+        fetch('http://118.89.236.17:8080/comment/getCommentDetail',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -91,7 +91,7 @@ export const getReviewsById=(reviews)=>{
 };
 export const fetchReviewsById=(id)=>{
     return (dispatch,getState)=>{
-        fetch('http://localhost:8080/review/getReviewsById',{
+        fetch('http://118.89.236.17:8080/review/getReviewsById',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -118,7 +118,7 @@ export const addReview=(review)=>{
 };
 export const fetchAddReview=(review)=>{
     return (dispatch,getState)=>{
-        fetch('http://localhost:8080/review/addReview',{
+        fetch('http://118.89.236.17:8080/review/addReview',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -162,7 +162,7 @@ export const loginUser=(user)=>{
 };
 export const doLogin=(user)=>{
     return (dispatch,getState)=>{
-        fetch('http://localhost:8080/user/login',{
+        fetch('http://118.89.236.17:8080/user/login',{
             method:'POST',
             headers:{
               'Content-Type':'application/json'
@@ -206,7 +206,7 @@ export const addComment=(comment)=>{
 };
 export const fetchComment=(comment)=>{
     return (dispatch,getState)=>{
-      fetch('http://localhost:8080/comment/postBlog',{
+      fetch('http://118.89.236.17:8080/comment/postBlog',{
         method:'POST',
         headers:{
           'Content-Type':'application/json'

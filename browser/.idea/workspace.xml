@@ -12,15 +12,53 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="BlogPost.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/admin/blog/BlogPost.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
+            <state relative-caret-position="4235">
               <caret line="123" column="14" lean-forward="false" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
               <folding>
-                <element signature="e#27#53#0" expanded="true" />
+                <marker date="1506511169233" expanded="false" signature="0:26" ph="/** 博客发表组件 blogpost ...*/" />
+                <marker date="1506511169233" expanded="true" signature="34:380" ph="..." />
+                <marker date="1506511169233" expanded="true" signature="506:1005" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="530:725" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="567:721" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="587:713" ph="{&quot;title&quot;: '失败'...}" />
+                <marker date="1506511169233" expanded="true" signature="647:705" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="1067:1136" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="1148:4508" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="1228:1394" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="1246:1306" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="1326:1387" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="1428:1609" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="1448:1514" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="1536:1602" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="1645:1810" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="1663:1723" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="1743:1803" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="2082:2288" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="2105:2242" ph="[...]" />
+                <marker date="1506511169233" expanded="true" signature="2106:2173" ph="{&quot;message&quot;: '请输入标题'...}" />
+                <marker date="1506511169233" expanded="true" signature="2174:2241" ph="{&quot;message&quot;: '标题长度不能大于20个字符!'...}" />
+                <marker date="1506511169233" expanded="true" signature="2524:2730" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="2547:2684" ph="[...]" />
+                <marker date="1506511169233" expanded="true" signature="2548:2615" ph="{&quot;message&quot;: '请输入摘要!'...}" />
+                <marker date="1506511169233" expanded="true" signature="2616:2683" ph="{&quot;message&quot;: '摘要长度不能大于50个字符!'...}" />
+                <marker date="1506511169233" expanded="true" signature="2972:3151" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="2995:3064" ph="[...]" />
+                <marker date="1506511169233" expanded="true" signature="2996:3063" ph="{&quot;message&quot;: '请选择作者!'...}" />
+                <marker date="1506511169233" expanded="true" signature="3522:3705" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="3545:3630" ph="[...]" />
+                <marker date="1506511169233" expanded="true" signature="3546:3629" ph="{&quot;type&quot;: 'object'...}" />
+                <marker date="1506511169233" expanded="true" signature="3936:4073" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="3959:4027" ph="[...]" />
+                <marker date="1506511169233" expanded="true" signature="3960:4026" ph="{&quot;message&quot;: '请输入内容!'...}" />
+                <marker date="1506511169233" expanded="true" signature="4544:4620" ph="{...}" />
+                <marker date="1506511169233" expanded="true" signature="4555:4617" ph="{&quot;comment&quot;: state.comment.comment...}" />
+                <marker date="1506511169233" expanded="true" signature="4660:4719" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -29,8 +67,8 @@
       <file leaf-file-name="Review.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/user/article/Review.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="76" column="66" lean-forward="true" selection-start-line="76" selection-start-column="66" selection-end-line="76" selection-end-column="66" />
+            <state relative-caret-position="420">
+              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -39,7 +77,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="315">
               <caret line="9" column="59" lean-forward="false" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
               <folding />
             </state>
@@ -49,7 +87,7 @@
       <file leaf-file-name="sider.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reducer/sider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="35">
               <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
               <folding />
             </state>
@@ -59,7 +97,7 @@
       <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reducer/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="175">
               <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
               <folding />
             </state>
@@ -69,7 +107,7 @@
       <file leaf-file-name="ConsoleCarousel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/admin/common/components/ConsoleCarousel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="175">
               <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -82,7 +120,7 @@
       <file leaf-file-name="blogpost.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/admin/blog/css/blogpost.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="245">
               <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
               <folding />
             </state>
@@ -92,7 +130,7 @@
       <file leaf-file-name="Main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/common/Main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="840">
               <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
               <folding />
             </state>
@@ -102,7 +140,7 @@
       <file leaf-file-name="comment.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/reducer/comment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="490">
               <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
               <folding />
             </state>
@@ -112,7 +150,7 @@
       <file leaf-file-name="Comment.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/user/common/Comment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="70">
               <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
@@ -212,9 +250,9 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="114" />
-    <option name="y" value="63" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="55" />
+    <option name="y" value="159" />
     <option name="width" value="1692" />
     <option name="height" value="1009" />
   </component>
@@ -249,126 +287,36 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
-          <expand>
-            <path>
-              <item name="browser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="browser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="browser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="browser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="action" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="browser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="browser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="browser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="browser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="browser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="browser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="browser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="browser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="browser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="browser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="router" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="browser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="browser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="article" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="browser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="browser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="browser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="browser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="browser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="browser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -377,7 +325,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="last_opened_file_path" value="E:/github/react/studentmanagement-front" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="C:\Users\tianrenjie\AppData\Roaming\npm\node_modules\eslint" />
@@ -408,7 +356,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="start" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="start" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -416,7 +364,71 @@
       </scripts>
       <node-interpreter value="project" />
       <envs />
+      <method />
     </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="npm.start" />
+    </list>
     <recent_temporary>
       <list size="1">
         <item index="0" class="java.lang.String" itemvalue="npm.start" />
@@ -453,11 +465,12 @@
       <workItem from="1506387017239" duration="603000" />
       <workItem from="1506414070710" duration="2288000" />
       <workItem from="1506481602590" duration="14278000" />
+      <workItem from="1506519080654" duration="69000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138493000" />
+    <option name="totallyTimeSpent" value="138562000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -469,16 +482,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="114" y="63" width="1692" height="1009" extended-state="1" />
+    <frame x="55" y="159" width="1692" height="1009" extended-state="1" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14933495" sideWeight="0.49532712" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14884569" sideWeight="0.49532712" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951945" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21624714" sideWeight="0.5205562" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20758693" sideWeight="0.5046729" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21624714" sideWeight="0.47944376" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21563981" sideWeight="0.47944376" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -491,7 +504,7 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -590,16 +603,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
@@ -693,7 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -717,7 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -725,7 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -733,9 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-          <folding>
-            <element signature="e#22#48#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -743,9 +741,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-91">
           <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-          <folding>
-            <element signature="e#25#51#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -753,7 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -761,7 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2485">
           <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -775,7 +768,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reducer/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="175">
           <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding />
         </state>
@@ -783,7 +776,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/blog/css/blogpost.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="245">
           <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding />
         </state>
@@ -791,7 +784,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reducer/sider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="35">
           <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
           <folding />
         </state>
@@ -799,7 +792,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/common/Main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="840">
           <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
           <folding />
         </state>
@@ -807,7 +800,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/common/components/ConsoleCarousel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="175">
           <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -818,7 +811,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reducer/comment.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="490">
           <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding />
         </state>
@@ -826,7 +819,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/common/Comment.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="70">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
@@ -834,7 +827,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="315">
           <caret line="9" column="59" lean-forward="false" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
           <folding />
         </state>
@@ -842,18 +835,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/admin/blog/BlogPost.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
+        <state relative-caret-position="4235">
           <caret line="123" column="14" lean-forward="false" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
           <folding>
-            <element signature="e#27#53#0" expanded="true" />
+            <marker date="1506511169233" expanded="false" signature="0:26" ph="/** 博客发表组件 blogpost ...*/" />
+            <marker date="1506511169233" expanded="true" signature="34:380" ph="..." />
+            <marker date="1506511169233" expanded="true" signature="506:1005" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="530:725" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="567:721" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="587:713" ph="{&quot;title&quot;: '失败'...}" />
+            <marker date="1506511169233" expanded="true" signature="647:705" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="1067:1136" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="1148:4508" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="1228:1394" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="1246:1306" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="1326:1387" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="1428:1609" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="1448:1514" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="1536:1602" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="1645:1810" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="1663:1723" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="1743:1803" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="2082:2288" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="2105:2242" ph="[...]" />
+            <marker date="1506511169233" expanded="true" signature="2106:2173" ph="{&quot;message&quot;: '请输入标题'...}" />
+            <marker date="1506511169233" expanded="true" signature="2174:2241" ph="{&quot;message&quot;: '标题长度不能大于20个字符!'...}" />
+            <marker date="1506511169233" expanded="true" signature="2524:2730" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="2547:2684" ph="[...]" />
+            <marker date="1506511169233" expanded="true" signature="2548:2615" ph="{&quot;message&quot;: '请输入摘要!'...}" />
+            <marker date="1506511169233" expanded="true" signature="2616:2683" ph="{&quot;message&quot;: '摘要长度不能大于50个字符!'...}" />
+            <marker date="1506511169233" expanded="true" signature="2972:3151" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="2995:3064" ph="[...]" />
+            <marker date="1506511169233" expanded="true" signature="2996:3063" ph="{&quot;message&quot;: '请选择作者!'...}" />
+            <marker date="1506511169233" expanded="true" signature="3522:3705" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="3545:3630" ph="[...]" />
+            <marker date="1506511169233" expanded="true" signature="3546:3629" ph="{&quot;type&quot;: 'object'...}" />
+            <marker date="1506511169233" expanded="true" signature="3936:4073" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="3959:4027" ph="[...]" />
+            <marker date="1506511169233" expanded="true" signature="3960:4026" ph="{&quot;message&quot;: '请输入内容!'...}" />
+            <marker date="1506511169233" expanded="true" signature="4544:4620" ph="{...}" />
+            <marker date="1506511169233" expanded="true" signature="4555:4617" ph="{&quot;comment&quot;: state.comment.comment...}" />
+            <marker date="1506511169233" expanded="true" signature="4660:4719" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/article/Review.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="76" column="66" lean-forward="true" selection-start-line="76" selection-start-column="66" selection-end-line="76" selection-end-column="66" />
+        <state relative-caret-position="420">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding />
         </state>
       </provider>
