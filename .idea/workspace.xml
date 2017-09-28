@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dc881278-0832-4a2d-8787-2a6b7e355765" name="Default" comment="addReview solved.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/browser/src/action/action.js" afterPath="$PROJECT_DIR$/browser/src/action/action.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/browser/src/reducer/review.js" afterPath="$PROJECT_DIR$/browser/src/reducer/review.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/browser/src/user/article/Review.js" afterPath="$PROJECT_DIR$/browser/src/user/article/Review.js" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="CommentService.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/service/CommentService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1506511178038" expanded="true" signature="0:37" ph="/** 文章列表service commentservice ...*/" />
+                <marker date="1506511178038" expanded="true" signature="144:361" ph="{...}" />
+                <marker date="1506511178038" expanded="true" signature="228:357" ph="{...}" />
+                <marker date="1506511178038" expanded="true" signature="246:289" ph="{...}" />
+                <marker date="1506511178038" expanded="true" signature="302:351" ph="{...}" />
+                <marker date="1506511178038" expanded="true" signature="417:633" ph="{...}" />
+                <marker date="1506511178038" expanded="true" signature="500:629" ph="{...}" />
+                <marker date="1506511178038" expanded="true" signature="518:561" ph="{...}" />
+                <marker date="1506511178038" expanded="true" signature="574:623" ph="{...}" />
+                <marker date="1506511178038" expanded="true" signature="697:943" ph="{...}" />
+                <marker date="1506511178038" expanded="true" signature="810:939" ph="{...}" />
+                <marker date="1506511178038" expanded="true" signature="829:871" ph="{...}" />
+                <marker date="1506511178038" expanded="true" signature="884:933" ph="{...}" />
+                <marker date="1506511178038" expanded="true" signature="997:1297" ph="{...}" />
+                <marker date="1506511178038" expanded="true" signature="1100:1294" ph="{...}" />
+                <marker date="1506511178038" expanded="true" signature="1116:1170" ph="{...}" />
+                <marker date="1506511178038" expanded="true" signature="1179:1260" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1506511178037" expanded="true" signature="0:15" ph="/** 控制路由 ...*/" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="action.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/browser/src/action/action.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+              <folding>
+                <marker date="1506511413664" expanded="true" signature="0:17" ph="/** action ...*/" />
+                <marker date="1506511413664" expanded="false" signature="25:90" ph="..." />
+                <marker date="1506511413664" expanded="true" signature="176:238" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="189:235" ph="{&quot;type&quot;: GET_SIDER...}" />
+                <marker date="1506511413664" expanded="true" signature="271:655" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="307:652" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="369:406" ph="{&quot;method&quot;: 'POST'...}" />
+                <marker date="1506511413664" expanded="true" signature="425:451" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="455:510" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="535:566" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="597:618" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="767:838" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="780:835" ph="{&quot;type&quot;: GET_ALL_COMMENTS...}" />
+                <marker date="1506511413664" expanded="true" signature="874:1266" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="908:1263" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="974:1011" ph="{&quot;method&quot;: 'POST'...}" />
+                <marker date="1506511413664" expanded="true" signature="1030:1056" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="1060:1115" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="1140:1177" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="1208:1229" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="1378:1449" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="1391:1446" ph="{&quot;type&quot;: GET_COMMENT_BY_ID...}" />
+                <marker date="1506511413664" expanded="true" signature="1487:2011" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="1521:2008" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="1590:1756" ph="{&quot;method&quot;: 'POST'...}" />
+                <marker date="1506511413664" expanded="true" signature="1639:1704" ph="{&quot;Content-Type&quot;: 'application/json'...}" />
+                <marker date="1506511413664" expanded="true" signature="1775:1801" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="1805:1860" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="1885:1922" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="1953:1974" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="2116:2187" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="2129:2184" ph="{&quot;type&quot;: GET_REVIEWS_BY_ID...}" />
+                <marker date="1506511413664" expanded="true" signature="2225:2746" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="2259:2743" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="2325:2491" ph="{&quot;method&quot;: 'POST'...}" />
+                <marker date="1506511413664" expanded="true" signature="2374:2439" ph="{&quot;Content-Type&quot;: 'application/json'...}" />
+                <marker date="1506511413664" expanded="true" signature="2510:2536" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="2540:2595" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="2620:2657" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="2688:2709" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="2820:2883" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="2833:2880" ph="{&quot;type&quot;: ADD_REVIEW...}" />
+                <marker date="1506511413664" expanded="true" signature="2923:3924" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="2957:3921" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="3018:3183" ph="{&quot;method&quot;: 'POST'...}" />
+                <marker date="1506511413664" expanded="true" signature="3067:3132" ph="{&quot;Content-Type&quot;: 'application/json'...}" />
+                <marker date="1506511413664" expanded="true" signature="3202:3228" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="3232:3287" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="3312:3334" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="3346:3484" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="3376:3468" ph="{&quot;title&quot;: '失败'...}" />
+                <marker date="1506511413664" expanded="true" signature="3501:3843" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="3545:3637" ph="{&quot;title&quot;: '成功'...}" />
+                <marker date="1506511413664" expanded="true" signature="3671:3698" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="3866:3887" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="4004:4065" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="4017:4062" ph="{&quot;type&quot;: LOGIN_USER...}" />
+                <marker date="1506511413664" expanded="true" signature="4096:5095" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="4130:5092" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="4185:4346" ph="{&quot;method&quot;: 'POST'...}" />
+                <marker date="1506511413664" expanded="true" signature="4234:4297" ph="{&quot;Content-Type&quot;: 'application/json'...}" />
+                <marker date="1506511413664" expanded="true" signature="4365:4391" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="4395:4450" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="4475:4497" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="4509:4646" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="4539:4630" ph="{&quot;title&quot;: '错误'...}" />
+                <marker date="1506511413664" expanded="true" signature="4663:5014" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="4750:4850" ph="{&quot;title&quot;: '成功'...}" />
+                <marker date="1506511413664" expanded="true" signature="4883:4909" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="5037:5058" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="5188:5249" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="5201:5246" ph="{&quot;type&quot;: ADD_COMMENT...}" />
+                <marker date="1506511413664" expanded="true" signature="5288:6090" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="5322:6087" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="5381:5523" ph="{&quot;method&quot;: 'POST'...}" />
+                <marker date="1506511413664" expanded="true" signature="5422:5477" ph="{&quot;Content-Type&quot;: 'application/json'...}" />
+                <marker date="1506511413664" expanded="true" signature="5542:5564" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="5568:5613" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="5636:5654" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="5666:5771" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="5690:5759" ph="{&quot;title&quot;: '错误'...}" />
+                <marker date="1506511413664" expanded="true" signature="5784:6017" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="5822:5887" ph="{&quot;title&quot;: '成功'...}" />
+                <marker date="1506511413664" expanded="true" signature="5915:5948" ph="{...}" />
+                <marker date="1506511413664" expanded="true" signature="6038:6055" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="review.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/browser/src/reducer/review.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+              <folding>
+                <marker date="1506518347218" expanded="true" signature="0:25" ph="/** review reducer ...*/" />
+                <marker date="1506518347218" expanded="true" signature="139:406" ph="{...}" />
+                <marker date="1506518347218" expanded="true" signature="165:354" ph="{...}" />
+                <marker date="1506518347218" expanded="true" signature="198:267" ph="..." />
+                <marker date="1506518347218" expanded="true" signature="292:353" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Review.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/browser/src/user/article/Review.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1435">
+              <caret line="51" column="23" lean-forward="false" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+              <folding>
+                <marker date="1506517744100" expanded="true" signature="0:24" ph="/** 用户评论组件 review ...*/" />
+                <marker date="1506517744100" expanded="false" signature="32:380" ph="..." />
+                <marker date="1506517744100" expanded="true" signature="506:1143" ph="{...}" />
+                <marker date="1506517744100" expanded="true" signature="530:639" ph="{...}" />
+                <marker date="1506517744100" expanded="true" signature="575:632" ph="{...}" />
+                <marker date="1506517744100" expanded="true" signature="669:726" ph="{...}" />
+                <marker date="1506517744100" expanded="true" signature="772:916" ph="{...}" />
+                <marker date="1506517744100" expanded="true" signature="846:910" ph="{...}" />
+                <marker date="1506517744100" expanded="true" signature="968:1040" ph="{...}" />
+                <marker date="1506517744100" expanded="true" signature="1172:1745" ph="{...}" />
+                <marker date="1506517744100" expanded="true" signature="1261:1557" ph="{...}" />
+                <marker date="1506517744100" expanded="true" signature="1287:1376" ph="{...}" />
+                <marker date="1506517744100" expanded="true" signature="1402:1557" ph="{...}" />
+                <marker date="1506517744100" expanded="true" signature="1760:3875" ph="{...}" />
+                <marker date="1506517744100" expanded="true" signature="1958:2354" ph="{...}" />
+                <marker date="1506517744100" expanded="true" signature="3911:4007" ph="{...}" />
+                <marker date="1506517744100" expanded="true" signature="3924:4004" ph="{&quot;reviews&quot;: state.review.reviews...}" />
+                <marker date="1506517744100" expanded="true" signature="4047:4129" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>http://localhost:8080</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>http://118.89.236.17:8080</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/browser/src/action/action.js" />
+        <option value="$PROJECT_DIR$/browser/src/user/article/Review.js" />
+        <option value="$PROJECT_DIR$/browser/src/reducer/review.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/browser/node_modules" />
+    <handled-path value="$PROJECT_DIR$/server/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1098" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wrf-and-my-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wrf-and-my-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wrf-and-my-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wrf-and-my-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc881278-0832-4a2d-8787-2a6b7e355765" name="Default" comment="" />
+      <created>1506511307241</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1506511307241</updated>
+      <workItem from="1506511308550" duration="1504000" />
+      <workItem from="1506518652531" duration="441000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1945000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21670191" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="addReview solved." />
+    <option name="LAST_COMMIT_MESSAGE" value="addReview solved." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/server/service/CommentService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506511178038" expanded="true" signature="0:37" ph="/** 文章列表service commentservice ...*/" />
+            <marker date="1506511178038" expanded="true" signature="144:361" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="228:357" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="246:289" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="302:351" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="417:633" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="500:629" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="518:561" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="574:623" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="697:943" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="810:939" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="829:871" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="884:933" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="997:1297" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="1100:1294" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="1116:1170" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="1179:1260" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506511178037" expanded="true" signature="0:15" ph="/** 控制路由 ...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browser/src/action/action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+          <folding>
+            <marker date="1506511413664" expanded="true" signature="0:17" ph="/** action ...*/" />
+            <marker date="1506511413664" expanded="false" signature="25:90" ph="..." />
+            <marker date="1506511413664" expanded="true" signature="176:238" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="189:235" ph="{&quot;type&quot;: GET_SIDER...}" />
+            <marker date="1506511413664" expanded="true" signature="271:655" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="307:652" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="369:406" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1506511413664" expanded="true" signature="425:451" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="455:510" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="535:566" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="597:618" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="767:838" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="780:835" ph="{&quot;type&quot;: GET_ALL_COMMENTS...}" />
+            <marker date="1506511413664" expanded="true" signature="874:1266" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="908:1263" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="974:1011" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1506511413664" expanded="true" signature="1030:1056" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1060:1115" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1140:1177" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1208:1229" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1378:1449" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1391:1446" ph="{&quot;type&quot;: GET_COMMENT_BY_ID...}" />
+            <marker date="1506511413664" expanded="true" signature="1487:2011" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1521:2008" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1590:1756" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1506511413664" expanded="true" signature="1639:1704" ph="{&quot;Content-Type&quot;: 'application/json'...}" />
+            <marker date="1506511413664" expanded="true" signature="1775:1801" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1805:1860" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1885:1922" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1953:1974" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2116:2187" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2129:2184" ph="{&quot;type&quot;: GET_REVIEWS_BY_ID...}" />
+            <marker date="1506511413664" expanded="true" signature="2225:2746" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2259:2743" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2325:2491" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1506511413664" expanded="true" signature="2374:2439" ph="{&quot;Content-Type&quot;: 'application/json'...}" />
+            <marker date="1506511413664" expanded="true" signature="2510:2536" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2540:2595" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2620:2657" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2688:2709" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2820:2883" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2833:2880" ph="{&quot;type&quot;: ADD_REVIEW...}" />
+            <marker date="1506511413664" expanded="true" signature="2923:3924" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2957:3921" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="3018:3183" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1506511413664" expanded="true" signature="3067:3132" ph="{&quot;Content-Type&quot;: 'application/json'...}" />
+            <marker date="1506511413664" expanded="true" signature="3202:3228" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="3232:3287" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="3312:3334" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="3346:3484" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="3376:3468" ph="{&quot;title&quot;: '失败'...}" />
+            <marker date="1506511413664" expanded="true" signature="3501:3843" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="3545:3637" ph="{&quot;title&quot;: '成功'...}" />
+            <marker date="1506511413664" expanded="true" signature="3671:3698" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="3866:3887" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4004:4065" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4017:4062" ph="{&quot;type&quot;: LOGIN_USER...}" />
+            <marker date="1506511413664" expanded="true" signature="4096:5095" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4130:5092" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4185:4346" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1506511413664" expanded="true" signature="4234:4297" ph="{&quot;Content-Type&quot;: 'application/json'...}" />
+            <marker date="1506511413664" expanded="true" signature="4365:4391" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4395:4450" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4475:4497" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4509:4646" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4539:4630" ph="{&quot;title&quot;: '错误'...}" />
+            <marker date="1506511413664" expanded="true" signature="4663:5014" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4750:4850" ph="{&quot;title&quot;: '成功'...}" />
+            <marker date="1506511413664" expanded="true" signature="4883:4909" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5037:5058" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5188:5249" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5201:5246" ph="{&quot;type&quot;: ADD_COMMENT...}" />
+            <marker date="1506511413664" expanded="true" signature="5288:6090" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5322:6087" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5381:5523" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1506511413664" expanded="true" signature="5422:5477" ph="{&quot;Content-Type&quot;: 'application/json'...}" />
+            <marker date="1506511413664" expanded="true" signature="5542:5564" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5568:5613" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5636:5654" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5666:5771" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5690:5759" ph="{&quot;title&quot;: '错误'...}" />
+            <marker date="1506511413664" expanded="true" signature="5784:6017" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5822:5887" ph="{&quot;title&quot;: '成功'...}" />
+            <marker date="1506511413664" expanded="true" signature="5915:5948" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="6038:6055" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browser/src/user/article/Review.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1435">
+          <caret line="51" column="23" lean-forward="true" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+          <folding>
+            <marker date="1506517744100" expanded="true" signature="0:24" ph="/** 用户评论组件 review ...*/" />
+            <marker date="1506517744100" expanded="false" signature="32:380" ph="..." />
+            <marker date="1506517744100" expanded="true" signature="506:1143" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="530:639" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="575:632" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="669:726" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="772:916" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="846:910" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="968:1040" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="1172:1745" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="1261:1557" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="1287:1376" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="1402:1557" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="1760:3875" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="1958:2354" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="3911:4007" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="3924:4004" ph="{&quot;reviews&quot;: state.review.reviews...}" />
+            <marker date="1506517744100" expanded="true" signature="4047:4129" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browser/src/reducer/review.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding>
+            <marker date="1506518347218" expanded="true" signature="0:25" ph="/** review reducer ...*/" />
+            <marker date="1506518347218" expanded="true" signature="139:406" ph="{...}" />
+            <marker date="1506518347218" expanded="true" signature="165:354" ph="{...}" />
+            <marker date="1506518347218" expanded="true" signature="198:267" ph="..." />
+            <marker date="1506518347218" expanded="true" signature="292:353" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/service/CommentService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506511178038" expanded="true" signature="0:37" ph="/** 文章列表service commentservice ...*/" />
+            <marker date="1506511178038" expanded="true" signature="144:361" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="228:357" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="246:289" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="302:351" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="417:633" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="500:629" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="518:561" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="574:623" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="697:943" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="810:939" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="829:871" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="884:933" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="997:1297" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="1100:1294" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="1116:1170" ph="{...}" />
+            <marker date="1506511178038" expanded="true" signature="1179:1260" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506511178037" expanded="true" signature="0:15" ph="/** 控制路由 ...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browser/src/user/article/Review.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1435">
+          <caret line="51" column="23" lean-forward="false" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+          <folding>
+            <marker date="1506517744100" expanded="true" signature="0:24" ph="/** 用户评论组件 review ...*/" />
+            <marker date="1506517744100" expanded="false" signature="32:380" ph="..." />
+            <marker date="1506517744100" expanded="true" signature="506:1143" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="530:639" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="575:632" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="669:726" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="772:916" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="846:910" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="968:1040" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="1172:1745" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="1261:1557" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="1287:1376" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="1402:1557" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="1760:3875" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="1958:2354" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="3911:4007" ph="{...}" />
+            <marker date="1506517744100" expanded="true" signature="3924:4004" ph="{&quot;reviews&quot;: state.review.reviews...}" />
+            <marker date="1506517744100" expanded="true" signature="4047:4129" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browser/src/reducer/review.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding>
+            <marker date="1506518347218" expanded="true" signature="0:25" ph="/** review reducer ...*/" />
+            <marker date="1506518347218" expanded="true" signature="139:406" ph="{...}" />
+            <marker date="1506518347218" expanded="true" signature="165:354" ph="{...}" />
+            <marker date="1506518347218" expanded="true" signature="198:267" ph="..." />
+            <marker date="1506518347218" expanded="true" signature="292:353" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/browser/src/action/action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+          <folding>
+            <marker date="1506511413664" expanded="true" signature="0:17" ph="/** action ...*/" />
+            <marker date="1506511413664" expanded="false" signature="25:90" ph="..." />
+            <marker date="1506511413664" expanded="true" signature="176:238" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="189:235" ph="{&quot;type&quot;: GET_SIDER...}" />
+            <marker date="1506511413664" expanded="true" signature="271:655" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="307:652" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="369:406" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1506511413664" expanded="true" signature="425:451" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="455:510" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="535:566" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="597:618" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="767:838" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="780:835" ph="{&quot;type&quot;: GET_ALL_COMMENTS...}" />
+            <marker date="1506511413664" expanded="true" signature="874:1266" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="908:1263" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="974:1011" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1506511413664" expanded="true" signature="1030:1056" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1060:1115" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1140:1177" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1208:1229" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1378:1449" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1391:1446" ph="{&quot;type&quot;: GET_COMMENT_BY_ID...}" />
+            <marker date="1506511413664" expanded="true" signature="1487:2011" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1521:2008" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1590:1756" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1506511413664" expanded="true" signature="1639:1704" ph="{&quot;Content-Type&quot;: 'application/json'...}" />
+            <marker date="1506511413664" expanded="true" signature="1775:1801" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1805:1860" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1885:1922" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="1953:1974" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2116:2187" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2129:2184" ph="{&quot;type&quot;: GET_REVIEWS_BY_ID...}" />
+            <marker date="1506511413664" expanded="true" signature="2225:2746" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2259:2743" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2325:2491" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1506511413664" expanded="true" signature="2374:2439" ph="{&quot;Content-Type&quot;: 'application/json'...}" />
+            <marker date="1506511413664" expanded="true" signature="2510:2536" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2540:2595" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2620:2657" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2688:2709" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2820:2883" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2833:2880" ph="{&quot;type&quot;: ADD_REVIEW...}" />
+            <marker date="1506511413664" expanded="true" signature="2923:3924" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="2957:3921" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="3018:3183" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1506511413664" expanded="true" signature="3067:3132" ph="{&quot;Content-Type&quot;: 'application/json'...}" />
+            <marker date="1506511413664" expanded="true" signature="3202:3228" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="3232:3287" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="3312:3334" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="3346:3484" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="3376:3468" ph="{&quot;title&quot;: '失败'...}" />
+            <marker date="1506511413664" expanded="true" signature="3501:3843" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="3545:3637" ph="{&quot;title&quot;: '成功'...}" />
+            <marker date="1506511413664" expanded="true" signature="3671:3698" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="3866:3887" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4004:4065" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4017:4062" ph="{&quot;type&quot;: LOGIN_USER...}" />
+            <marker date="1506511413664" expanded="true" signature="4096:5095" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4130:5092" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4185:4346" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1506511413664" expanded="true" signature="4234:4297" ph="{&quot;Content-Type&quot;: 'application/json'...}" />
+            <marker date="1506511413664" expanded="true" signature="4365:4391" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4395:4450" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4475:4497" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4509:4646" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4539:4630" ph="{&quot;title&quot;: '错误'...}" />
+            <marker date="1506511413664" expanded="true" signature="4663:5014" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="4750:4850" ph="{&quot;title&quot;: '成功'...}" />
+            <marker date="1506511413664" expanded="true" signature="4883:4909" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5037:5058" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5188:5249" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5201:5246" ph="{&quot;type&quot;: ADD_COMMENT...}" />
+            <marker date="1506511413664" expanded="true" signature="5288:6090" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5322:6087" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5381:5523" ph="{&quot;method&quot;: 'POST'...}" />
+            <marker date="1506511413664" expanded="true" signature="5422:5477" ph="{&quot;Content-Type&quot;: 'application/json'...}" />
+            <marker date="1506511413664" expanded="true" signature="5542:5564" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5568:5613" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5636:5654" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5666:5771" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5690:5759" ph="{&quot;title&quot;: '错误'...}" />
+            <marker date="1506511413664" expanded="true" signature="5784:6017" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="5822:5887" ph="{&quot;title&quot;: '成功'...}" />
+            <marker date="1506511413664" expanded="true" signature="5915:5948" ph="{...}" />
+            <marker date="1506511413664" expanded="true" signature="6038:6055" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
