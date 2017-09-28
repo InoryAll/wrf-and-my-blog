@@ -12,6 +12,7 @@ import Wrapper from "../admin/wrapper/Wrapper";
 import Console from "../admin/common/Console";
 import ConsoleCarousel from "../admin/common/components/ConsoleCarousel";
 import BlogPost from "../admin/blog/BlogPost";
+import Error from "../404/Error";
 
 export const routers=(
     <Router history={browserHistory}>
@@ -30,5 +31,6 @@ export const routers=(
         <IndexRoute components={ConsoleCarousel}/>
         <Route path="/admin/postBlog"  components={BlogPost}/>
       </Route>
+      <Route path="*" components={Error}/>
     </Router>
 );

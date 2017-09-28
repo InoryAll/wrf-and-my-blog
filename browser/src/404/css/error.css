@@ -1,0 +1,29 @@
+/**
+ * 路由错误404样式 error
+ */
+html{
+    background: url("../../static/images/unusualBg.jpg") no-repeat;
+    background-size: cover;
+}
+.error-container{
+    padding: 420px 0;
+}
+.error-circle{
+    position: relative;
+    width: 450px;
+    margin: 0 auto;
+    left: 70px;
+}
+.error-title{
+    text-align: center;
+    color: #b3acf2;
+    font-size: 60px;
+}
+.error-p{
+    text-align: center;
+}
+.error-link{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+}
