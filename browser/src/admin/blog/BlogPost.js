@@ -15,7 +15,8 @@ const Option = Select.Option;
 const { TextArea } = Input;
 class BlogPost extends React.Component{
   componentWillMount(){
-    if (!this.props.user.username) {
+    // 页面的权限控制，暂时开放，由于安卓端的兼容性问题。
+    /*if (!this.props.user.username) {
       Modal.error({
         title:'失败',
         content:'请登录！',
@@ -23,7 +24,7 @@ class BlogPost extends React.Component{
           browserHistory.push('/admin/login');
         }
       });
-    }
+    }*/
   }
   handleSubmit = (e) => {
     e.preventDefault();
@@ -115,7 +116,7 @@ class BlogPost extends React.Component{
               rules: [{
                 required: true, message: '请选择作者!'
               }],
-              initialValue: this.props.user && this.props.user.username
+              initialValue: this.props.user.username ? this.props.user.username : 'wrf'
             })(
               <Select placeholder="请选择作者" disabled>
                 <Option value="trj">trj</Option>
