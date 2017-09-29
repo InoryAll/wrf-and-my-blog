@@ -34,10 +34,10 @@ class Detail extends React.Component{
     }
   }
     
-    shouldComponentUpdate(nextProps,nextState){
+   /* shouldComponentUpdate(nextProps,nextState){
       console.log(_.isEqual(nextProps.comment,this.props.comment));
       return !_.isEqual(nextProps.comment,this.props.comment);
-    }
+    }*/
     
     /*componentDidUpdate(){
       const id=this.props.params.id;
@@ -56,7 +56,6 @@ class Detail extends React.Component{
     }*/
 
     render(){
-        console.log('render');
         const comment=this.props.comment;
         let commentItem;
         comment && comment.forEach(function (item,index) {
