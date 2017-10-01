@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Form, Mention, Card, Row, Avatar, Button } from 'antd';
+import { Form, Mention, Card, Row, Avatar, Button, Input } from 'antd';
 import './css/review.css';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
@@ -13,12 +13,13 @@ import _ from 'lodash';
 
 const { toString, toContentState, getMentions } = Mention;
 const FormItem = Form.Item;
+const { TextArea } = Input;
 
 class Review extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            initValue: toContentState('@wrf')
+            initValue: toContentState('@wrf'),
         };
     }
     
@@ -27,21 +28,18 @@ class Review extends React.Component{
     }
     
     componentWillReceiveProps(nextProps){
-        console.log('update');
         if (this.props.id!==nextProps.id){
           this.props.fetchReviewsById(nextProps.id);
         }
     }
     
-    shouldComponentUpdate(nextProps,nextState){
+    /*shouldComponentUpdate(nextProps,nextState){
         return !_.isEqual(this.props.reviews,nextProps.reviews);
-    }
-
-
-
+    }*/
+    
     handleReset = (e) => {
-        e.preventDefault();
-        this.props.form.resetFields();
+          e.preventDefault();
+          this.props.form.resetFields();
     };
 
     handleSubmit = (e) => {
@@ -52,13 +50,11 @@ class Review extends React.Component{
                 return;
             }
             const review={
-                content:toString(values.mention),
+                content:values.mention,
                 date:moment().format('YYYY-MM-DD'),
                 comment:this.props.id
             };
             this.props.fetchAddReview(review);
-            console.log('Submit!!!');
-            console.log(toString(values.mention));
             this.handleReset(e);
         });
     };
@@ -90,8 +86,7 @@ class Review extends React.Component{
                                 id="control-mention"
                             >
                                 {getFieldDecorator('mention')(
-                                    <Mention
-                                        suggestions={['wrf', 'trj']}
+                                    <TextArea
                                         style={{ height: 60 }}
                                         placeholder="请输入..."
                                     />

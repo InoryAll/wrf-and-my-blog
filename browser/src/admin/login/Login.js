@@ -6,6 +6,7 @@ import { Card, Row, Col, Form, Input, Icon, Button, Alert } from 'antd';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {doLogin} from "../../action/action";
+import '../wrapper/css/wrapper.css';
 import './css/login.css';
 
 const FormItem=Form.Item;

@@ -1,0 +1,7 @@
+
+.idea/inspectionProfiles/Project_Default.xml
+.idea/wrf-and-my-blog.iml
+*.xml
+.idea/wrf.iml
+browser/.idea/workspace.xml
+server/.idea/workspace.xml

@@ -1,12 +1,10 @@
 /**
  * 包裹组件Wrapper样式表 wrapper
  */
-html{
+.admin-wrapper{
+    height: 100%;
     background: url("../../static/images/bg.jpg") no-repeat fixed;
     background-size: cover;
-}
-.admin-wrapper{
-    background: none;
 }
 #root,body{
     background: none;
