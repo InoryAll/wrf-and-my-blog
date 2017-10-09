@@ -17,10 +17,17 @@
       <file leaf-file-name="Error.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/404/Error.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="3990">
+              <caret line="123" column="14" lean-forward="false" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
+              <folding>
+                <element signature="e#27#53#0" expanded="true" />
+=======
             <state relative-caret-position="270">
               <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
               <folding>
                 <element signature="e#21#47#0" expanded="true" />
+>>>>>>> c21d25fdfe50dfff3b14c62e262ea294c09087a6
               </folding>
             </state>
           </provider>
@@ -29,11 +36,17 @@
       <file leaf-file-name="CommentList.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/admin/commentManage/CommentList.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="-810">
+              <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+              <folding />
+=======
             <state relative-caret-position="120">
               <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+>>>>>>> c21d25fdfe50dfff3b14c62e262ea294c09087a6
             </state>
           </provider>
         </entry>
@@ -220,9 +233,14 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds">
+    <option name="x" value="916" />
+=======
   <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="140" />
     <option name="y" value="12" />
+>>>>>>> c21d25fdfe50dfff3b14c62e262ea294c09087a6
     <option name="width" value="1692" />
     <option name="height" value="980" />
   </component>
@@ -257,6 +275,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+      <pane id="Scratches" />
+>>>>>>> c21d25fdfe50dfff3b14c62e262ea294c09087a6
+>>>>>>> 81304531add867ee0ebf99707162815803108e53
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -334,8 +360,16 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scope" />
       <pane id="Scratches" />
+=======
+<<<<<<< HEAD
+      <pane id="Scratches" />
+      <pane id="Scope" />
+=======
+>>>>>>> c21d25fdfe50dfff3b14c62e262ea294c09087a6
+>>>>>>> 81304531add867ee0ebf99707162815803108e53
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,7 +378,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+<<<<<<< HEAD
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ck-lion-front" />
+=======
+    <property name="last_opened_file_path" value="E:/ck-lion-front" />
+>>>>>>> c21d25fdfe50dfff3b14c62e262ea294c09087a6
+>>>>>>> 81304531add867ee0ebf99707162815803108e53
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="C:\Users\tianrenjie\AppData\Roaming\npm\node_modules\eslint" />
@@ -422,6 +464,18 @@
       <option name="filePath" />
       <method />
     </configuration>
+<<<<<<< HEAD
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+=======
+>>>>>>> c21d25fdfe50dfff3b14c62e262ea294c09087a6
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -490,16 +544,32 @@
       <workItem from="1506387017239" duration="603000" />
       <workItem from="1506414070710" duration="2288000" />
       <workItem from="1506481602590" duration="14278000" />
+<<<<<<< HEAD
+      <workItem from="1506519080654" duration="652000" />
+      <workItem from="1506826002278" duration="693000" />
+=======
       <workItem from="1506519080654" duration="69000" />
       <workItem from="1506560041787" duration="9650000" />
       <workItem from="1506646023954" duration="9433000" />
       <workItem from="1506731353576" duration="606000" />
+<<<<<<< HEAD
       <workItem from="1507537070604" duration="50000" />
+=======
+>>>>>>> c21d25fdfe50dfff3b14c62e262ea294c09087a6
+>>>>>>> 81304531add867ee0ebf99707162815803108e53
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="158301000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="139838000" />
+=======
+    <option name="totallyTimeSpent" value="158251000" />
+>>>>>>> c21d25fdfe50dfff3b14c62e262ea294c09087a6
+>>>>>>> 81304531add867ee0ebf99707162815803108e53
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -511,18 +581,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
+    <frame x="916" y="0" width="1692" height="1009" extended-state="0" />
+=======
     <frame x="140" y="12" width="1692" height="980" extended-state="1" />
+<<<<<<< HEAD
+=======
+>>>>>>> c21d25fdfe50dfff3b14c62e262ea294c09087a6
+    <editor active="true" />
+>>>>>>> 81304531add867ee0ebf99707162815803108e53
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14873035" sideWeight="0.49532712" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951945" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21624714" sideWeight="0.5205562" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20758693" sideWeight="0.5046729" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21563981" sideWeight="0.47944376" order="7" side_tool="false" content_ui="tabs" />
+=======
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22248521" sideWeight="0.47944376" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> c21d25fdfe50dfff3b14c62e262ea294c09087a6
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -742,9 +825,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/article/css/detail.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="337">
+          <caret line="212" column="10" lean-forward="false" selection-start-line="212" selection-start-column="10" selection-end-line="212" selection-end-column="10" />
+=======
         <state relative-caret-position="300">
           <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
           <folding />
+>>>>>>> c21d25fdfe50dfff3b14c62e262ea294c09087a6
         </state>
       </provider>
     </entry>
@@ -876,21 +964,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/article/Review.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="3990">
+          <caret line="123" column="14" lean-forward="false" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
+          <folding>
+            <element signature="e#27#53#0" expanded="true" />
+=======
         <state relative-caret-position="600">
           <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="25" />
           <folding>
             <element signature="e#25#51#0" expanded="true" />
+>>>>>>> c21d25fdfe50dfff3b14c62e262ea294c09087a6
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/user/article/Detail.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="-810">
+          <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+          <folding />
+=======
         <state relative-caret-position="330">
           <caret line="28" column="45" lean-forward="false" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
           <folding>
             <element signature="e#27#53#0" expanded="true" />
           </folding>
+>>>>>>> c21d25fdfe50dfff3b14c62e262ea294c09087a6
         </state>
       </provider>
     </entry>

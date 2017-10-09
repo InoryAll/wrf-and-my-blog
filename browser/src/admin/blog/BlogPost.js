@@ -8,7 +8,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
 import { fetchComment } from "../../action/action";
-import './css/blogpost.css';
+import './css/blogPost.css';
 
 const FormItem = Form.Item;
 const Option = Select.Option;

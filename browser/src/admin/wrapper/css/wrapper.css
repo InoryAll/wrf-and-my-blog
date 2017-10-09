@@ -5,10 +5,13 @@
     height: 100%;
     background: url("../../static/images/bg.jpg") no-repeat fixed;
     background-size: cover;
+    position: relative;
 }
-#root,body{
+#root,body,html{
     background: none;
 }
 .card-container{
     padding: 10% 0;
+    background: url("../../static/images/bg.jpg") no-repeat fixed;
+    background-size: cover;
 }
