@@ -16,10 +16,14 @@ class CommentList extends React.Component {
     }
     handleSearch(comment){
         // 处理查看文章信息的函数
+  
+        // 查看的模态框出现...
         browserHistory.push();
     }
     handleUpdate(comment){
         // 处理更新文章信息的函数
+  
+        // 更新的模态框出现...
         browserHistory.push();
     }
     handleDelete(comment){
