@@ -26,21 +26,9 @@ class UserList extends React.Component {
         });
         console.log(commentList);
         const columns=[{
-            title:'文章标题',
-            dataIndex:'title',
-            key:'title'
-        },{
-            title:'文章概要',
-            dataIndex:'summary',
-            key:'summary'
-        },{
-            title:'作者',
-            dataIndex:'author',
-            key:'author'
-        },{
-            title:'日期',
-            dataIndex:'date',
-            key:'date'
+            title:'用户名',
+            dataIndex:'username',
+            key:'username'
         },{
             title:'操作',
             key: 'action',
