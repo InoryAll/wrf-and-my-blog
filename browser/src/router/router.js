@@ -14,6 +14,7 @@ import ConsoleCarousel from "../admin/common/components/ConsoleCarousel";
 import BlogPost from "../admin/blog/BlogPost";
 import Error from "../404/Error";
 import CommentList from "../admin/commentManage/CommentList";
+import UserList from "../admin/userManege/UserList";
 
 export const routers=(
     <Router history={browserHistory}>
@@ -33,6 +34,9 @@ export const routers=(
         <Route path="/admin/postBlog"  components={BlogPost}/>
         <Route path="/admin/commentManage">
             <Route path="commentList" components={CommentList}/>
+        </Route>
+        <Route path="/admin/userManage">
+          <Route path="userList" components={UserList}/>
         </Route>
       </Route>
       <Route path="*" components={Error}/>
