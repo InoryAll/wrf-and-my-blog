@@ -17,5 +17,6 @@ router.post('/review/addReview',ReviewService.addReview);
 router.post('/review/getReviewsById',ReviewService.getReviewsById);
 
 router.post('/user/login',UserService.findUser);
+router.post('/user/getAllUsers',UserService.findAllUser);
 
 module.exports = router;

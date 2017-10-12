@@ -11,20 +11,10 @@ import './css/userList.css';
 
 class UserList extends React.Component {
     componentWillMount(){
-        this.props.fetchAllComments();
     }
 
     render(){
-        const { comments, user } = this.props;
-        // 选出符合条件的comment，并且生成出来，为了方便测试，先注释。
-        let commentList=[];
-        comments && comments.map((comment)=>{
-            /*if (comment.author === user.username ) {
-             commentList.push(comment);
-             }*/
-            commentList.push(comment);
-        });
-        console.log(commentList);
+        const { user } = this.props;
         const columns=[{
             title:'用户名',
             dataIndex:'username',
@@ -43,10 +33,10 @@ class UserList extends React.Component {
             }
         }];
         return (
-            <Card bordered={false} className="comment-list-card">
+            <Card bordered={false} className="user-list-card">
                 <Table
                     columns={columns}
-                    dataSource={commentList}
+                    dataSource={}
                 />
             </Card>
         );

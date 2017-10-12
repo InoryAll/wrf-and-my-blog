@@ -14,3 +14,14 @@ exports.findUser=function (req,res,next) {
     }
   });
 };
+
+exports.findAllUser=function (req,res,next) {
+  UserDao.findAll(function (err,users) {
+    if (!err) {
+      res.json(users);
+    }
+    else {
+      console.log(err.message);
+    }
+  });
+};
