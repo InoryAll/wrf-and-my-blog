@@ -238,3 +238,30 @@ export const fetchComment=(comment)=>{
       });
     };
 };
+
+//users add
+export const GET_ALL_USERS = 'GET_ALL_USERS';
+export const getAllUsers=(users)=>{
+  return {
+    type: GET_ALL_USERS,
+    users
+  };
+};
+export const fetchAllUsers=()=>{
+  return (dispatch) => {
+    fetch('http://118.89.236.17:8080/user/getAllUsers',{
+      method:'POST',
+      headers: {
+        'Content-Type':'application/json'
+      }
+    }).then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    }).then((data)=>{
+      dispatch(getAllUsers(data));
+    }).catch((e)=>{
+      console.log(e.message);
+    });
+  };
+};
