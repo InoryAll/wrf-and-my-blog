@@ -7,14 +7,17 @@ import _ from 'lodash';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
+import { fetchAllUsers } from "../../action/action";
 import './css/userList.css';
 
 class UserList extends React.Component {
     componentWillMount(){
+        this.props.fetchAllUsers();
     }
-
     render(){
-        const { user } = this.props;
+        const { users } = this.props;
+        let userList = [];
+        userList = users;
         const columns=[{
             title:'用户名',
             dataIndex:'username',
@@ -36,7 +39,7 @@ class UserList extends React.Component {
             <Card bordered={false} className="user-list-card">
                 <Table
                     columns={columns}
-                    dataSource={}
+                    dataSource={userList}
                 />
             </Card>
         );
@@ -45,12 +48,12 @@ class UserList extends React.Component {
 
 function mapStateToProps(state) {
     return {
-
+        users: state.user.users
     };
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({  },dispatch);
+    return bindActionCreators({ fetchAllUsers },dispatch);
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(UserList);
