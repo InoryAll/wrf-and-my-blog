@@ -29,7 +29,7 @@ class CommentList extends React.Component {
     handleDelete(comment){
         // 处理删除文章信息的函数
 
-        //删除的确认模态框出现...
+        //删除的确认框出现...
         browserHistory.push();
     }
     render(){
