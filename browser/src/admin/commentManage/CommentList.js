@@ -9,28 +9,45 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
 import './css/commentList.css';
+import CommentModal from "./CommentModal";
 
 class CommentList extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            visible: false,
+        };
+    }
     componentWillMount(){
         this.props.fetchAllComments();
     }
+    showModal = () => {
+        this.setState({
+          visible: true,
+        });
+    };
+    onChange = (visible) => {
+        this.setState({
+          visible: visible
+        });
+    };
     handleSearch(comment){
         // 处理查看文章信息的函数
   
         // 查看的模态框出现...
-        browserHistory.push();
+        // browserHistory.push();
     }
     handleUpdate(comment){
         // 处理更新文章信息的函数
   
         // 更新的模态框出现...
-        browserHistory.push();
+        // browserHistory.push();
     }
     handleDelete(comment){
         // 处理删除文章信息的函数
 
         //删除的确认框出现...
-        browserHistory.push();
+        // browserHistory.push();
     }
     render(){
         const { comments, user } = this.props;
@@ -65,20 +82,27 @@ class CommentList extends React.Component {
             render: (text,record,index) =>{
                 return (
                     <div>
-                        <Button className="action-btn" onClick={()=>{this.handleSearch(record)}}>查看</Button>
-                        <Button type="primary" className="action-btn" onClick={()=>{this.handleUpdate(record)}}>修改</Button>
+                        <Button className="action-btn" onClick={this.showModal}>查看</Button>
+                        <Button type="primary" className="action-btn" onClick={this.showModal}>修改</Button>
                         <Button className="action-btn" onClick={this.handleDelete(record)}>删除</Button>
                     </div>
                 );
             }
         }];
         return (
-            <Card bordered={false} className="comment-list-card">
-                <Table
-                    columns={columns}
-                    dataSource={commentList}
+            <div>
+                <Card bordered={false} className="comment-list-card">
+                    <Table
+                      columns={columns}
+                      dataSource={commentList}
+                      rowKey={(record) => { return record._id }}
+                    />
+                </Card>
+                <CommentModal
+                  onChange={this.onChange}
+                  visible={this.state.visible}
                 />
-            </Card>
+            </div>
         );
     }
 }
