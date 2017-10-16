@@ -55,7 +55,7 @@ class CommentModal extends React.Component{
           title="查看/修改文章信息"
           onOk={this.handleOk}
           onCancel={this.handleCancel}
-          width={600}
+          width={800}
           footer={[
             <Button key="back" size="large" onClick={this.handleCancel}>返回</Button>,
             <Button key="submit" type="primary" size="large" loading={loading} onClick={this.handleOk}>
@@ -129,7 +129,7 @@ class CommentModal extends React.Component{
                 }],
                 initialValue: ''
               })(
-                <TextArea rows="20"/>
+                <TextArea rows="15"/>
               )}
             </FormItem>
           </Form>
