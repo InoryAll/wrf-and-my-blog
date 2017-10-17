@@ -84,7 +84,7 @@ class CommentList extends React.Component {
                     <div>
                         <Button className="action-btn" onClick={this.showModal}>查看</Button>
                         <Button type="primary" className="action-btn" onClick={this.showModal}>修改</Button>
-                        <Button className="action-btn" onClick={this.handleDelete(record)}>删除</Button>
+                        <Button className="action-btn" onClick={()=>{this.handleDelete(record)}}>删除</Button>
                     </div>
                 );
             }

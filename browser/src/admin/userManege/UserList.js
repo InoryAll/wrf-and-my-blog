@@ -30,7 +30,7 @@ class UserList extends React.Component {
                     <div>
                         <Button className="action-btn" onClick={()=>{this.handleSearch(record)}}>查看</Button>
                         <Button type="primary" className="action-btn" onClick={()=>{this.handleUpdate(record)}}>修改</Button>
-                        <Button className="action-btn" onClick={this.handleDelete(record)}>删除</Button>
+                        <Button className="action-btn" onClick={()=>{this.handleDelete(record)}}>删除</Button>
                     </div>
                 );
             }
