@@ -16,17 +16,31 @@ class CommentList extends React.Component {
         super(props);
         this.state={
             visible: false,
+            type: '',
         };
     }
     componentWillMount(){
         this.props.fetchAllComments();
     }
-    showModal = () => {
-        this.setState({
-          visible: true,
-        });
+    showModal = (id) => {
+        switch (id) {
+          case 1:
+              this.setState({
+                visible: true,
+                type: 'search',
+              });
+              // 调用查询
+              break;
+          case 2:
+              this.setState({
+                visible: true,
+                type: 'update',
+              });
+              // 调用查询
+              break;
+        }
     };
-    onChange = (visible) => {
+    onChange = (id,visible) => {
         this.setState({
           visible: visible
         });
@@ -83,8 +97,8 @@ class CommentList extends React.Component {
             render: (text,record,index) =>{
                 return (
                     <div>
-                        <Button className="action-btn" onClick={this.showModal}>查看</Button>
-                        <Button type="primary" className="action-btn" onClick={this.showModal}>修改</Button>
+                        <Button className="action-btn" onClick={()=>{this.showModal(1)}}>查看</Button>
+                        <Button type="primary" className="action-btn" onClick={()=>{this.showModal(2)}}>修改</Button>
                         <Button className="action-btn" onClick={()=>{this.handleDelete(record)}}>删除</Button>
                     </div>
                 );
