@@ -4,6 +4,8 @@
 import React from 'react';
 import { Modal, Button, Form, Input, Select, DatePicker } from 'antd';
 import moment from 'moment';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 const FormItem = Form.Item;
 const Option = Select.Option;
@@ -36,6 +38,7 @@ class CommentModal extends React.Component{
     });
   };
   render(){
+    const { comment } = this.props;
     const { visible, loading } = this.state;
     const { getFieldDecorator } = this.props.form;
     const formItemLayout = {
@@ -139,4 +142,15 @@ class CommentModal extends React.Component{
   }
 }
 
-export default Form.create()(CommentModal);
+function mapStateToProps(state) {
+  return {
+    comment: state.comment.comment,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({}, dispatch);
+}
+
+CommentModal = Form.create()(CommentModal);
+export default connect(mapStateToProps,mapDispatchToProps)(CommentModal);

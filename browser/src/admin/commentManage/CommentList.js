@@ -4,7 +4,7 @@
 import React from 'react';
 import { Table, Card, Button } from  'antd';
 import _ from 'lodash';
-import { fetchAllComments } from '../../action/action';
+import { fetchAllComments, fetchCommentById } from '../../action/action';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
@@ -30,6 +30,7 @@ class CommentList extends React.Component {
                 type: 'search',
               });
               // 调用查询
+              this.handleSearch(record);
               break;
           case 2:
               this.setState({
@@ -37,6 +38,7 @@ class CommentList extends React.Component {
                 type: 'update',
               });
               // 调用查询
+            this.handleUpdate(record);
               break;
         }
     };
@@ -45,17 +47,11 @@ class CommentList extends React.Component {
           visible: visible
         });
     };
-    handleSearch(comment){
-        // 处理查看文章信息的函数
-  
-        // 查看的模态框出现...
-        // browserHistory.push();
+    handleSearch(record){
+        this.props.fetchCommentById(record._id);
     }
-    handleUpdate(comment){
-        // 处理更新文章信息的函数
-  
-        // 更新的模态框出现...
-        // browserHistory.push();
+    handleUpdate(record){
+        this.props.fetchCommentById(record._id);
     }
     handleDelete(comment){
         // 处理删除文章信息的函数
@@ -130,7 +126,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ fetchAllComments },dispatch);
+    return bindActionCreators({ fetchAllComments, fetchCommentById },dispatch);
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(CommentList);
