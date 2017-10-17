@@ -21,7 +21,8 @@ class UserList extends React.Component {
         const columns=[{
             title:'用户名',
             dataIndex:'username',
-            key:'username'
+            key:'username',
+            width: '70%',
         },{
             title:'操作',
             key: 'action',

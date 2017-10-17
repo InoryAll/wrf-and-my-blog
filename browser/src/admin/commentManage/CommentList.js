@@ -67,7 +67,8 @@ class CommentList extends React.Component {
         },{
             title:'文章概要',
             dataIndex:'summary',
-            key:'summary'
+            key:'summary',
+            width: '40%',
         },{
             title:'作者',
             dataIndex:'author',
