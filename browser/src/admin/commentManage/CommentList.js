@@ -22,7 +22,7 @@ class CommentList extends React.Component {
     componentWillMount(){
         this.props.fetchAllComments();
     }
-    showModal = (id) => {
+    showModal = (id, record) => {
         switch (id) {
           case 1:
               this.setState({
@@ -97,8 +97,8 @@ class CommentList extends React.Component {
             render: (text,record,index) =>{
                 return (
                     <div>
-                        <Button className="action-btn" onClick={()=>{this.showModal(1)}}>查看</Button>
-                        <Button type="primary" className="action-btn" onClick={()=>{this.showModal(2)}}>修改</Button>
+                        <Button className="action-btn" onClick={()=>{this.showModal(1, record)}}>查看</Button>
+                        <Button type="primary" className="action-btn" onClick={()=>{this.showModal(2, record)}}>修改</Button>
                         <Button className="action-btn" onClick={()=>{this.handleDelete(record)}}>删除</Button>
                     </div>
                 );
