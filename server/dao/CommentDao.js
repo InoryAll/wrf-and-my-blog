@@ -17,14 +17,16 @@ exports.findById=function (id,callback) {
 };
 
 exports.update=function (object,callback) {
-  var comment=new Comment({
+  var comment={
     title:object.title,
     summary:object.summary,
     author:object.author,
     date:object.date,
     content:object.content,
     review:''
-  });
+  };
+  // var _id = object._id;
+  // delete object._id;
   Comment.update({_id: object._id},comment,callback);
 };
 

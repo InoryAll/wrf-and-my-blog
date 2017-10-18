@@ -220,13 +220,13 @@ export const fetchComment=(comment)=>{
         if (data.code==='0'){
           Modal.error({
             title:'错误',
-            content:'发表失败，请重试!'
+            content:data.message,
           });
         }
         else{
           const modal=Modal.success({
             title:'成功',
-            content:'发表成功!'
+            content:data.message,
           });
           setTimeout(()=>{
             dispatch(addComment(comment));
@@ -248,7 +248,7 @@ export const getAllUsers=(users)=>{
   };
 };
 export const fetchAllUsers=()=>{
-  return (dispatch) => {
+  return (dispatch,getState) => {
     fetch('http://localhost:8080/user/getAllUsers',{
       method:'POST',
       headers: {
@@ -260,6 +260,50 @@ export const fetchAllUsers=()=>{
       }
     }).then((data)=>{
       dispatch(getAllUsers(data));
+    }).catch((e)=>{
+      console.log(e.message);
+    });
+  };
+};
+
+//comment update
+export const UPDATE_COMMENT = 'UPDATE_COMMENT';
+export const updateComment = (comment)=>{
+  return {
+    type: UPDATE_COMMENT,
+    comment
+  };
+};
+export const fetchUpdateComment = (comment) => {
+  return (dispatch,getState)=>{
+    fetch('http://localhost:8080/comment/updateComment',{
+      method: 'POST',
+      headers:{
+        'Content-Type': 'application/json',
+      },
+      body:JSON.stringify(comment)
+    }).then((response)=>{
+      if (response.ok) {
+        return response.json();
+      }
+    }).then((data)=>{
+      if (data.code === '0') {
+        Modal.error({
+          title: '错误',
+          content: data.message,
+        });
+      }
+      else {
+        const modal = Modal.success({
+          title: '成功',
+          content: data.message,
+        });
+        setTimeout(()=>{
+          dispatch(updateComment(data));
+          modal.destroy();
+        },1000);
+        fetchAllComments()(dispatch,getState);
+      }
     }).catch((e)=>{
       console.log(e.message);
     });

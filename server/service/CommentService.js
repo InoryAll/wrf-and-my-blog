@@ -63,13 +63,15 @@ exports.addComment=function (req,res,next) {
 exports.updateComment=function (req,res,next) {
   console.log('updateComment');
   var comment=req.body;
-  CommentDao.update(comment,function (err,data) {
+  CommentDao.update(comment,function (err,message) {
     if (!err) {
-      res.json(data);
+      message = {code: '1', message: '修改成功!'};
     }
-    else {
+    else{
       console.log(err.message);
+      message = {code:'0', message:'修改失败!'};
     }
+    return res.json(message);
   });
 };
 

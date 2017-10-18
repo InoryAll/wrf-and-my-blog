@@ -7,6 +7,7 @@ import moment from 'moment';
 import _ from 'lodash';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { fetchUpdateComment } from "../../action/action";
 
 const FormItem = Form.Item;
 const Option = Select.Option;
@@ -21,24 +22,28 @@ class CommentModal extends React.Component{
       visible: nextProps.visible,
     });
   }
-  handleOk = (values) => {
-    this.setState({ loading: true });
-    setTimeout(() => {
-      this.setState({ loading: false, visible: false });
-    }, 3000);
-    if (this.state.type === 'search') {
+  handleOk = () => {
+    const { getFieldsValue } = this.props.form;
+    // this.setState({ loading: true });
+    // setTimeout(() => {
+    //   this.setState({ loading: false, visible: false });
+    // }, 3000);
+    if (this.props.type === 'search') {
       this.props.onChange(1, false);
     }
-    if (this.state.type === 'update') {
+    if (this.props.type === 'update') {
+      const values = getFieldsValue();
+      const params = {...values, date: moment(values.date).format('YYYY-MM-DD'), _id: this.props.comment._id};
+      this.props.fetchUpdateComment(params);
       this.props.onChange(2, false);
     }
   };
   handleCancel = () => {
     this.setState({ visible: false });
-    if (this.state.type === 'search') {
+    if (this.props.type === 'search') {
       this.props.onChange(1, false);
     }
-    if (this.state.type === 'update') {
+    if (this.props.type === 'update') {
       this.props.onChange(2, false);
     }
   };
@@ -47,7 +52,7 @@ class CommentModal extends React.Component{
     this.props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
-        this.handleOk(values);
+        // this.handleOk({...values, date: moment(values.date).format('YYYY-MM-DD')});
       }
     });
   };
@@ -170,7 +175,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({}, dispatch);
+  return bindActionCreators({ fetchUpdateComment }, dispatch);
 }
 
 CommentModal = Form.create()(CommentModal);
