@@ -59,5 +59,18 @@ exports.addComment=function (req,res,next) {
   })
 };
 
+// 更新文章信息
+exports.updateComment=function (req,res,next) {
+  console.log('updateComment');
+  var comment=req.body;
+  CommentDao.update(comment,function (err,data) {
+    if (!err) {
+      res.json(data);
+    }
+    else {
+      console.log(err.message);
+    }
+  });
+};
 
 
