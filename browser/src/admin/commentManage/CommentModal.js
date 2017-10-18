@@ -21,7 +21,7 @@ class CommentModal extends React.Component{
       visible: nextProps.visible,
     });
   }
-  handleOk = () => {
+  handleOk = (values) => {
     this.setState({ loading: true });
     setTimeout(() => {
       this.setState({ loading: false, visible: false });
@@ -47,6 +47,7 @@ class CommentModal extends React.Component{
     this.props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
+        this.handleOk(values);
       }
     });
   };
@@ -56,11 +57,6 @@ class CommentModal extends React.Component{
     const { getFieldDecorator } = this.props.form;
     const isUpdate = type === 'update';
     const isEmpty =  _.isEmpty(comment);
-    let commentItem;
-    comment && comment.forEach(function (item,index) {
-      commentItem=item;
-    });
-    console.log(comment);
     const formItemLayout = {
       labelCol: {
         xs: { span: 24 },
@@ -92,12 +88,12 @@ class CommentModal extends React.Component{
               hasFeedBack
               {...formItemLayout}
             >{
-              getFieldDecorator('title', {
+              isUpdate ? getFieldDecorator('title', {
                 rules: [{required: true, message: '请输入文章标题!'}],
-                initialValue: isEmpty ? '' :commentItem.title,
+                initialValue: isEmpty ? '' :comment.title,
               })(
-                  isUpdate ? (<Input disabled={!isUpdate}/>) : (<span className="ant-form-text">{commentItem && commentItem.title}</span>)
-              )
+                <Input disabled={!isUpdate}/>
+              ) : <span className="ant-form-text">{comment && comment.title}</span>
             }
             </FormItem>
             <FormItem
@@ -105,12 +101,12 @@ class CommentModal extends React.Component{
               hasFeedBack
               {...formItemLayout}
             >{
-              getFieldDecorator('summary', {
+              isUpdate ? getFieldDecorator('summary', {
                 rules: [{required: true, message: '请输入文章摘要!'}],
-                initialValue: isEmpty ? '' : commentItem.summary,
+                initialValue: isEmpty ? '' : comment.summary,
               })(
-                isUpdate ? (<Input disabled={!isUpdate}/>) : (<span className="ant-form-text">{commentItem && commentItem.summary}</span>)
-              )
+                 <Input disabled={!isUpdate}/>
+              ) : <span className="ant-form-text">{comment && comment.summary}</span>
             }
             </FormItem>
             <FormItem
@@ -118,15 +114,15 @@ class CommentModal extends React.Component{
               hasFeedBack
               {...formItemLayout}
             >{
-              getFieldDecorator('author', {
+              isUpdate ? getFieldDecorator('author', {
                 rules: [{required: true, message: '请选择作者!'}],
-                initialValue:isEmpty ? 'wrf' : commentItem.author,
+                initialValue:isEmpty ? 'wrf' : comment.author,
               })(
-                isUpdate ? (<Select placeholder="请选择作者" disabled>
+                 <Select placeholder="请选择作者" disabled>
                   <Option value="trj">trj</Option>
                   <Option value="wrf">wrf</Option>
-                </Select>) : (<span className="ant-form-text">{commentItem && commentItem.author}</span>)
-              )
+                </Select>
+              ): <span className="ant-form-text">{comment && comment.author}</span>
             }
             </FormItem>
             <FormItem
@@ -134,14 +130,14 @@ class CommentModal extends React.Component{
               hasFeedBack
               {...formItemLayout}
             >{
-              getFieldDecorator('date', {
+              isUpdate ? getFieldDecorator('date', {
                 rules: [{
                   type: 'object', required: true, message: '请选择时间!'
                 }],
-                initialValue: isEmpty ? moment(new Date(),'YYYY-MM-DD') : moment(commentItem.date,'YYYY-MM-DD'),
+                initialValue: isEmpty ? moment(new Date(),'YYYY-MM-DD') : moment(comment.date,'YYYY-MM-DD'),
               })(
-                isUpdate ? (<DatePicker disabled/>) : (<span className="ant-form-text">{commentItem &&  moment(commentItem.date).format('YYYY-MM-DD')}</span>)
-              )
+                 <DatePicker disabled/>
+              ): <span className="ant-form-text">{comment &&  moment(comment.date).format('YYYY-MM-DD')}</span>
             }
             </FormItem>
             <FormItem
@@ -149,14 +145,16 @@ class CommentModal extends React.Component{
               label="内容"
               hasFeedback={isUpdate}
             >
-              {getFieldDecorator('content', {
-                rules: [{
-                  required: true, message: '请输入内容!'
-                }],
-                initialValue: isEmpty ? '' : commentItem.content,
-              })(
-                isUpdate ? (<TextArea rows="15" disabled={!isUpdate} />) : (<span className="ant-form-text">{commentItem && commentItem.content}</span>)
-              )}
+              {
+                isUpdate ? getFieldDecorator('content', {
+                  rules: [{
+                    required: true, message: '请输入内容!'
+                  }],
+                  initialValue: isEmpty ? '' : comment.content,
+                })(
+                   <TextArea rows="15" disabled={!isUpdate} />
+                ) : <span className="ant-form-text">{comment && comment.content}</span>
+              }
             </FormItem>
           </Form>
         </Modal>

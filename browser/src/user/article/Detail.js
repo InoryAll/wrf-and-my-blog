@@ -57,10 +57,7 @@ class Detail extends React.Component{
 
     render(){
         const comment=this.props.comment;
-        let commentItem;
-        comment && comment.forEach(function (item,index) {
-            commentItem=item;
-        });
+        const commentItem = comment;
         return (
             <div className="detail-container">
                 <Card className="detail-card" bordered={false}>

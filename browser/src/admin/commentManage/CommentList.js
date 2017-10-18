@@ -7,6 +7,7 @@ import _ from 'lodash';
 import { fetchAllComments, fetchCommentById } from '../../action/action';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import moment from 'moment';
 import { browserHistory } from 'react-router';
 import './css/commentList.css';
 import CommentModal from "./CommentModal";
@@ -69,7 +70,6 @@ class CommentList extends React.Component {
             }*/
             commentList.push(comment);
         });
-        console.log(commentList);
         const columns=[{
             title:'文章标题',
             dataIndex:'title',
@@ -86,7 +86,10 @@ class CommentList extends React.Component {
         },{
             title:'日期',
             dataIndex:'date',
-            key:'date'
+            key:'date',
+            render: (text, record) => {
+                return moment(record.date).format('YYYY-MM-DD');
+            }
         },{
             title:'操作',
             key: 'action',
