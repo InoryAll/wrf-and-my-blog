@@ -4,6 +4,7 @@
 import React from 'react';
 import { Modal, Button, Form, Input, Select, DatePicker } from 'antd';
 import moment from 'moment';
+import _ from 'lodash';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -50,9 +51,16 @@ class CommentModal extends React.Component{
     });
   };
   render(){
-    const { comment } = this.props;
+    const { comment, type } = this.props;
     const { visible, loading } = this.state;
     const { getFieldDecorator } = this.props.form;
+    const isUpdate = type === 'update';
+    const isEmpty =  _.isEmpty(comment);
+    let commentItem;
+    comment && comment.forEach(function (item,index) {
+      commentItem=item;
+    });
+    console.log(comment);
     const formItemLayout = {
       labelCol: {
         xs: { span: 24 },
@@ -85,9 +93,10 @@ class CommentModal extends React.Component{
               {...formItemLayout}
             >{
               getFieldDecorator('title', {
-                rules: [{required: true, message: '请输入文章标题!'}]
+                rules: [{required: true, message: '请输入文章标题!'}],
+                initialValue: isEmpty ? '' :commentItem.title,
               })(
-                <Input/>
+                  isUpdate ? (<Input disabled={!isUpdate}/>) : (<span className="ant-form-text">{commentItem && commentItem.title}</span>)
               )
             }
             </FormItem>
@@ -97,9 +106,10 @@ class CommentModal extends React.Component{
               {...formItemLayout}
             >{
               getFieldDecorator('summary', {
-                rules: [{required: true, message: '请输入文章摘要!'}]
+                rules: [{required: true, message: '请输入文章摘要!'}],
+                initialValue: isEmpty ? '' : commentItem.summary,
               })(
-                <Input/>
+                <Input disabled={!isUpdate}/>
               )
             }
             </FormItem>
@@ -109,9 +119,10 @@ class CommentModal extends React.Component{
               {...formItemLayout}
             >{
               getFieldDecorator('author', {
-                rules: [{required: true, message: '请选择作者!'}]
+                rules: [{required: true, message: '请选择作者!'}],
+                initialValue:isEmpty ? 'wrf' : commentItem.author,
               })(
-                <Select placeholder="请选择作者">
+                <Select placeholder="请选择作者" disabled>
                   <Option value="trj">trj</Option>
                   <Option value="wrf">wrf</Option>
                 </Select>
@@ -127,7 +138,7 @@ class CommentModal extends React.Component{
                 rules: [{
                   type: 'object', required: true, message: '请选择时间!'
                 }],
-                initialValue: moment(new Date(),'YYYY-MM-DD')
+                initialValue: isEmpty ? moment(new Date(),'YYYY-MM-DD') : moment(commentItem.date,'YYYY-MM-DD'),
               })(
                 <DatePicker disabled/>
               )
@@ -142,9 +153,9 @@ class CommentModal extends React.Component{
                 rules: [{
                   required: true, message: '请输入内容!'
                 }],
-                initialValue: ''
+                initialValue: isEmpty ? '' : commentItem.content,
               })(
-                <TextArea rows="15"/>
+                <TextArea rows="15" disabled={!isUpdate} />
               )}
             </FormItem>
           </Form>
