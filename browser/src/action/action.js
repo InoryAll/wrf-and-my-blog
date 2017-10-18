@@ -309,3 +309,47 @@ export const fetchUpdateComment = (comment) => {
     });
   };
 };
+
+//comment delete
+export const DELETE_COMMENT = 'DELETE_COMMENT';
+export const deleteComment = (comment)=>{
+  return {
+    type: DELETE_COMMENT,
+    comment
+  };
+};
+export const fetchDeleteComment = (comment)=>{
+  return (dispatch, getState) => {
+    fetch('http://localhost:8080/comment/deleteComment',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({id:comment._id}),
+    }).then((response)=>{
+      if (response.ok) {
+        return response.json();
+      }
+    }).then((data)=>{
+      if (data.code === '0') {
+        Modal.error({
+          title: '错误',
+          content: data.message,
+        });
+      }
+      else {
+        const modal = Modal.success({
+          title: '成功',
+          content: data.message,
+        });
+        setTimeout(()=>{
+          dispatch(deleteComment(comment));
+          modal.destroy();
+        },1000);
+        fetchAllComments()(dispatch,getState);
+      }
+    }).catch((e)=>{
+      console.log(e.message);
+    });
+  };
+};

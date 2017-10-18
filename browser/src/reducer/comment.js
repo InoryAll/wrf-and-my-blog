@@ -1,7 +1,13 @@
 /**
  * comment reducer
  */
-import {ADD_COMMENT, GET_ALL_COMMENTS, GET_COMMENT_BY_ID, UPDATE_COMMENT} from "../action/action";
+import {
+  ADD_COMMENT,
+  DELETE_COMMENT,
+  GET_ALL_COMMENTS,
+  GET_COMMENT_BY_ID,
+  UPDATE_COMMENT
+} from "../action/action";
 
 export default function comment(state={},action) {
     switch (action.type){
@@ -12,7 +18,7 @@ export default function comment(state={},action) {
       case ADD_COMMENT:
           return Object.assign({},state,{comment:action.comment});
       case UPDATE_COMMENT:
-          return state;
+      case DELETE_COMMENT:
       default:
           return state;
     }

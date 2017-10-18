@@ -4,7 +4,7 @@
 import React from 'react';
 import { Table, Card, Button, Modal } from  'antd';
 import _ from 'lodash';
-import { fetchAllComments, fetchCommentById } from '../../action/action';
+import { fetchAllComments, fetchCommentById, fetchDeleteComment } from '../../action/action';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import moment from 'moment';
@@ -54,6 +54,7 @@ class CommentList extends React.Component {
         this.props.fetchCommentById(record._id);
     }
     handleDelete(record){
+      const { fetchDeleteComment } = this.props;
       confirm({
         title: '你确认要删除此文章么?',
         content: '操作不可恢复',
@@ -62,7 +63,7 @@ class CommentList extends React.Component {
         cancelText: '取消',
         onOk() {
           console.log('OK');
-          
+          fetchDeleteComment(record);
         },
         onCancel() {
           console.log('Cancel');
@@ -139,7 +140,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ fetchAllComments, fetchCommentById },dispatch);
+    return bindActionCreators({ fetchAllComments, fetchCommentById, fetchDeleteComment },dispatch);
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(CommentList);
