@@ -109,7 +109,7 @@ class CommentModal extends React.Component{
                 rules: [{required: true, message: '请输入文章摘要!'}],
                 initialValue: isEmpty ? '' : commentItem.summary,
               })(
-                <Input disabled={!isUpdate}/>
+                isUpdate ? (<Input disabled={!isUpdate}/>) : (<span className="ant-form-text">{commentItem && commentItem.summary}</span>)
               )
             }
             </FormItem>
@@ -122,10 +122,10 @@ class CommentModal extends React.Component{
                 rules: [{required: true, message: '请选择作者!'}],
                 initialValue:isEmpty ? 'wrf' : commentItem.author,
               })(
-                <Select placeholder="请选择作者" disabled>
+                isUpdate ? (<Select placeholder="请选择作者" disabled>
                   <Option value="trj">trj</Option>
                   <Option value="wrf">wrf</Option>
-                </Select>
+                </Select>) : (<span className="ant-form-text">{commentItem && commentItem.author}</span>)
               )
             }
             </FormItem>
@@ -140,14 +140,14 @@ class CommentModal extends React.Component{
                 }],
                 initialValue: isEmpty ? moment(new Date(),'YYYY-MM-DD') : moment(commentItem.date,'YYYY-MM-DD'),
               })(
-                <DatePicker disabled/>
+                isUpdate ? (<DatePicker disabled/>) : (<span className="ant-form-text">{commentItem &&  moment(commentItem.date).format('YYYY-MM-DD')}</span>)
               )
             }
             </FormItem>
             <FormItem
               {...formItemLayout}
               label="内容"
-              hasFeedback
+              hasFeedback={isUpdate}
             >
               {getFieldDecorator('content', {
                 rules: [{
@@ -155,7 +155,7 @@ class CommentModal extends React.Component{
                 }],
                 initialValue: isEmpty ? '' : commentItem.content,
               })(
-                <TextArea rows="15" disabled={!isUpdate} />
+                isUpdate ? (<TextArea rows="15" disabled={!isUpdate} />) : (<span className="ant-form-text">{commentItem && commentItem.content}</span>)
               )}
             </FormItem>
           </Form>
