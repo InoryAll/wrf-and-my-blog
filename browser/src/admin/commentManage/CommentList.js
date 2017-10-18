@@ -112,6 +112,7 @@ class CommentList extends React.Component {
                 <CommentModal
                   onChange={this.onChange}
                   visible={this.state.visible}
+                  type={this.state.type}
                 />
             </div>
         );

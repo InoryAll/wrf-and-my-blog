@@ -25,9 +25,21 @@ class CommentModal extends React.Component{
     setTimeout(() => {
       this.setState({ loading: false, visible: false });
     }, 3000);
+    if (this.state.type === 'search') {
+      this.props.onChange(1, false);
+    }
+    if (this.state.type === 'update') {
+      this.props.onChange(2, false);
+    }
   };
   handleCancel = () => {
     this.setState({ visible: false });
+    if (this.state.type === 'search') {
+      this.props.onChange(1, false);
+    }
+    if (this.state.type === 'update') {
+      this.props.onChange(2, false);
+    }
   };
   handleSubmit = (e) => {
     e.preventDefault();
