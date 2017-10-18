@@ -8,6 +8,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
 import { fetchAllUsers } from "../../action/action";
+import UserModal from './UserModal';
 import './css/userList.css';
 
 class UserList extends React.Component {
@@ -77,6 +78,11 @@ class UserList extends React.Component {
                 <Table
                     columns={columns}
                     dataSource={userList}
+                />
+                <UserModal
+                    visible={this.state.visible}
+                    onChange={this.onChange}
+                    type={this.state.type}
                 />
             </Card>
         );
