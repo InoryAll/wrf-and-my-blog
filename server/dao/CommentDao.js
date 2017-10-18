@@ -30,6 +30,10 @@ exports.update=function (object,callback) {
   Comment.update({_id: object._id},comment,callback);
 };
 
+exports.delete=function (id,callback) {
+  Comment.remove({ _id: id },callback);
+};
+
 exports.add=function (object,callback) {
   var comment=new Comment({
     title:object.title,

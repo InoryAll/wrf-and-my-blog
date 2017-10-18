@@ -2,7 +2,7 @@
  * 所有文章列表组件 commentlist
  */
 import React from 'react';
-import { Table, Card, Button } from  'antd';
+import { Table, Card, Button, Modal } from  'antd';
 import _ from 'lodash';
 import { fetchAllComments, fetchCommentById } from '../../action/action';
 import { bindActionCreators } from 'redux';
@@ -12,6 +12,7 @@ import { browserHistory } from 'react-router';
 import './css/commentList.css';
 import CommentModal from "./CommentModal";
 
+const confirm = Modal.confirm;
 class CommentList extends React.Component {
     constructor(props) {
         super(props);
@@ -30,7 +31,6 @@ class CommentList extends React.Component {
                 visible: true,
                 type: 'search',
               });
-              // 调用查询
               this.handleSearch(record);
               break;
           case 2:
@@ -38,7 +38,6 @@ class CommentList extends React.Component {
                 visible: true,
                 type: 'update',
               });
-              // 调用查询
             this.handleUpdate(record);
               break;
         }
@@ -54,11 +53,21 @@ class CommentList extends React.Component {
     handleUpdate(record){
         this.props.fetchCommentById(record._id);
     }
-    handleDelete(comment){
-        // 处理删除文章信息的函数
-
-        //删除的确认框出现...
-        // browserHistory.push();
+    handleDelete(record){
+      confirm({
+        title: '你确认要删除此文章么?',
+        content: '操作不可恢复',
+        okText: '确认',
+        okType: 'danger',
+        cancelText: '取消',
+        onOk() {
+          console.log('OK');
+          
+        },
+        onCancel() {
+          console.log('Cancel');
+        },
+      });
     }
     render(){
         const { comments, user } = this.props;

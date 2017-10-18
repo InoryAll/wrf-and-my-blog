@@ -75,4 +75,20 @@ exports.updateComment=function (req,res,next) {
   });
 };
 
+// 删除文章信息
+exports.deleteComment=function (req,res,next) {
+  console.log('deleteComment');
+  var id = req.body.id;
+  CommentDao.delete(id, function (err,message) {
+    if (!err) {
+      message = {code: '1', message: '删除成功!'};
+    }
+    else {
+      console.log(err.message);
+      message = {code: '0', message: '删除失败!'};
+    }
+    res.json(message);
+  });
+};
+
 
