@@ -34,7 +34,7 @@ class UserModal extends React.Component {
     });
   };
   render() {
-    const { getFieldDecorator } = this.prop.form;
+    const { getFieldDecorator } = this.props.form;
     const formItemLayout = {
       labelCol: {
         xs: { span: 24 },
