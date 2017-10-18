@@ -11,9 +11,45 @@ import { fetchAllUsers } from "../../action/action";
 import './css/userList.css';
 
 class UserList extends React.Component {
+    state = {
+        visible: false,
+        type: '',
+    };
     componentWillMount(){
         this.props.fetchAllUsers();
     }
+    showModal = (id,record) => {
+        switch (id) {
+          case 1:
+            this.setState({
+              visible: true,
+              type: 'search',
+            });
+            this.handleSearch(record);
+            break;
+          case 2:
+            this.setState({
+              visible: true,
+              type: 'update',
+            });
+            this.handleUpdate(record);
+            break;
+        }
+    };
+    onChange = (id,visible) => {
+        this.setState({
+          visible: visible,
+        });
+    };
+    handleSearch = (record) => {
+    
+    };
+    handleUpdate = (record) => {
+    
+    };
+    handleDelete = (record) => {
+    
+    };
     render(){
         const { users } = this.props;
         let userList = [];
@@ -29,8 +65,8 @@ class UserList extends React.Component {
             render: (text,record,index) =>{
                 return (
                     <div>
-                        <Button className="action-btn" onClick={()=>{this.handleSearch(record)}}>查看</Button>
-                        <Button type="primary" className="action-btn" onClick={()=>{this.handleUpdate(record)}}>修改</Button>
+                        <Button className="action-btn" onClick={()=>{this.showModal(1,record)}}>查看</Button>
+                        <Button type="primary" className="action-btn" onClick={()=>{this.showModal(2,record)}}>修改</Button>
                         <Button className="action-btn" onClick={()=>{this.handleDelete(record)}}>删除</Button>
                     </div>
                 );
