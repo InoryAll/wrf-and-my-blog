@@ -38,6 +38,7 @@ class UserModal extends React.Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     const { currentUser } = this.props;
+    const isUpdate = this.props.type==='update';
     const formItemLayout = {
       labelCol: {
         xs: { span: 24 },
