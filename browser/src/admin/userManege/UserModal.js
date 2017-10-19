@@ -10,7 +10,9 @@ class UserModal extends React.Component {
     visible: this.props.visible,
   };
   componentWillReceiveProps(nextProps) {
-  
+   this.setState({
+     visible: nextProps.visible,
+   });
   }
   handleOk = (e) => {
     console.log(e);
