@@ -15,6 +15,7 @@ class UserList extends React.Component {
     state = {
         visible: false,
         type: '',
+        currentUser: undefined,
     };
     componentWillMount(){
         this.props.fetchAllUsers();
@@ -25,6 +26,7 @@ class UserList extends React.Component {
             this.setState({
               visible: true,
               type: 'search',
+              currentUser: record,
             });
             this.handleSearch(record);
             break;
@@ -32,6 +34,7 @@ class UserList extends React.Component {
             this.setState({
               visible: true,
               type: 'update',
+              currentUser: record,
             });
             this.handleUpdate(record);
             break;
@@ -83,6 +86,7 @@ class UserList extends React.Component {
                     visible={this.state.visible}
                     onChange={this.onChange}
                     type={this.state.type}
+                    currentUser={this.state.currentUser}
                 />
             </Card>
         );

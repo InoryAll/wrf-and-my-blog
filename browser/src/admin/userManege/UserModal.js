@@ -37,6 +37,7 @@ class UserModal extends React.Component {
   };
   render() {
     const { getFieldDecorator } = this.props.form;
+    const { currentUser } = this.props;
     const formItemLayout = {
       labelCol: {
         xs: { span: 24 },
@@ -69,6 +70,7 @@ class UserModal extends React.Component {
               {
                 getFieldDecorator('username',{
                   rules:[{ required: true, message: '请输入用户名' }],
+                  initialValue: currentUser && currentUser.username,
                 })(
                   <Input />
                 )
@@ -82,6 +84,7 @@ class UserModal extends React.Component {
               {
                 getFieldDecorator('password',{
                   rules:[{ required: true, message: '请输入密码' }],
+                  initialValue: currentUser && currentUser.password,
                 })(
                   <Input type="password" />
                 )
