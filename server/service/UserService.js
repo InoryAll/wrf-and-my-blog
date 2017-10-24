@@ -15,6 +15,18 @@ exports.findUser=function (req,res,next) {
   });
 };
 
+exports.findUserById=function (req,res,next) {
+  var id=req.body.id;
+  UserDao.findById(id,function (err,user) {
+    if (!err) {
+      res.json(user);
+    }
+    else {
+      console.log(err.message);
+    }
+  })
+};
+
 exports.findAllUser=function (req,res,next) {
   UserDao.findAll(function (err,users) {
     if (!err) {

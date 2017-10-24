@@ -8,6 +8,10 @@ exports.find=function (user,callback) {
   User.find({username:user.username,password:user.password},callback);
 };
 
+exports.findById=function (id,callback) {
+  User.find({_id: id},callback);
+};
+
 exports.findAll=function (callback) {
   User.find(callback);
 };
