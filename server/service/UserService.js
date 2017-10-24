@@ -25,3 +25,17 @@ exports.findAllUser=function (req,res,next) {
     }
   });
 };
+
+exports.updateUser=function (req,res,next) {
+  var user = req.body;
+  UserDao.update(user,function (err,message) {
+    if (!err) {
+      message = {code: 1, message: '修改成功!'};
+    }
+    else {
+      console.log(err.message);
+      message = {code: 0, message: '修改失败!'};
+    }
+    res.json(message);
+  });
+};

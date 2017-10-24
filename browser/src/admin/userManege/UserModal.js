@@ -15,16 +15,23 @@ class UserModal extends React.Component {
    });
   }
   handleOk = (e) => {
-    console.log(e);
-    this.setState({
-      visible: false,
-    });
+    const { getFieldsValue } = this.props.form;
+    if (this.props.type === 'search') {
+      this.props.onChange(1, false);
+    }
+    if (this.props.type === 'update') {
+      const values = getFieldsValue();
+      this.props.onChange(2, false);
+    }
   };
   handleCancel = (e) => {
-    console.log(e);
-    this.setState({
-      visible: false,
-    });
+    this.setState({ visible: false });
+    if (this.props.type === 'search') {
+      this.props.onChange(1, false);
+    }
+    if (this.props.type === 'update') {
+      this.props.onChange(2, false);
+    }
   };
   handleSubmit = (e) => {
     e.preventDefault();

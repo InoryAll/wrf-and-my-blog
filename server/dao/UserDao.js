@@ -11,3 +11,11 @@ exports.find=function (user,callback) {
 exports.findAll=function (callback) {
   User.find(callback);
 };
+
+exports.update=function (object,callback) {
+  var user = {
+    username: object.username,
+    password: object.password,
+  };
+  User.update({_id: object._id},user,callback);
+};
