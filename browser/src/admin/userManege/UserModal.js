@@ -73,7 +73,7 @@ class UserModal extends React.Component {
                   rules:[{ required: true, message: '请输入用户名' }],
                   initialValue: currentUser && currentUser.username,
                 })(
-                  <Input />
+                  <Input disabled={!isUpdate} />
                 )
               }
             </FormItem>
@@ -87,7 +87,7 @@ class UserModal extends React.Component {
                   rules:[{ required: true, message: '请输入密码' }],
                   initialValue: currentUser && currentUser.password,
                 })(
-                  <Input type="password" />
+                  <Input type="password" disabled={!isUpdate} />
                 )
               }
             </FormItem>
