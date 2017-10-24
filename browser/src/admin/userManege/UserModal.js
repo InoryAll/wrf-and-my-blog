@@ -3,6 +3,9 @@
  */
 import React from 'react';
 import { Form, Modal, Button, Input } from 'antd';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { fetchUpdateUser } from "../../action/action";
 
 const FormItem = Form.Item;
 class UserModal extends React.Component {
@@ -21,6 +24,11 @@ class UserModal extends React.Component {
     }
     if (this.props.type === 'update') {
       const values = getFieldsValue();
+      const params = {
+        _id: this.props.currentUser._id,
+        ...values,
+      };
+      this.props.fetchUpdateUser(params);
       this.props.onChange(2, false);
     }
   };
@@ -105,10 +113,12 @@ class UserModal extends React.Component {
 }
 
 function mapStateToProps(state) {
+  return {};
 }
 
-function mapDispatchToProps() {
-  
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchUpdateUser }, dispatch);
 }
 
-export default Form.create()(UserModal);
+UserModal = Form.create()(UserModal);
+export default connect(mapStateToProps,mapDispatchToProps)(UserModal);

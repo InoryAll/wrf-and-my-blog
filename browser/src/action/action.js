@@ -239,7 +239,7 @@ export const fetchComment=(comment)=>{
     };
 };
 
-//users add
+//users getAll
 export const GET_ALL_USERS = 'GET_ALL_USERS';
 export const getAllUsers=(users)=>{
   return {
@@ -390,6 +390,7 @@ export const fetchUpdateUser = (user) => {
           dispatch(userUpdate(user));
           modal.destroy();
         },1000);
+        fetchAllUsers()(dispatch, getState);
       }
     }).catch((e) => {
       console.log(e.message);
