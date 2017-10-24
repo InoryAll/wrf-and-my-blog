@@ -353,3 +353,46 @@ export const fetchDeleteComment = (comment)=>{
     });
   };
 };
+
+//user update
+export const USER_UPDATE = 'USER_UPDATE';
+export const userUpdate = (user) => {
+  return {
+    type: USER_UPDATE,
+    user
+  };
+};
+export const fetchUpdateUser = (user) => {
+  return (dispatch, getState) => {
+    fetch('http://localhost:8080/user/updateUser',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    }).then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    }).then((data) => {
+      if (data.code === '0') {
+        Modal.error({
+          title: '错误',
+          content: data.message,
+        });
+      }
+      else {
+        const modal = Modal.error({
+          title: '成功',
+          content: data.message,
+        });
+        setTimeout(() => {
+          dispatch(userUpdate(user));
+          modal.destroy();
+        },1000);
+      }
+    }).catch((e) => {
+      console.log(e.message);
+    });
+  };
+};

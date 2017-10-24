@@ -104,4 +104,11 @@ class UserModal extends React.Component {
   }
 }
 
+function mapStateToProps(state) {
+}
+
+function mapDispatchToProps() {
+  
+}
+
 export default Form.create()(UserModal);
