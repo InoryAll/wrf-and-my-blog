@@ -2,7 +2,7 @@
  * 所有用户列表组件
  */
 import React from 'react';
-import { Table, Card, Button } from  'antd';
+import { Table, Card, Button, Modal } from  'antd';
 import _ from 'lodash';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -11,6 +11,7 @@ import { fetchAllUsers } from "../../action/action";
 import UserModal from './UserModal';
 import './css/userList.css';
 
+const confirm = Modal.confirm;
 class UserList extends React.Component {
     state = {
         visible: false,
@@ -46,13 +47,26 @@ class UserList extends React.Component {
         });
     };
     handleSearch = (record) => {
-    
+      // 处理搜索
     };
     handleUpdate = (record) => {
-    
+      // 处理更新
     };
     handleDelete = (record) => {
-    
+      // 处理删除
+      confirm({
+        title: '你确认要删除此用户么?',
+        content: '操作不可恢复',
+        okText: '确认',
+        okType: 'danger',
+        cancelText: '取消',
+        onOk() {
+          console.log('OK');
+        },
+        onCancel() {
+          console.log('Cancel');
+        },
+      });
     };
     render(){
         const { users } = this.props;
