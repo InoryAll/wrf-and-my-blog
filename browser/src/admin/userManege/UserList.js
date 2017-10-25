@@ -97,6 +97,7 @@ class UserList extends React.Component {
                 <Table
                     columns={columns}
                     dataSource={userList}
+                    rowKey={(record) => { return record._id }}
                 />
                 <UserModal
                     visible={this.state.visible}
