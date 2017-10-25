@@ -23,3 +23,7 @@ exports.update=function (object,callback) {
   };
   User.update({_id: object._id},user,callback);
 };
+
+exports.delete=function (id,callback) {
+  User.remove({_id: id}, callback);
+};

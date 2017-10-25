@@ -51,3 +51,17 @@ exports.updateUser=function (req,res,next) {
     res.json(message);
   });
 };
+
+exports.deleteUser=function (req,res,next) {
+  var id = req.body.id;
+  UserDao.delete(id,function (err,message) {
+    if (!err) {
+      message = {code: 1, message: '删除成功!'};
+    }
+    else {
+      console.log(err.message);
+      message = {code: 0, message: '删除失败!'};
+    }
+    res.json(message);
+  });
+};
