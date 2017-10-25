@@ -71,7 +71,7 @@ class Main extends React.Component {
                         </SubMenu>
                         <Menu.Item key="2">
                             <Icon type="message" />
-                            <span>留言板</span>
+                            <span><Link to="/index/messageBoard" className="to-home">留言板</Link></span>
                         </Menu.Item>
                     </Menu>
                 </Sider>

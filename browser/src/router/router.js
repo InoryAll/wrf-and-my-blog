@@ -15,6 +15,7 @@ import BlogPost from "../admin/blog/BlogPost";
 import Error from "../404/Error";
 import CommentList from "../admin/commentManage/CommentList";
 import UserList from "../admin/userManege/UserList";
+import MessageBoard from "../user/message/MessageBoard";
 
 export const routers=(
     <Router history={browserHistory}>
@@ -24,6 +25,7 @@ export const routers=(
       <Route path="/index" components={Main}>
           <IndexRoute components={Comment}/>
           <Route path="/detail/:id" components={Detail}/>
+          <Route path="/messageBoard" components={MessageBoard} />
       </Route>
       <Route path="/admin" components={Wrapper}>
         <IndexRoute components={LoginContainer}/>
