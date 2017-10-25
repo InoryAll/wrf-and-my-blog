@@ -7,7 +7,7 @@ import _ from 'lodash';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
-import { fetchAllUsers } from "../../action/action";
+import { fetchAllUsers, fetchDeleteUser } from "../../action/action";
 import UserModal from './UserModal';
 import './css/userList.css';
 
@@ -54,6 +54,7 @@ class UserList extends React.Component {
     };
     handleDelete = (record) => {
       // 处理删除
+      const { fetchDeleteUser } = this.props;
       confirm({
         title: '你确认要删除此用户么?',
         content: '操作不可恢复',
@@ -62,6 +63,7 @@ class UserList extends React.Component {
         cancelText: '取消',
         onOk() {
           console.log('OK');
+          fetchDeleteUser(record);
         },
         onCancel() {
           console.log('Cancel');
@@ -114,7 +116,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ fetchAllUsers },dispatch);
+    return bindActionCreators({ fetchAllUsers, fetchDeleteUser },dispatch);
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(UserList);

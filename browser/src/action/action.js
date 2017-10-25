@@ -397,3 +397,47 @@ export const fetchUpdateUser = (user) => {
     });
   };
 };
+
+//user delete
+export const USER_DELETE = 'USER_DELETE';
+export const userDelete = (user) => {
+  return {
+    type: USER_DELETE,
+    user
+  };
+};
+export const fetchDeleteUser = (user) => {
+  return (dispatch,getState) => {
+    fetch('http://localhost:8080/user/deleteUser',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({id: user._id}),
+    }).then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    }).then((data) => {
+      if (data.code === '0') {
+        Modal.error({
+          title: '错误',
+          content: data.message,
+        });
+      }
+      else {
+        const modal = Modal.success({
+          title: '成功',
+          content: data.message,
+        });
+        setTimeout(() => {
+          dispatch(userDelete(user));
+          modal.destroy();
+        },1000);
+        fetchAllUsers()(dispatch,getState);
+      }
+    }).catch((e) => {
+      console.log(e.message);
+    });
+  };
+};
