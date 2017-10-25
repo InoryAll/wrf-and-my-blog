@@ -44,14 +44,12 @@ class Console extends React.Component {
               title={<span><Icon type="book" /><span>文章管理</span></span>}
             >
               <Menu.Item key="3"><Link to="/admin/commentManage/commentList">文章列表</Link></Menu.Item>
-              <Menu.Item key="4">文章详情</Menu.Item>
             </SubMenu>
             <SubMenu
               key="sub2"
               title={<span><Icon type="user" /><span>用户管理</span></span>}
             >
               <Menu.Item key="5"><Link to="/admin/userManage/userList">用户列表</Link></Menu.Item>
-              <Menu.Item key="6">用户详情</Menu.Item>
             </SubMenu>
           </Menu>
         </Sider>
