@@ -39,6 +39,11 @@ class UserList extends React.Component {
             });
             this.handleUpdate(record);
             break;
+          case 3:
+            this.setState({
+              visible: true,
+            });
+            break;
         }
     };
     onChange = (id,visible) => {
@@ -94,6 +99,9 @@ class UserList extends React.Component {
         }];
         return (
             <Card bordered={false} className="user-list-card">
+                <div className="add-btn">
+                  <Button type="primary">添加用户</Button>
+                </div>
                 <Table
                     columns={columns}
                     dataSource={userList}
