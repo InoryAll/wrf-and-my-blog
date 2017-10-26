@@ -449,14 +449,14 @@ export const checkUser = () => {
     type: CHECK_USER,
   };
 };
-export const checkUserById = (id, callback) => {
+export const checkUserById = (username, callback) => {
   return (dispatch, getState) => {
     fetch('http://localhost:8080/user/getUserDetail',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({_id: id}),
+      body: JSON.stringify({username: username}),
     }).then((response) => {
       if (response.ok) {
         return response.json();

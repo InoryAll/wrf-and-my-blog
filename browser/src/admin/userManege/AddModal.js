@@ -36,6 +36,7 @@ class AddModal extends React.Component{
   };
   render() {
     const { getFieldDecorator } = this.props.form;
+    const { checkUserById } = this.props;
     const formItemLayout = {
       labelCol: {
         xs: { span: 24 },
@@ -72,7 +73,11 @@ class AddModal extends React.Component{
                   { validator(rule, value, callback) {
                     const errors = [];
                     if (value) {
-                        this.validateStatus= 'validating';
+                      const _this = this;
+                      _this.validateStatus= 'validating';
+                      checkUserById(value, (data) => {
+                        console.log(data);
+                      });
                     } else {
                       callback();
                     }

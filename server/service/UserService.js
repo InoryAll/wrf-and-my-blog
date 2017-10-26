@@ -15,11 +15,17 @@ exports.findUser=function (req,res,next) {
   });
 };
 
-exports.findUserById=function (req,res,next) {
-  var id=req.body.id;
-  UserDao.findById(id,function (err,user) {
+exports.findUserByName=function (req,res,next) {
+  var username=req.body.username;
+  UserDao.findByName(username,function (err,user) {
     if (!err) {
-      res.json(user);
+      var message;
+      if (user.length === 0) {
+        message = { code: '1', message: '用户名可以使用!'};
+      } else {
+        message = { code: '0', message: '用户名已存在!'};
+      }
+      res.json(message);
     }
     else {
       console.log(err.message);
