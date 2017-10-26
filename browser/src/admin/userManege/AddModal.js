@@ -8,6 +8,7 @@ const FormItem = Form.Item;
 class AddModal extends React.Component{
   state = {
     visible: this.props.visible,
+    validating: '',
   };
   componentWillReceiveProps(nextProps) {
     this.setState({
@@ -61,12 +62,23 @@ class AddModal extends React.Component{
             label="用户名"
             hasFeedback
             {...formItemLayout}
+            validateStatus={this.state.validating}
           >
             {
               getFieldDecorator('username',{
-                rules:[{ required: true, message: '请输入用户名' }],
+                rules:[
+                  { required: true, message: '请输入用户名' },
+                  { validator(rule, value, callback) {
+                    const errors = [];
+                    if (value) {
+                    
+                    } else {
+                      callback();
+                    }
+                  } },
+                  ],
               })(
-                <Input />
+                <Input placeholder="请输入用户名" />
               )
             }
           </FormItem>
@@ -79,7 +91,7 @@ class AddModal extends React.Component{
               getFieldDecorator('password',{
                 rules:[{ required: true, message: '请输入密码' }],
               })(
-                <Input type="password" />
+                <Input type="password" placeholder="请输入密码" />
               )
             }
           </FormItem>
@@ -92,7 +104,7 @@ class AddModal extends React.Component{
               getFieldDecorator('rePassword',{
                 rules:[{ required: true, message: '请再次输入密码' }],
               })(
-                <Input type="password" />
+                <Input type="password" placeholder="请再次输入" />
               )
             }
           </FormItem>

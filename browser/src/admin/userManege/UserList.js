@@ -41,9 +41,9 @@ class UserList extends React.Component {
             this.handleUpdate(record);
             break;
           case 3:
-            // this.setState({
-            //   visible: true,
-            // });
+            this.setState({
+              visible: true,
+            });
             break;
         }
     };
@@ -69,7 +69,7 @@ class UserList extends React.Component {
         cancelText: '取消',
         onOk() {
           console.log('OK');
-          // fetchDeleteUser(record);
+          fetchDeleteUser(record);
         },
         onCancel() {
           console.log('Cancel');

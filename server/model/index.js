@@ -13,7 +13,7 @@ mongoose.connect(config.address,{
 
 var connection=mongoose.connection;
 connection.on('open',function () {
-    createData();
+    // createData();
     console.log('connected to '+config.address);
 });
 connection.on('error',function (err) {
