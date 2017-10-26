@@ -13,7 +13,7 @@ mongoose.connect(config.address,{
 
 var connection=mongoose.connection;
 connection.on('open',function () {
-    // createData();
+    createData();
     console.log('connected to '+config.address);
 });
 connection.on('error',function (err) {
@@ -50,8 +50,8 @@ function createData() {
     reviews.push({_id:reviewIds[0],content:'你好，这是我的第一条评论哦.',date:'2017-9-4',comment:''});
     reviews.push({_id:reviewIds[1],content:'你好，这是我的第二条评论哦.',date:'2017-9-4',comment:''});
     comments.push({_id:commentIds[0],title:'这是我的第一篇文章',summary:'这是划时代意义的第一篇文章',author:'trj',date:'2017-9-4',content:'大家好啊，这是我的第一篇化时代意义的文章，有问题大家尽管来问我~',review:''});
-    users.push({_id:userIds[0],username:'tianrenjie',password: '123456'});
-    users.push({_id:userIds[1],username:'wangrunfang',password: '123456'});
+    users.push({_id:userIds[0],username:'trj',password: '123456'});
+    users.push({_id:userIds[1],username:'wrf',password: '123456'});
    
     Review.create(reviews, function(err, docs) {
         Comment.create(comments, function(err, docs) {
