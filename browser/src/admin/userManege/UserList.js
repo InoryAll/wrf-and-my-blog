@@ -10,6 +10,7 @@ import { browserHistory } from 'react-router';
 import { fetchAllUsers, fetchDeleteUser } from "../../action/action";
 import UserModal from './UserModal';
 import './css/userList.css';
+import AddModal from "./AddModal";
 
 const confirm = Modal.confirm;
 class UserList extends React.Component {
@@ -40,9 +41,9 @@ class UserList extends React.Component {
             this.handleUpdate(record);
             break;
           case 3:
-            this.setState({
-              visible: true,
-            });
+            // this.setState({
+            //   visible: true,
+            // });
             break;
         }
     };
@@ -68,7 +69,7 @@ class UserList extends React.Component {
         cancelText: '取消',
         onOk() {
           console.log('OK');
-          fetchDeleteUser(record);
+          // fetchDeleteUser(record);
         },
         onCancel() {
           console.log('Cancel');
@@ -100,7 +101,7 @@ class UserList extends React.Component {
         return (
             <Card bordered={false} className="user-list-card">
                 <div className="add-btn">
-                  <Button type="primary">添加用户</Button>
+                  <Button type="primary" onClick={()=>{ this.showModal(3,null) }}>添加用户</Button>
                 </div>
                 <Table
                     columns={columns}
@@ -112,6 +113,10 @@ class UserList extends React.Component {
                     onChange={this.onChange}
                     type={this.state.type}
                     currentUser={this.state.currentUser}
+                />
+                <AddModal
+                    visible={this.state.visible}
+                    onChange={this.onChange}
                 />
             </Card>
         );

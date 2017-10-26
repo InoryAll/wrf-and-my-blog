@@ -16,7 +16,7 @@ class AddModal extends React.Component{
   }
   handleOk = (e) => {
     const { getFieldsValue } = this.props.form;
-      this.props.onChange(3, false);
+    this.props.onChange(3, false);
   };
   handleCancel = (e) => {
     this.setState({ visible: false });
@@ -102,4 +102,4 @@ class AddModal extends React.Component{
   }
 }
 
-export default AddModal;
+export default Form.create()(AddModal);
