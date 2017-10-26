@@ -441,3 +441,31 @@ export const fetchDeleteUser = (user) => {
     });
   };
 };
+
+// user check
+export const CHECK_USER = 'CHECK_USER';
+export const checkUser = () => {
+  return {
+    type: CHECK_USER,
+  };
+};
+export const checkUserById = (id, callback) => {
+  return (dispatch, getState) => {
+    fetch('http://localhost:8080/user/getUserDetail',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({_id: id}),
+    }).then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    }).then((data) => {
+      dispatch(checkUser());
+      callback(data);
+    }).catch((e) => {
+      console.log(e.message);
+    });
+  };
+};

@@ -3,12 +3,14 @@
  */
 import React from 'react';
 import { Form, Modal, Button, Input } from 'antd';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { checkUserById } from "../../action/action";
 
 const FormItem = Form.Item;
 class AddModal extends React.Component{
   state = {
     visible: this.props.visible,
-    validating: '',
   };
   componentWillReceiveProps(nextProps) {
     this.setState({
@@ -62,7 +64,6 @@ class AddModal extends React.Component{
             label="用户名"
             hasFeedback
             {...formItemLayout}
-            validateStatus={this.state.validating}
           >
             {
               getFieldDecorator('username',{
@@ -71,7 +72,7 @@ class AddModal extends React.Component{
                   { validator(rule, value, callback) {
                     const errors = [];
                     if (value) {
-                    
+                        this.validateStatus= 'validating';
                     } else {
                       callback();
                     }
@@ -114,4 +115,13 @@ class AddModal extends React.Component{
   }
 }
 
-export default Form.create()(AddModal);
+function mapStateToProps(state) {
+  return {};
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ checkUserById }, dispatch);
+}
+
+AddModal = Form.create()(AddModal);
+export default connect(mapStateToProps, mapDispatchToProps)(AddModal);

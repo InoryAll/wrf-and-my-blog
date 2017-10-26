@@ -1,7 +1,7 @@
 /**
  * user reducer
  */
-import {GET_ALL_USERS, USER_DELETE, USER_UPDATE} from "../action/action";
+import {CHECK_USER, GET_ALL_USERS, USER_DELETE, USER_UPDATE} from "../action/action";
 
 export default function user(state={},action) {
   switch (action.type) {
@@ -9,6 +9,7 @@ export default function user(state={},action) {
       return {...state,users:action.users};
     case USER_UPDATE:
     case USER_DELETE:
+    case CHECK_USER:
     default:
       return state;
   }
