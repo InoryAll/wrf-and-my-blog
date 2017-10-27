@@ -76,7 +76,13 @@ class AddModal extends React.Component{
                       const _this = this;
                       _this.validateStatus= 'validating';
                       checkUserById(value, (data) => {
-                        console.log(data);
+                        if (data.code === '0') {
+                          _this.validateStatus = 'error';
+                          errors.push({ message: '用户名已存在' });
+                        } else {
+                          _this.validateStatus = 'success';
+                        }
+                        callback(errors);
                       });
                     } else {
                       callback();
@@ -108,7 +114,12 @@ class AddModal extends React.Component{
           >
             {
               getFieldDecorator('rePassword',{
-                rules:[{ required: true, message: '请再次输入密码' }],
+                rules:[
+                  { required: true, message: '请再次输入密码' },
+                  { validator(rule, value, callback) {
+                  
+                  } }
+                  ],
               })(
                 <Input type="password" placeholder="请再次输入" />
               )

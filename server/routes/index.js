@@ -20,7 +20,7 @@ router.post('/review/getReviewsById',ReviewService.getReviewsById);
 
 router.post('/user/login',UserService.findUser);
 router.post('/user/getAllUsers',UserService.findAllUser);
-router.post('/user/getUserDetail',UserService.findUserById);
+router.post('/user/getUserDetail',UserService.findUserByName);
 router.post('/user/updateUser',UserService.updateUser);
 router.post('/user/deleteUser',UserService.deleteUser);
 
