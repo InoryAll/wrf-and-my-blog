@@ -5,6 +5,7 @@ import React from 'react';
 import { Form, Modal, Button, Input } from 'antd';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 import { checkUserById } from "../../action/action";
 
 const FormItem = Form.Item;
@@ -35,7 +36,7 @@ class AddModal extends React.Component{
     });
   };
   render() {
-    const { getFieldDecorator } = this.props.form;
+    const { getFieldDecorator,getFieldValue } = this.props.form;
     const { checkUserById } = this.props;
     const formItemLayout = {
       labelCol: {
@@ -117,7 +118,14 @@ class AddModal extends React.Component{
                 rules:[
                   { required: true, message: '请再次输入密码' },
                   { validator(rule, value, callback) {
-                  
+                      const errors = [];
+                      const pwd = getFieldValue('password');
+                      if (!_.isEqual(pwd, value)) {
+                        errors.push({ message: '两次输入的密码不一致' });
+                        callback(errors);
+                      } else {
+                        callback();
+                      }
                   } }
                   ],
               })(
