@@ -122,9 +122,13 @@ class AddModal extends React.Component{
                   { validator(rule, value, callback) {
                       const errors = [];
                       const pwd = getFieldValue('password');
-                      if (!_.isEqual(pwd, value)) {
-                        errors.push({ message: '两次输入的密码不一致' });
-                        callback(errors);
+                      if (value) {
+                        if (!_.isEqual(pwd, value)) {
+                          errors.push({ message: '两次输入的密码不一致' });
+                          callback(errors);
+                        } else {
+                          callback();
+                        }
                       } else {
                         callback();
                       }
