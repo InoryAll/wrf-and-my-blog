@@ -4,6 +4,14 @@
 var model=require('../model/index');
 var User=model.User;
 
+exports.add=function (object,callback) {
+  var user = new User({
+    username: object.username,
+    password: object.password,
+  });
+  user.save(callback);
+};
+
 exports.find=function (user,callback) {
   User.find({username:user.username,password:user.password},callback);
 };

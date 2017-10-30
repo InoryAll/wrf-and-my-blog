@@ -3,6 +3,20 @@
  */
 var UserDao=require('../dao/UserDao');
 
+exports.addUser=function (req,res,next) {
+  var user = req.body;
+  UserDao.add(user,function (err,message) {
+    if (!err) {
+      message = {code: '1', message: '添加用户成功!'};
+    }
+    else {
+      console.log(err,message);
+      message = {code: '0', message: '添加用户失败!'};
+    }
+    res.json(message);
+  })
+};
+
 exports.findUser=function (req,res,next) {
   var user=req.body;
   UserDao.find(user,function (err,admin) {

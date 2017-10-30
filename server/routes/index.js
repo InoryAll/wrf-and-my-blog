@@ -23,5 +23,6 @@ router.post('/user/getAllUsers',UserService.findAllUser);
 router.post('/user/getUserDetail',UserService.findUserByName);
 router.post('/user/updateUser',UserService.updateUser);
 router.post('/user/deleteUser',UserService.deleteUser);
+router.post('/user/addUser',UserService.addUser);
 
 module.exports = router;
