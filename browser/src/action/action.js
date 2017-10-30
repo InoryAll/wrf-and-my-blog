@@ -469,3 +469,47 @@ export const checkUserById = (username, callback) => {
     });
   };
 };
+
+//user add
+export const ADD_USER = 'ADD_USER';
+export const addUser = (user) => {
+  return {
+    type: ADD_USER,
+    user
+  };
+};
+export const fetchAddUser = (user) => {
+  return (dispatch, getState) => {
+    fetch('http://localhost:8080/user/addUser',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    }).then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    }).then((data) => {
+      if (data.code === '0') {
+        Modal.error({
+          title: '错误',
+          content: data.message,
+        });
+      }
+      else {
+        const modal = Modal.success({
+          title: '成功',
+          content: data.message,
+        });
+        setTimeout(()=>{
+          dispatch(addUser(user));
+          modal.destroy();
+        },1000);
+        fetchAllUsers()(dispatch,getState)
+      }
+    }).catch((e)=>{
+      console.log(e.message);
+    });
+  };
+};

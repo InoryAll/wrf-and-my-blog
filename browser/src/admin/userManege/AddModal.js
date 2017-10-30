@@ -6,7 +6,7 @@ import { Form, Modal, Button, Input } from 'antd';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import _ from 'lodash';
-import { checkUserById } from "../../action/action";
+import { checkUserById, fetchAddUser } from "../../action/action";
 
 const FormItem = Form.Item;
 class AddModal extends React.Component{
@@ -20,6 +20,8 @@ class AddModal extends React.Component{
   }
   handleOk = (e) => {
     const { getFieldsValue } = this.props.form;
+    const params = getFieldsValue();
+    this.props.fetchAddUser(params);
     this.props.onChange(3, false);
   };
   handleCancel = (e) => {
@@ -144,7 +146,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ checkUserById }, dispatch);
+  return bindActionCreators({ checkUserById, fetchAddUser }, dispatch);
 }
 
 AddModal = Form.create()(AddModal);
