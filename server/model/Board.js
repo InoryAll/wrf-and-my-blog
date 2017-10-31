@@ -6,6 +6,7 @@ var Schema = mongoose.Schema;
 
 var BoradSchema = new Schema({
   date: String,
+  author: String,
   content: String,
 });
 

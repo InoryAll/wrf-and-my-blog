@@ -1,0 +1,36 @@
+/**
+ * 留言本展示组件样式 messageboard
+ */
+.message-show-card{
+    padding:10px 20px;
+}
+.title{
+   font-size: 30px;
+}
+.message-show-split{
+    height: 2px;
+    margin: 10px 0;
+    background: #D3E0E2;
+    border: none;
+}
+.message-card{
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    border-color: transparent;
+    margin-bottom: 10px;
+}
+.content{
+    text-align: left;
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+.author{
+    float: right;
+}
+.date{
+    float: right;
+}
+.author,.date{
+    margin-right: 20px;
+    color: #bfbfbf;
+}
