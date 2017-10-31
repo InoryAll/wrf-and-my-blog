@@ -470,7 +470,7 @@ export const checkUserById = (username, callback) => {
   };
 };
 
-//user add
+// user add
 export const ADD_USER = 'ADD_USER';
 export const addUser = (user) => {
   return {
@@ -509,6 +509,77 @@ export const fetchAddUser = (user) => {
         fetchAllUsers()(dispatch,getState)
       }
     }).catch((e)=>{
+      console.log(e.message);
+    });
+  };
+};
+
+// boards get
+export const BOARD_SEARCH = 'BOARD_SEARCH';
+export const boardSearch = (boards) => {
+  return {
+    type: BOARD_SEARCH,
+    boards,
+  };
+};
+export const fetchAllBoards = () => {
+  return (dispatch, getState) => {
+    fetch('http://localhost:8080/board/getAllboards',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    }).then((data) => {
+      dispatch(boardSearch(data));
+    }).catch((e) => {
+      console.log(e.message);
+    });
+  };
+};
+
+// boards add
+export const BOARD_ADD = 'BOARD_ADD';
+export const boardAdd = (board) => {
+  return {
+    type: BOARD_ADD,
+    board,
+  };
+};
+export const fetchAddBoard = (board) => {
+  return (dispatch, getState) => {
+    fetch('http://localhost:8080/board/addBoard',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(board),
+    }).then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    }).then((data) => {
+      if (data.code === '0') {
+        Modal.error({
+          title: '错误',
+          content: data.message,
+        });
+      }
+      else {
+        const modal = Modal.success({
+          title: '成功',
+          content: data.message,
+        });
+        setTimeout(() => {
+          dispatch(boardAdd(board));
+          modal.destroy();
+        },1000);
+        fetchAllBoards()(dispatch, getState);
+      }
+    }).catch((e) => {
       console.log(e.message);
     });
   };
