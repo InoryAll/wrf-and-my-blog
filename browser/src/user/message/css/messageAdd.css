@@ -1,0 +1,13 @@
+/**
+ * 留言添加组件样式 messageadd
+ */
+.message-add-card{
+    padding: 0 20px;
+}
+.message-card{
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    border-color: transparent;
+}
+.message-btn{
+    margin-right: 10px;
+}
