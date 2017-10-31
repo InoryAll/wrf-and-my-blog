@@ -21,8 +21,17 @@
 .content{
     text-align: left;
     margin: 0;
-    font-size: 18px;
+    font-size: 14px;
     color: #333;
+    float: left;
+    line-height: 40px;
+}
+.icon-div{
+    float: left;
+    height: 40px;
+    margin-right: 10px;
+}
+.user-icon{
 }
 .author{
     float: right;
