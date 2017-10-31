@@ -15,3 +15,13 @@ exports.addBoard = function (req, res, next) {
     res.json(message);
   });
 };
+
+exports.getAllBoards = function (req, res, next) {
+  BoardDao.findAll(function (err,boards) {
+    if (!err) {
+      res.json(boards);
+    } else {
+      console.log(err.message);
+    }
+  });
+};

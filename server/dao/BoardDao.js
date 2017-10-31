@@ -13,3 +13,7 @@ exports.add = function (object, callback) {
   board.save(callback);
 };
 
+exports.findAll = function (callback) {
+  Board.find(callback);
+};
+

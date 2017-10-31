@@ -27,5 +27,6 @@ router.post('/user/deleteUser',UserService.deleteUser);
 router.post('/user/addUser',UserService.addUser);
 
 router.post('/board/addBoard',BoardService.addBoard);
+router.post('/board/getAllBoards',BoardService.getAllBoards);
 
 module.exports = router;
