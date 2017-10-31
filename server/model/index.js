@@ -27,10 +27,12 @@ connection.on('error',function (err) {
 require('./Comment');
 require('./Review');
 require('./User');
+require('./Board');
 
 exports.Comment=mongoose.model('Comment');
 exports.Review=mongoose.model('Review');
 exports.User=mongoose.model('User');
+exports.Board=mongoose.model('Board');
 
 function createData() {
     var Comment=require('./index').Comment;
