@@ -7,6 +7,7 @@ var router = express.Router();
 var  CommentService=require('../service/CommentService');
 var  ReviewService=require( '../service/ReviewService');
 var  UserService=require('../service/UserService');
+var  BoardService=require('../service/BoardService');
 
 router.post('/comment/getSiders',CommentService.getSliders);
 router.post('/comment/getAllComment',CommentService.getAllComments);
@@ -24,5 +25,7 @@ router.post('/user/getUserDetail',UserService.findUserByName);
 router.post('/user/updateUser',UserService.updateUser);
 router.post('/user/deleteUser',UserService.deleteUser);
 router.post('/user/addUser',UserService.addUser);
+
+router.post('/board/addBoard',BoardService.addBoard);
 
 module.exports = router;
