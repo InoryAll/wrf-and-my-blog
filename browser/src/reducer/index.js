@@ -7,6 +7,7 @@ import sider from './sider';
 import review from './review';
 import login from './login';
 import user from './user';
+import board from './board';
 
 export const rooterReducer=combineReducers({
     comment,
@@ -14,4 +15,5 @@ export const rooterReducer=combineReducers({
     review,
     login,
     user,
+    board,
 });
