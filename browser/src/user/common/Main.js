@@ -73,6 +73,10 @@ class Main extends React.Component {
                             <Icon type="message" />
                             <span><Link to="/messageBoard" className="to-home">留言板</Link></span>
                         </Menu.Item>
+                        <Menu.Item key="3">
+                            <Icon type="calendar" />
+                            <span><Link to="/calender" className="to-home">日历</Link></span>
+                        </Menu.Item>
                     </Menu>
                 </Sider>
                 <Layout>

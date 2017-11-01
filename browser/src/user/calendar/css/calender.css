@@ -1,3 +1,9 @@
 /**
  * 日期组件样式 calender
  */
+.calender-card-container{
+    padding: 10px 20px;
+}
+.calender-card{
+    border: none;
+}

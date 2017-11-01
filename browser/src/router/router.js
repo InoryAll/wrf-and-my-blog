@@ -16,6 +16,7 @@ import Error from "../404/Error";
 import CommentList from "../admin/commentManage/CommentList";
 import UserList from "../admin/userManege/UserList";
 import MessageBoard from "../user/message/MessageBoard";
+import Calendar from "../user/calendar/MyCalendar";
 
 export const routers=(
     <Router history={browserHistory}>
@@ -26,6 +27,7 @@ export const routers=(
           <IndexRoute components={Comment}/>
           <Route path="/detail/:id" components={Detail}/>
           <Route path="/messageBoard" components={MessageBoard} />
+          <Route path="/calender" components={Calendar} />
       </Route>
       <Route path="/admin" components={Wrapper}>
         <IndexRoute components={LoginContainer}/>
