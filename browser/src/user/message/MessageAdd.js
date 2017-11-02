@@ -3,17 +3,27 @@
  */
 import React from 'react';
 import moment from 'moment';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import { Form, Input, Button, Card, DatePicker } from 'antd';
+import { fetchAddBoard } from "../../action/action";
 import './css/messageAdd.css';
 
 const FormItem = Form.Item;
 const { TextArea } = Input;
 class MessageAdd extends React.Component{
+  onReset = () => {
+    const { resetFields } = this.props.form;
+    resetFields();
+  };
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
+        const params = values;
+        this.props.fetchAddBoard(params);
+        this.onReset();
       }
     });
   };
@@ -96,7 +106,7 @@ class MessageAdd extends React.Component{
               )}
             </FormItem>
             <FormItem {...tailFormItemLayout}>
-              <Button className="message-btn">重置</Button>
+              <Button className="message-btn" onClick={this.onReset}>重置</Button>
               <Button type="primary" htmlType="submit" className="message-btn">提交</Button>
             </FormItem>
           </Form>
@@ -106,4 +116,14 @@ class MessageAdd extends React.Component{
   }
 }
 
-export default Form.create()(MessageAdd);
+function mapStateToProps(state) {
+  return {
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchAddBoard },dispatch);
+}
+
+MessageAdd = Form.create()(MessageAdd);
+export default connect(mapStateToProps,mapDispatchToProps)(MessageAdd);
