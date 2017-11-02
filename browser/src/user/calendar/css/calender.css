@@ -7,6 +7,13 @@
 .calender-card{
     border: none;
 }
+.calender-box{
+    text-align: center;
+    width: 290px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    margin: 20px auto;
+}
 .title{
     font-size: 30px;
 }
@@ -15,4 +22,15 @@
     margin: 10px 0;
     background: #D3E0E2;
     border: none;
+}
+.countDown-container{
+    text-align: center;
+}
+.countDown-title{
+    font-weight: bold;
+    padding: 0 10px;
+    font-size: 20px;
+}
+.countDown-content{
+    font-size: 20px;
 }
