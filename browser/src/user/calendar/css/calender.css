@@ -7,3 +7,12 @@
 .calender-card{
     border: none;
 }
+.title{
+    font-size: 30px;
+}
+.calender-split{
+    height: 2px;
+    margin: 10px 0;
+    background: #D3E0E2;
+    border: none;
+}

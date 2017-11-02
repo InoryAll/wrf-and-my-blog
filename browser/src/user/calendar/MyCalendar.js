@@ -12,13 +12,36 @@ moment.locale('zh-cn');
 function onPanelChange(value, mode) {
   console.log(value, mode);
 }
+function countDown() {
+    const currentTime = moment();
+    const targetTime = moment('2017/12/31');
+    const timeSpan = targetTime.diff(currentTime);
+    return timeSpan;
+}
 class MyCalendar extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      timeSpan: 0,
+    };
+  }
+  componentDidMount() {
+    this.timer = setInterval(() => {
+      const timeSpan = countDown();
+      this.setState({
+        timeSpan: timeSpan,
+      });
+    },1000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
   render(){
     return (
       <div className="calender-card-container">
         <Card className="calender-card">
           <h1 className="title">我的日历</h1>
-          <hr/>
+          <hr className="calender-split" />
           <Row>
             <Col span={8} offset={8}>
               <div style={{ width: 290, border: '1px solid #d9d9d9', borderRadius: 4 }}>
@@ -27,6 +50,12 @@ class MyCalendar extends React.Component{
                   onPanelChange={onPanelChange}
                 />
               </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <span>倒计时:</span>
+              <span>{ this.state.timeSpan }</span>
             </Col>
           </Row>
         </Card>
