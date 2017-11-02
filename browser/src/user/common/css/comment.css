@@ -36,3 +36,6 @@
 .comment  .more{
     float: right;
 }
+.comment-container{
+    padding: 10px 16px;
+}

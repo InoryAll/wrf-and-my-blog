@@ -47,7 +47,7 @@ class Comment extends React.Component{
             );
         });
         return (
-            <div>
+            <div className="comment-container">
                 { commentList }
             </div>
         );

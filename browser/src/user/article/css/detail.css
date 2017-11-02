@@ -63,3 +63,6 @@
 .detail .contact .img-container .img-box:nth-of-type(2){
     background: #533eb4;
 }
+.detail-container{
+    padding: 10px 16px;
+}

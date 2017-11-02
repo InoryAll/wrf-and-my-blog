@@ -18,7 +18,7 @@
     border-color: transparent;
     margin-bottom: 10px;
 }
-.content{
+.message-content{
     text-align: left;
     margin: 0;
     font-size: 14px;
@@ -33,13 +33,13 @@
 }
 .user-icon{
 }
-.author{
+.message-author{
     float: right;
 }
-.date{
+.message-date{
     float: right;
 }
-.author,.date{
+.message-author,.message-date{
     margin-right: 20px;
     color: #bfbfbf;
 }
