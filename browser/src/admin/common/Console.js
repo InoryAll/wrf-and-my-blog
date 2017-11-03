@@ -2,8 +2,9 @@
  * 管理员主界面main
  */
 import React from 'react';
-import { Layout, Menu, Breadcrumb, Icon, Badge, Avatar } from 'antd';
-import { Link,IndexLink } from 'react-router';
+import { Layout, Menu, Breadcrumb, Icon, Badge, Avatar, Modal } from 'antd';
+import { Link,IndexLink,browserHistory } from 'react-router';
+import { connect } from 'react-redux';
 import item from '../static/images/item.jpg';
 import './css/console.css';
 
@@ -13,6 +14,17 @@ class Console extends React.Component {
   state = {
     collapsed: false,
   };
+  componentWillMount() {
+    if (!this.props.user.username) {
+      Modal.error({
+        title:'失败',
+        content:'请登录！',
+        onOk(){
+          browserHistory.push('/admin/login');
+        }
+      });
+    }
+  }
   onCollapse = (collapsed) => {
     console.log(collapsed);
     this.setState({ collapsed });
@@ -66,4 +78,13 @@ class Console extends React.Component {
   }
 }
 
-export default Console;
+function mapStateToProps(state) {
+ return {
+   user: state.login,
+ };
+}
+
+function mapDispatchToProps() {
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Console);

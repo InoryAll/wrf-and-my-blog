@@ -15,8 +15,8 @@ const Option = Select.Option;
 const { TextArea } = Input;
 class BlogPost extends React.Component{
   componentWillMount(){
-    // 页面的权限控制，暂时开放，由于安卓端的兼容性问题。
-    /*if (!this.props.user.username) {
+    // 页面的权限控制
+    if (!this.props.user.username) {
       Modal.error({
         title:'失败',
         content:'请登录！',
@@ -24,7 +24,7 @@ class BlogPost extends React.Component{
           browserHistory.push('/admin/login');
         }
       });
-    }*/
+    }
   }
   handleSubmit = (e) => {
     e.preventDefault();

@@ -20,7 +20,17 @@ class UserList extends React.Component {
         currentUser: undefined,
     };
     componentWillMount(){
+      if (!this.props.user.username) {
+        Modal.error({
+          title:'失败',
+          content:'请登录！',
+          onOk(){
+            browserHistory.push('/admin/login');
+          }
+        });
+      } else {
         this.props.fetchAllUsers();
+      }
     }
     showModal = (id,record) => {
         switch (id) {
@@ -125,7 +135,8 @@ class UserList extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        users: state.user.users
+        users: state.user.users,
+        user: state.login,
     };
 }
 

@@ -22,7 +22,17 @@ class CommentList extends React.Component {
         };
     }
     componentWillMount(){
+      if (!this.props.user.username) {
+        Modal.error({
+          title:'失败',
+          content:'请登录！',
+          onOk(){
+            browserHistory.push('/admin/login');
+          }
+        });
+      } else {
         this.props.fetchAllComments();
+      }
     }
     showModal = (id, record) => {
         switch (id) {
