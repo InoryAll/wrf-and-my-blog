@@ -40,7 +40,7 @@ class Login extends React.Component{
         <Row>
           <Col>
             <div className="admin-title">
-              WTF&&TRJ后台管理系统
+              WRF&&TRJ后台管理系统
             </div>
           </Col>
         </Row>
