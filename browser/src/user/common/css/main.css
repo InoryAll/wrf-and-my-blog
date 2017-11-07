@@ -2,6 +2,12 @@
  *主页面组件样式 Main
  */
 
+/*header顶部*/
+.header{
+    background: #fff;
+    box-shadow: 0 0 2px #000;
+}
+
 /*slider侧边栏*/
 .logo {
     height: 32px;

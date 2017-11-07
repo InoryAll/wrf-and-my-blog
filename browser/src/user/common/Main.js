@@ -5,6 +5,7 @@ import React from 'react';
 import { Layout, Menu, Breadcrumb, Icon, Card, Button, Row, Col, Avatar, Mention, Form } from 'antd';
 import './css/main.css';
 import Banner from './components/Banner';
+import TopMenu from './TopMenu';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {fetchSiders} from "../../action/action";
@@ -80,8 +81,8 @@ class Main extends React.Component {
                     </Menu>
                 </Sider>
                 <Layout>
-                    <Header>
-                        11111111
+                    <Header className="header">
+                    
                     </Header>
                     <Card className="banner-card" bordered={false}>
                         <Banner/>
