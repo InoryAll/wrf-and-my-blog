@@ -1,5 +1,5 @@
 /**
- *主页面组件 Main
+ *主页面组件 main
  */
 import React from 'react';
 import { Layout, Menu, Breadcrumb, Icon, Card, Button, Row, Col, Avatar, Mention, Form } from 'antd';
@@ -80,6 +80,9 @@ class Main extends React.Component {
                     </Menu>
                 </Sider>
                 <Layout>
+                    <Header>
+                        11111111
+                    </Header>
                     <Card className="banner-card" bordered={false}>
                         <Banner/>
                     </Card>
