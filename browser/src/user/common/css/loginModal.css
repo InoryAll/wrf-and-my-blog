@@ -2,5 +2,32 @@
  * 第三方登录框样式 loginmodal
  */
 .login-card{
-
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.login-div{
+    display: block;
+    width: 150px;
+    height: 150px;
+    /*box-shadow: 5px 5px 5px #000;*/
+    box-sizing: border-box;
+    border-radius: 50%;
+    line-height: 150px;
+    text-align: center;
+    margin: 0 auto;
+}
+.login-qq{
+    font-size: 100px;
+}
+.login-weixin{
+    font-size: 100px;
+}
+.login-h{
+    color: #919191;
+    font-size: 20px;
+    padding: 4px 0;
+    text-align: center;
 }

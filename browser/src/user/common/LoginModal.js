@@ -34,23 +34,24 @@ class LoginModal extends React.Component{
           onOk={this.handleOk}
           onCancel={this.handleCancel}
           footer={null}
+          width={570}
         >
           <Row>
-            <Col span={10}>
-              <Card className="QQ-login login-card">
-                <span>
-                  <i className="iconfont icon-qq login-icon" />
-                </span>
+            <Col span={8} offset={3}>
+              <div className="login-container">
+                <Button className="login-div">
+                  <i className="iconfont icon-QQ login-qq" />
+                </Button>
                 <h1 className="login-h">QQ登录</h1>
-              </Card>
+              </div>
             </Col>
-            <Col span={10} offset={4}>
-              <Card className="wechat-login login-card">
-                <span>
-                  <i className="iconfont icon-weixin login-icon" />
-                </span>
+            <Col span={8} offset={2}>
+              <div className="login-container">
+                <Button className="login-div">
+                  <i className="iconfont icon-weixin login-weixin" />
+                </Button>
                 <h1 className="login-h">微信登录</h1>
-              </Card>
+              </div>
             </Col>
           </Row>
         </Modal>
