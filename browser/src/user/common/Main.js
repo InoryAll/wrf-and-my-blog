@@ -82,7 +82,7 @@ class Main extends React.Component {
                 </Sider>
                 <Layout>
                     <Header className="header">
-                    
+                        <TopMenu />
                     </Header>
                     <Card className="banner-card" bordered={false}>
                         <Banner/>

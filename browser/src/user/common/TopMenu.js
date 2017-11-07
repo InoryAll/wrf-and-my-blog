@@ -3,9 +3,9 @@
  */
 import React from 'react';
 import { Menu, Icon } from 'antd';
+import './css/topMenu.css';
 
 const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
 class TopMenu extends React.Component {
   state = {
     current: 'login',
@@ -20,28 +20,17 @@ class TopMenu extends React.Component {
     return (
       <Menu
         onClick={this.handleClick}
-        selectedKeys={[this.state.current]}
         mode="horizontal"
+        className="top-menu"
       >
         <Menu.Item key="login">
           <Icon type="user" />登录
         </Menu.Item>
-        <Menu.Item key="app" disabled>
-          <Icon type="appstore" />Navigation Two
-        </Menu.Item>
-        <SubMenu title={<span><Icon type="setting" />Navigation Three - Submenu</span>}>
-          <MenuItemGroup title="Item 1">
-            <Menu.Item key="setting:1">Option 1</Menu.Item>
-            <Menu.Item key="setting:2">Option 2</Menu.Item>
-          </MenuItemGroup>
-          <MenuItemGroup title="Item 2">
-            <Menu.Item key="setting:3">Option 3</Menu.Item>
-            <Menu.Item key="setting:4">Option 4</Menu.Item>
-          </MenuItemGroup>
+        <SubMenu title={<span><Icon type="user" />用户名</span>}>
+          <Menu.Item key="chooseOne">选项1</Menu.Item>
+          <Menu.Item key="chooseTwo">选项2</Menu.Item>
+          <Menu.Item key="logout">注销</Menu.Item>
         </SubMenu>
-        <Menu.Item key="alipay">
-          <a href="https://ant.design" target="_blank" rel="noopener noreferrer">Navigation Four - Link</a>
-        </Menu.Item>
       </Menu>
     );
   }
