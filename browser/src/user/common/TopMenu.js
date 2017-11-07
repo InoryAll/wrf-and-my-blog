@@ -22,6 +22,7 @@ class TopMenu extends React.Component {
         onClick={this.handleClick}
         mode="horizontal"
         className="top-menu"
+        selectedKeys={[]}
       >
         <Menu.Item key="login">
           <Icon type="user" />登录
