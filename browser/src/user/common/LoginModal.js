@@ -3,26 +3,31 @@
  */
 import React from 'react';
 import { Modal, Card, Row, Col, Button } from 'antd';
+import _ from 'lodash';
 import './css/loginModal.css';
 
 class LoginModal extends React.Component{
   state = {
     loading: false,
-    visible: true,
+    visible: this.props.visible,
   };
-  showModal = () => {
-    this.setState({
-      visible: true,
-    });
-  };
+  componentWillReceiveProps(nextProps) {
+    if (!_.isEqual(this.props.visible, nextProps.visible)) {
+      this.setState({
+        visible: nextProps.visible,
+      });
+    }
+  }
   handleOk = () => {
     this.setState({ loading: true });
     setTimeout(() => {
       this.setState({ loading: false, visible: false });
     }, 3000);
+    this.props.onModalChange(false);
   };
   handleCancel = () => {
     this.setState({ visible: false });
+    this.props.onModalChange(false);
   };
   render() {
     const { visible, loading } = this.state;

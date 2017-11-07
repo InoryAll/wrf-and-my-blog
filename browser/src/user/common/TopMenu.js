@@ -7,14 +7,15 @@ import './css/topMenu.css';
 
 const SubMenu = Menu.SubMenu;
 class TopMenu extends React.Component {
-  state = {
-    current: 'login',
-  };
   handleClick = (e) => {
-    console.log('click ', e);
-    this.setState({
-      current: e.key,
-    });
+    switch (e.key) {
+      case 'login':
+        console.log('login');
+        this.props.onMenuChange(true);
+        break;
+      default:
+        break;
+    }
   };
   render() {
     return (

@@ -19,7 +19,8 @@ class Main extends React.Component {
     constructor(props){
         super(props);
         this.state={
-            collapsed: false
+            collapsed: false,
+            visible: false,
         };
     }
 
@@ -30,6 +31,12 @@ class Main extends React.Component {
     onCollapse = (collapsed) => {
         console.log(collapsed);
         this.setState({ collapsed });
+    };
+    
+    onChange = (visible) => {
+        this.setState({
+          visible: visible,
+        });
     };
 
     render() {
@@ -83,7 +90,7 @@ class Main extends React.Component {
                 </Sider>
                 <Layout>
                     <Header className="header">
-                        <TopMenu />
+                        <TopMenu onMenuChange={this.onChange} />
                     </Header>
                     <Card className="banner-card" bordered={false}>
                         <Banner/>
@@ -95,7 +102,7 @@ class Main extends React.Component {
                         WRF&TRJ ©2017 Created by Us.
                     </Footer>
                 </Layout>
-                <LoginModal />
+                <LoginModal visible={this.state.visible} onModalChange={this.onChange} />
             </Layout>
         );
     }
