@@ -10,7 +10,6 @@ class TopMenu extends React.Component {
   handleClick = (e) => {
     switch (e.key) {
       case 'login':
-        console.log('login');
         this.props.onMenuChange(true);
         break;
       default:
@@ -31,6 +30,7 @@ class TopMenu extends React.Component {
         <SubMenu title={<span><Icon type="user" />用户名</span>}>
           <Menu.Item key="chooseOne">选项1</Menu.Item>
           <Menu.Item key="chooseTwo">选项2</Menu.Item>
+          <Menu.Divider />
           <Menu.Item key="logout">注销</Menu.Item>
         </SubMenu>
       </Menu>
