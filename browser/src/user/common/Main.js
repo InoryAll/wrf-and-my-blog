@@ -10,6 +10,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {fetchSiders} from "../../action/action";
 import {Link} from 'react-router';
+import LoginModal from "./LoginModal";
 
 const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -94,6 +95,7 @@ class Main extends React.Component {
                         WRF&TRJ ©2017 Created by Us.
                     </Footer>
                 </Layout>
+                <LoginModal />
             </Layout>
         );
     }

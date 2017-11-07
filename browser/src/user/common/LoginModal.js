@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import { Modal, Card, Row, Col, Button } from 'antd';
+import './css/loginModal.css';
 
 class LoginModal extends React.Component{
   state = {
@@ -27,21 +28,25 @@ class LoginModal extends React.Component{
     const { visible, loading } = this.state;
     return (
       <div>
-        <Button type="primary" onClick={this.showModal}>
-          Open
-        </Button>
         <Modal
           visible={visible}
-          title="Title"
+          title="登录"
           onOk={this.handleOk}
           onCancel={this.handleCancel}
-          footer={[]}
+          footer={null}
         >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+          <Row>
+            <Col span={10}>
+              <Card className="QQ-login login-card">
+              
+              </Card>
+            </Col>
+            <Col span={10} offset={4}>
+              <Card className="wechat-login login-card">
+              
+              </Card>
+            </Col>
+          </Row>
         </Modal>
       </div>
     );
