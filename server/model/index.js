@@ -39,7 +39,7 @@ function createData() {
     var Review=require('./index').Review;
     var User=require('./index').User;
     var ObjectId=mongoose.Types.ObjectId;
-
+    
     var commentIds=[new ObjectId,new ObjectId,new ObjectId,new ObjectId,new ObjectId,new ObjectId];
     var reviewIds=[new ObjectId,new ObjectId,new ObjectId];
     var userIds=[new ObjectId,new ObjectId];
