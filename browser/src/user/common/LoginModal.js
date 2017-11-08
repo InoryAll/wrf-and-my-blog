@@ -29,6 +29,12 @@ class LoginModal extends React.Component{
     this.setState({ visible: false });
     this.props.onModalChange(false);
   };
+  onQQLogin = () => {
+  
+  };
+  onWechatLogin = ()=> {
+  
+  };
   render() {
     const { visible, loading } = this.state;
     return (
@@ -44,7 +50,7 @@ class LoginModal extends React.Component{
           <Row>
             <Col span={8} offset={3}>
               <div className="login-container">
-                <Button className="login-div">
+                <Button className="login-div" onClick={this.onQQLogin}>
                   <i className="iconfont icon-QQ login-qq" />
                 </Button>
                 <h1 className="login-h">QQ登录</h1>
@@ -52,7 +58,7 @@ class LoginModal extends React.Component{
             </Col>
             <Col span={8} offset={2}>
               <div className="login-container">
-                <Button className="login-div">
+                <Button className="login-div" onClick={this.onWechatLogin}>
                   <i className="iconfont icon-weixin login-weixin" />
                 </Button>
                 <h1 className="login-h">微信登录</h1>
