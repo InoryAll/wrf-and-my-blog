@@ -1,12 +1,21 @@
 /**
  * login reducer
  */
-import {LOGIN_USER} from "../action/action";
+import { LOGIN_USER } from "../action/action";
+import { getCookie } from "../util/cookieUtil";
 
-export default function login(state={},action) {
+const initState = {
+  username: getCookie('username'),
+  password: getCookie('password'),
+};
+
+export default function login(state=initState,action) {
   switch (action.type){
     case LOGIN_USER:
-      return {...state,...action.user};
+      return {
+        username: getCookie('username'),
+        password: getCookie('password'),
+      };
     default:
       return state;
   }

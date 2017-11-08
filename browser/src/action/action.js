@@ -1,8 +1,9 @@
 /**
  * action
  */
-import {Modal} from 'antd';
-import {browserHistory} from 'react-router';
+import { Modal } from 'antd';
+import { browserHistory } from 'react-router';
+import { setCookie } from "../util/cookieUtil";
 
 // main sider
 export const GET_SIDER='GET_SIDER';
@@ -152,7 +153,7 @@ export const fetchAddReview=(review)=>{
     };
 };
 
-// user
+// user login
 export const LOGIN_USER='LOGIN_USER';
 export const loginUser=(user)=>{
     return {
@@ -180,6 +181,8 @@ export const doLogin=(user)=>{
                 });
             }
             else{
+                setCookie('username',user.username);
+                setCookie('password',user.password);
                 dispatch(loginUser(user));
                 const modal=Modal.success({
                   title:'成功',
