@@ -15,7 +15,7 @@ export const getSider=(siders) => {
 };
 export const fetchSiders=() => {
     return (dispatch,getState) => {
-        fetch('http://localhost:8080/comment/getSiders',{
+        fetch('http://118.89.236.17:8080/comment/getSiders',{
             method:'POST'
         }).then((response)=>{
             if (response.ok){
@@ -40,7 +40,7 @@ export const getAllComments=(comments) => {
 };
 export const fetchAllComments=()=>{
     return (dispatch,getState)=>{
-        fetch('http://localhost:8080/comment/getAllComment',{
+        fetch('http://118.89.236.17:8080/comment/getAllComment',{
             method:'POST'
         }).then((response)=>{
             if (response.ok){
@@ -64,7 +64,7 @@ export const getCommentById=(comment)=>{
 };
 export const fetchCommentById=(id)=>{
     return (dispatch,getState)=>{
-        fetch('http://localhost:8080/comment/getCommentDetail',{
+        fetch('http://118.89.236.17:8080/comment/getCommentDetail',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -92,7 +92,7 @@ export const getReviewsById=(reviews)=>{
 };
 export const fetchReviewsById=(id)=>{
     return (dispatch,getState)=>{
-        fetch('http://localhost:8080/review/getReviewsById',{
+        fetch('http://118.89.236.17:8080/review/getReviewsById',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -119,7 +119,7 @@ export const addReview=(review)=>{
 };
 export const fetchAddReview=(review)=>{
     return (dispatch,getState)=>{
-        fetch('http://localhost:8080/review/addReview',{
+        fetch('http://118.89.236.17:8080/review/addReview',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -163,7 +163,7 @@ export const loginUser=(user)=>{
 };
 export const doLogin=(user)=>{
     return (dispatch,getState)=>{
-        fetch('http://localhost:8080/user/login',{
+        fetch('http://118.89.236.17:8080/user/login',{
             method:'POST',
             headers:{
               'Content-Type':'application/json'
@@ -209,7 +209,7 @@ export const addComment=(comment)=>{
 };
 export const fetchComment=(comment)=>{
     return (dispatch,getState)=>{
-      fetch('http://localhost:8080/comment/postBlog',{
+      fetch('http://118.89.236.17:8080/comment/postBlog',{
         method:'POST',
         headers:{
           'Content-Type':'application/json'
@@ -252,7 +252,7 @@ export const getAllUsers=(users)=>{
 };
 export const fetchAllUsers=()=>{
   return (dispatch,getState) => {
-    fetch('http://localhost:8080/user/getAllUsers',{
+    fetch('http://118.89.236.17:8080/user/getAllUsers',{
       method:'POST',
       headers: {
         'Content-Type':'application/json'
@@ -279,7 +279,7 @@ export const updateComment = (comment)=>{
 };
 export const fetchUpdateComment = (comment) => {
   return (dispatch,getState)=>{
-    fetch('http://localhost:8080/comment/updateComment',{
+    fetch('http://118.89.236.17:8080/comment/updateComment',{
       method: 'POST',
       headers:{
         'Content-Type': 'application/json',
@@ -323,7 +323,7 @@ export const deleteComment = (comment)=>{
 };
 export const fetchDeleteComment = (comment)=>{
   return (dispatch, getState) => {
-    fetch('http://localhost:8080/comment/deleteComment',{
+    fetch('http://118.89.236.17:8080/comment/deleteComment',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -367,7 +367,7 @@ export const userUpdate = (user) => {
 };
 export const fetchUpdateUser = (user) => {
   return (dispatch, getState) => {
-    fetch('http://localhost:8080/user/updateUser',{
+    fetch('http://118.89.236.17:8080/user/updateUser',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -411,7 +411,7 @@ export const userDelete = (user) => {
 };
 export const fetchDeleteUser = (user) => {
   return (dispatch,getState) => {
-    fetch('http://localhost:8080/user/deleteUser',{
+    fetch('http://118.89.236.17:8080/user/deleteUser',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -454,7 +454,7 @@ export const checkUser = () => {
 };
 export const checkUserById = (username, callback) => {
   return (dispatch, getState) => {
-    fetch('http://localhost:8080/user/getUserDetail',{
+    fetch('http://118.89.236.17:8080/user/getUserDetail',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -483,7 +483,7 @@ export const addUser = (user) => {
 };
 export const fetchAddUser = (user) => {
   return (dispatch, getState) => {
-    fetch('http://localhost:8080/user/addUser',{
+    fetch('http://118.89.236.17:8080/user/addUser',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -527,7 +527,7 @@ export const boardSearch = (boards) => {
 };
 export const fetchAllBoards = () => {
   return (dispatch, getState) => {
-    fetch('http://localhost:8080/board/getAllboards',{
+    fetch('http://118.89.236.17:8080/board/getAllboards',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -554,7 +554,7 @@ export const boardAdd = (board) => {
 };
 export const fetchAddBoard = (board) => {
   return (dispatch, getState) => {
-    fetch('http://localhost:8080/board/addBoard',{
+    fetch('http://118.89.236.17:8080/board/addBoard',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
