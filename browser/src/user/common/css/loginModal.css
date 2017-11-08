@@ -1,13 +1,6 @@
 /**
  * 第三方登录框样式 loginmodal
  */
-.login-card{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 0 auto;
-    text-align: center;
-}
 .login-div{
     display: block;
     width: 150px;

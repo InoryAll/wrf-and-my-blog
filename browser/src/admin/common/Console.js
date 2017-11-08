@@ -5,7 +5,11 @@ import React from 'react';
 import { Layout, Menu, Breadcrumb, Icon, Badge, Avatar, Modal } from 'antd';
 import { Link,IndexLink,browserHistory } from 'react-router';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import TopMenu from '../../user/common/TopMenu';
+import LoginModal from '../../user/common/LoginModal';
 import item from '../static/images/item.jpg';
+import '../../static/font/iconfont.css';
 import './css/console.css';
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -13,6 +17,7 @@ const SubMenu = Menu.SubMenu;
 class Console extends React.Component {
   state = {
     collapsed: false,
+    visible: false,
   };
   componentWillMount() {
     if (!this.props.user.username) {
@@ -28,6 +33,11 @@ class Console extends React.Component {
   onCollapse = (collapsed) => {
     console.log(collapsed);
     this.setState({ collapsed });
+  };
+  onChange = (visible) => {
+    this.setState({
+      visible: visible,
+    });
   };
   render() {
     return (
@@ -66,6 +76,9 @@ class Console extends React.Component {
           </Menu>
         </Sider>
         <Layout>
+          <Header className="header">
+            <TopMenu onMenuChange={this.onChange} />
+          </Header>
           <Content className="console-content">
               {this.props.children}
           </Content>
@@ -73,6 +86,7 @@ class Console extends React.Component {
             Trj and Wrf ©2017 Created by Trj
           </Footer>
         </Layout>
+        <LoginModal visible={this.state.visible} onModalChange={this.onChange} />
       </Layout>
     );
   }
@@ -84,7 +98,8 @@ function mapStateToProps(state) {
  };
 }
 
-function mapDispatchToProps() {
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({},dispatch);
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(Console);

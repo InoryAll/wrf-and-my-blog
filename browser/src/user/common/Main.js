@@ -3,7 +3,6 @@
  */
 import React from 'react';
 import { Layout, Menu, Breadcrumb, Icon, Card, Button, Row, Col, Avatar, Mention, Form } from 'antd';
-import './css/main.css';
 import Banner from './components/Banner';
 import TopMenu from './TopMenu';
 import {bindActionCreators} from 'redux';
@@ -11,6 +10,8 @@ import {connect} from 'react-redux';
 import {fetchSiders} from "../../action/action";
 import {Link} from 'react-router';
 import LoginModal from "./LoginModal";
+import '../../static/font/iconfont.css';
+import './css/main.css';
 
 const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;

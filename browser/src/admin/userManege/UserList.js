@@ -15,7 +15,8 @@ import AddModal from "./AddModal";
 const confirm = Modal.confirm;
 class UserList extends React.Component {
     state = {
-        visible: false,
+        addVisible: false,
+        userVisible: false,
         type: '',
         currentUser: undefined,
     };
@@ -36,7 +37,7 @@ class UserList extends React.Component {
         switch (id) {
           case 1:
             this.setState({
-              visible: true,
+              userVisible: true,
               type: 'search',
               currentUser: record,
             });
@@ -44,7 +45,7 @@ class UserList extends React.Component {
             break;
           case 2:
             this.setState({
-              visible: true,
+              userVisible: true,
               type: 'update',
               currentUser: record,
             });
@@ -52,15 +53,27 @@ class UserList extends React.Component {
             break;
           case 3:
             this.setState({
-              visible: true,
+              addVisible: true,
             });
             break;
         }
     };
     onChange = (id,visible) => {
-        this.setState({
-          visible: visible,
-        });
+      switch (id) {
+        case 1:
+        case 2:
+          this.setState({
+            userVisible: visible,
+          });
+          break;
+        case 3:
+          this.setState({
+            addVisible: visible,
+          });
+          break;
+        default:
+          break;
+      }
     };
     handleSearch = (record) => {
       // 处理搜索
@@ -119,13 +132,13 @@ class UserList extends React.Component {
                     rowKey={(record) => { return record._id }}
                 />
                 <UserModal
-                    visible={this.state.visible}
+                    visible={this.state.userVisible}
                     onChange={this.onChange}
                     type={this.state.type}
                     currentUser={this.state.currentUser}
                 />
                 <AddModal
-                    visible={this.state.visible}
+                    visible={this.state.addVisible}
                     onChange={this.onChange}
                 />
             </Card>
