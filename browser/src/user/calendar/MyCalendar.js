@@ -21,7 +21,7 @@ function onPanelChange(value, mode) {
 }
 function countDown() {
     const currentTime = moment();
-    const targetTime = moment('2017-12-28');
+    const targetTime = moment('2018-7-1');
     const timeSpan =  targetTime.diff(currentTime);
     return formatTime(timeSpan);
 }
