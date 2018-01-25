@@ -1,7 +1,7 @@
 /**
  * review reducer
  */
-import {ADD_REVIEW, GET_REVIEWS_BY_ID} from "../action/action";
+import { ADD_REVIEW, GET_REVIEWS_BY_ID } from "../action/action";
 
 export default function review(state={},action) {
     switch (action.type){
