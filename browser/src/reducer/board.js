@@ -1,7 +1,7 @@
 /**
  * board reducer
  */
-import {BOARD_ADD, BOARD_SEARCH} from "../action/action";
+import { BOARD_ADD, BOARD_SEARCH } from "../action/action";
 
 export default function board(state = {}, action) {
   switch (action.type) {
