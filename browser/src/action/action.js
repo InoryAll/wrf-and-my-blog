@@ -1,5 +1,5 @@
 /**
- * action
+ * actions
  */
 import { Modal } from 'antd';
 import { browserHistory } from 'react-router';
