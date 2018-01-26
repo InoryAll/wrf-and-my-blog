@@ -62,49 +62,49 @@ export const getCommentById = (comment) => {
         comment
     };
 };
-export const fetchCommentById=(id)=>{
-    return (dispatch,getState)=>{
+export const fetchCommentById = (id) => {
+    return (dispatch, getState) => {
         fetch('http://118.89.236.17:8080/comment/getCommentDetail',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
             },
             body:JSON.stringify({id:id})
-        }).then((response)=>{
+        }).then((response) => {
             if (response.ok){
                 return response.json();
             }
-        }).then((data)=>{
+        }).then((data) => {
             dispatch(getCommentById(data));
-        }).catch((e)=>{
+        }).catch((e) => {
             console.log(e.message);
         });
     };
 };
 
 // reviews
-export const GET_REVIEWS_BY_ID='GET_REVIEWS_BY_ID';
-export const getReviewsById=(reviews)=>{
+export const GET_REVIEWS_BY_ID = 'GET_REVIEWS_BY_ID';
+export const getReviewsById = (reviews) => {
     return {
         type:GET_REVIEWS_BY_ID,
         reviews
     };
 };
-export const fetchReviewsById=(id)=>{
-    return (dispatch,getState)=>{
+export const fetchReviewsById = (id) => {
+    return (dispatch, getState) => {
         fetch('http://118.89.236.17:8080/review/getReviewsById',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
             },
             body:JSON.stringify({id:id})
-        }).then((response)=>{
+        }).then((response) => {
             if (response.ok){
                 return response.json();
             }
-        }).then((data)=>{
+        }).then((data) => {
             dispatch(getReviewsById(data));
-        }).catch((e)=>{
+        }).catch((e) => {
             console.log(e.message);
         });
     };
