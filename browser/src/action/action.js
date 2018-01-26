@@ -14,16 +14,16 @@ export const getSider=(siders) => {
     };
 };
 export const fetchSiders=() => {
-    return (dispatch,getState) => {
+    return (dispatch, getState) => {
         fetch('http://118.89.236.17:8080/comment/getSiders',{
             method:'POST'
-        }).then((response)=>{
+        }).then((response) => {
             if (response.ok){
                 return response.json();
             }
-        }).then((data)=>{
+        }).then((data) => {
             dispatch(getSider(data));
-        }).catch((e)=>{
+        }).catch((e) => {
             console.log(e.message);
         });
     };
