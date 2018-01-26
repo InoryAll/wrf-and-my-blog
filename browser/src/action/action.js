@@ -110,15 +110,15 @@ export const fetchReviewsById = (id) => {
     };
 };
 
-export const ADD_REVIEW='ADD_REVIEW';
-export const addReview=(review)=>{
+export const ADD_REVIEW = 'ADD_REVIEW';
+export const addReview = (review) => {
     return {
         type:ADD_REVIEW,
         review
     };
 };
-export const fetchAddReview=(review)=>{
-    return (dispatch,getState)=>{
+export const fetchAddReview = (review) => {
+    return (dispatch, getState) => {
         fetch('http://118.89.236.17:8080/review/addReview',{
             method:'POST',
             headers:{
