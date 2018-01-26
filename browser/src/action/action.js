@@ -31,32 +31,32 @@ export const fetchSiders=() => {
 
 
 // comment list
-export const GET_ALL_COMMENTS='GET_ALL_COMMENTS';
-export const getAllComments=(comments) => {
+export const GET_ALL_COMMENTS = 'GET_ALL_COMMENTS';
+export const getAllComments= (comments) => {
     return {
         type:GET_ALL_COMMENTS,
         comments
     };
 };
-export const fetchAllComments=()=>{
-    return (dispatch,getState)=>{
+export const fetchAllComments = () => {
+    return (dispatch, getState) => {
         fetch('http://118.89.236.17:8080/comment/getAllComment',{
             method:'POST'
-        }).then((response)=>{
+        }).then((response) => {
             if (response.ok){
                 return response.json();
             }
-        }).then((data)=>{
+        }).then((data) => {
             dispatch(getAllComments(data));
-        }).catch((e)=>{
+        }).catch((e) => {
             console.log(e.message);
         });
     };
 };
 
 // comment detail
-export const GET_COMMENT_BY_ID='GET_COMMENT_BY_ID';
-export const getCommentById=(comment)=>{
+export const GET_COMMENT_BY_ID = 'GET_COMMENT_BY_ID';
+export const getCommentById = (comment) => {
     return {
         type:GET_COMMENT_BY_ID,
         comment
